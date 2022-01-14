@@ -1,0 +1,21 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

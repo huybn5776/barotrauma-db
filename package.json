@@ -1,0 +1,48 @@
+{
+  "name": "barotrauma-db",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "eslint src && vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "naive-ui": "^2.23.2",
+    "ramda": "^0.27.1",
+    "rxjs": "^7.5.1",
+    "stream": "^0.0.2",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.27.62",
+    "@types/xml-js": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "postcss-less": "^5.0.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.2",
+    "stylelint": "^14.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.1.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.10",
+    "vue-tsc": "^0.30.1"
+  }
+}
