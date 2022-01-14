@@ -1,13 +1,17 @@
 <template>
   <div class="app">
     <ProvidersWrapper>
-      <router-view />
+      <SiteHeader/>
+      <div class="page-content-container">
+        <router-view />
+      </div>
     </ProvidersWrapper>
   </div>
 </template>
 
 <script lang="ts" setup>
 import ProvidersWrapper from '@components/ProvidersWrapper/ProvidersWrapper.vue';
+import SiteHeader from '@components/SiteHeader/SiteHeader.vue';
 </script>
 
 <style lang="scss">

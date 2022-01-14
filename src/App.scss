@@ -9,6 +9,9 @@ body {
 .app {
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
+  color: white;
+  background: linear-gradient(180deg, #1d2924 0%, #151e19 10%, #111a15 100%) no-repeat;
 }
 
 a {
@@ -18,4 +21,30 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.page-layout {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.page-content-container {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  min-height: 100%;
+  background-color: rgba(black, .8);
+}
+
+.page-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  padding: 16px 16px 32px 16px;
+}
+
+.page-header {
+  margin: 16px 0 8px 0;
 }
