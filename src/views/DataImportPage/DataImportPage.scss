@@ -1,0 +1,29 @@
+.data-import-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.tool-panel-header {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.tool-panel-section {
+  & + & {
+    margin-top: 32px;
+  }
+}
+
+.tool-panel-items-container {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  gap: 16px;
+  align-items: center;
+  justify-content: start;
+
+  & + & {
+    margin-top: 16px;
+  }
+}

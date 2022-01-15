@@ -1,0 +1,16 @@
+.items-description {
+  grid-column: 3 / 5;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+
+  & > * {
+    margin: 0;
+  }
+}
+
+.items-with-description {
+  grid-column: 1 / 5;
+  margin: 8px 0 -8px 0;
+  font-size: 15px;
+}

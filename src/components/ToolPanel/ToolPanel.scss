@@ -1,0 +1,18 @@
+.tool-panel-outer {
+  width: fit-content;
+  padding: 12px;
+  color: #d9d7bc;
+  background-color: #1d2924;
+  border-radius: 4px;
+}
+
+.tool-panel-inner {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px 24px 16px;
+  background-color: rgba(black, .5);
+  border-radius: 12px;
+}
