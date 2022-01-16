@@ -11,12 +11,6 @@
     :clickable="!!convertResult.texts?.length"
     @click="downloadTexts"
   />
-  <ItemBlock
-    label="Item images"
-    :active="!!convertResult.images"
-    :clickable="!!convertResult.images"
-    @click="downloadImages"
-  />
   <div v-if="convertResult.items?.length || convertResult.texts?.length" class="items-description">
     <p>{{ convertResult.items?.length || 0 }} Items</p>
     <p>{{ convertResult.texts?.length || 0 }} Locales</p>
@@ -36,11 +30,13 @@
 </template>
 
 <script lang="ts" setup>
+import { strToU8, zipSync, ZipOptions, Zippable, ZippableFile } from 'fflate';
+
 import ItemBlock from '@components/ItemBlock/ItemBlock.vue';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
 import { mergeItemsName } from '@services/game-data-parser';
-import { saveDataToJsonFile } from '@utils/file-utils';
+import { saveDataToJsonFile, downloadFile } from '@utils/file-utils';
 
 const props = defineProps<{ convertResult: { items?: ItemPrefab[]; texts?: Locale[] } }>();
 
@@ -55,7 +51,24 @@ function downloadTexts(): void {
   if (!props.convertResult.texts?.length) {
     return;
   }
-  saveDataToJsonFile(props.convertResult.texts, { fileName: 'texts', space: 2 });
+  const filesToArchive: Record<string, Uint8Array> = {};
+  props.convertResult.texts.forEach((locale) => {
+    const json = JSON.stringify(locale, null, 2);
+    const fileName = `${locale.language.replace(' ', '-').toLocaleLowerCase()}.json`;
+    filesToArchive[fileName] = strToU8(json);
+  });
+  archiveFilesAndDownload('texts', filesToArchive);
+}
+
+function archiveFilesAndDownload(
+  fileName: string,
+  files: Record<string, Zippable | ZippableFile>,
+  options?: ZipOptions,
+): void {
+  const zipped = zipSync(files, options);
+  const zipBlob = new Blob([zipped], { type: 'application/zip' });
+  const url = URL.createObjectURL(zipBlob);
+  downloadFile(url, `${fileName}.zip`);
 }
 
 function downloadItemWithText(targetLocale: Locale): void {

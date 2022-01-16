@@ -7,6 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "fflate": "^0.7.2",
     "naive-ui": "^2.23.2",
     "ramda": "^0.27.1",
     "rxjs": "^7.5.1",
