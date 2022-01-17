@@ -1,4 +1,4 @@
-import { omit } from 'ramda';
+import { omit, toLower, mergeDeepRight, indexBy } from 'ramda';
 
 import { DeconstructItem } from '@interfaces/deconstruct-item';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
@@ -8,6 +8,7 @@ import { LocationPriceInfo } from '@interfaces/location-price-info';
 import { PriceInfo } from '@interfaces/price-info';
 import { RequiredItem } from '@interfaces/required-item';
 import { Skill } from '@interfaces/skill';
+import { SpriteImage } from '@interfaces/sprite';
 import { deleteNilProperties, isNilOrEmpty } from '@utils/object-utils';
 
 export function parseItemXml(documents: Document[]): ItemPrefab[] {
@@ -34,6 +35,9 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
         deconstructTime: deconstruct?.time,
         deconstructItems: deconstruct?.items,
         maxStackSize: +(item.getAttribute('maxstacksize') || 1),
+        sprite: parseSprite(getChildrenOf(item, 'Sprite')[0]),
+        infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0]),
+        containedSprites: getChildrenOf(item, 'ContainedSprite').map(parseSprite),
       }) as ItemPrefab;
     });
   });
@@ -71,6 +75,14 @@ export function mergeItemsName(items: ItemPrefab[], locales: Locale[], targetLoc
       englishName: englishLocale?.[item.identifier],
       ...omit(['identifier', 'name', 'englishName'], item),
     };
+  });
+}
+
+export function mergeVariant(items: ItemPrefab[]): ItemPrefab[] {
+  const itemIdMap = indexBy((item) => item.identifier, items);
+  return items.map((item) => {
+    const variantSource = item.variantOf && itemIdMap[item.variantOf];
+    return variantSource ? (mergeDeepRight(variantSource, item) as ItemPrefab) : item;
   });
 }
 
@@ -160,6 +172,20 @@ function parseDeconstruct(deconstructElement: Element | null): {
   return { time, items };
 }
 
+function parseSprite(spriteElement: Element): SpriteImage | undefined {
+  if (!spriteElement) {
+    return undefined;
+  }
+  return deleteNilProperties({
+    texture: spriteElement.getAttribute('texture')?.replace('/JobGear/', '/Jobgear/').replace('Content/Items/', ''),
+    sourceRect: parseNumberArray(spriteElement.getAttribute('sourcerect')),
+    origin: parseNumberArray(spriteElement.getAttribute('origin')),
+    depth: parseNumberValue(spriteElement.getAttribute('depth')),
+    sheetIndex: parseNumberArray(spriteElement.getAttribute('sheetindex')),
+    sheetElementSize: parseNumberArray(spriteElement.getAttribute('sheetelementsize')),
+  }) as SpriteImage;
+}
+
 function parseNumberValue(intString: string | undefined | null): number | undefined {
   if (isNilOrEmpty(intString)) {
     return undefined;
@@ -172,4 +198,14 @@ function parseBooleanValue(booleanValue: string | undefined | null): boolean | u
     return undefined;
   }
   return booleanValue === 'true';
+}
+
+function parseNumberArray(numberArrayString: string | undefined | null): number[] | undefined {
+  if (isNilOrEmpty(numberArrayString)) {
+    return undefined;
+  }
+  return numberArrayString
+    .split(',')
+    .map((value) => +value)
+    .filter((number) => !Number.isNaN(number));
 }

@@ -47,11 +47,14 @@ export function saveDataToJsonFile(data: unknown, config: { fileName?: string; s
   const json = config.space ? JSON.stringify(data, null, config.space) : JSON.stringify(data);
   const blob = new Blob([json], { type: 'application/json' });
   const url = window.URL.createObjectURL(blob);
+  downloadFile(url, `${config.fileName}.json`);
+}
 
+export function downloadFile(url: string, fileName: string): void {
   const a = document.createElement('a');
   document.body.appendChild(a);
   a.href = url;
-  a.download = `${config.fileName}.json`;
+  a.download = fileName;
   a.click();
 
   setTimeout(() => {

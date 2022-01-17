@@ -12,6 +12,7 @@ const emits = defineEmits<{ (e: 'fileDropped', value: Record<string, File>): voi
 
 const { dropTargetRef, dropOverlayRef, fileDragEnter } = useDropArea({
   fileDropped: (filesMap) => emits('fileDropped', filesMap),
+  fileTypes: ['xml', 'png'],
 });
 </script>
 

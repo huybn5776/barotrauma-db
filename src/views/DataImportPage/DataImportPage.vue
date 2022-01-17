@@ -40,6 +40,7 @@ import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
 import { loadGameData, readXmlFile } from '@services/game-data-loader';
 import { parseItemXml, parseTextXml } from '@services/game-data-parser';
+import { getAllRequiredImages } from '@services/game-image-loader';
 import { isNotNilOrEmpty } from '@utils/object-utils';
 
 const loadedData = ref<{
@@ -48,7 +49,7 @@ const loadedData = ref<{
   texts?: Record<string, File>;
 }>({});
 const percentageMap = ref<Partial<Record<RequiredImportType, number>>>({});
-const convertResult = ref<{ items?: ItemPrefab[]; texts?: Locale[] }>({});
+const convertResult = ref<{ items?: ItemPrefab[]; texts?: Locale[], images?: Record<string, File> }>({});
 
 async function onFile(files: Record<string, File>): Promise<void> {
   const { contentPackage, items, texts } = await loadGameData(files, loadedData.value.contentPackage);
@@ -58,6 +59,9 @@ async function onFile(files: Record<string, File>): Promise<void> {
 
   updatePercentages();
   await checkFilesReadyAndConvert();
+  if (items && convertResult.value.items?.length) {
+    convertResult.value.images = await getAllRequiredImages(convertResult.value.items, files);
+  }
 }
 
 function updatePercentages(): void {

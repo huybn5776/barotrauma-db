@@ -5,8 +5,9 @@ import { fromEvent, tap, exhaustMap, Observable, merge, filter } from 'rxjs';
 import { useUntilDestroyed } from '@compositions/use-until-destroyed';
 import { getFilesFromDataTransfer } from '@utils/file-utils';
 
-interface DropAreaOption {
+interface DropAreaOptions {
   fileDropped: (filesMap: Record<string, File>) => void;
+  fileTypes?: string[];
 }
 
 interface UseDropArea {
@@ -15,7 +16,7 @@ interface UseDropArea {
   fileDragEnter: Ref<UnwrapRef<boolean>>;
 }
 
-export function useDropArea(option: DropAreaOption): UseDropArea {
+export function useDropArea(options: DropAreaOptions): UseDropArea {
   const dropTargetRef = ref<HTMLElement>();
   const dropOverlayRef = ref<HTMLElement>();
   const untilDestroyed = useUntilDestroyed();
@@ -39,8 +40,14 @@ export function useDropArea(option: DropAreaOption): UseDropArea {
         onDragLeave();
         if (event.dataTransfer?.files?.length) {
           const { dataTransfer } = event;
-          const filesMap = await getFilesFromDataTransfer(dataTransfer, (fileName) => fileName.endsWith('.xml'));
-          option.fileDropped(filesMap);
+          const { fileTypes } = options;
+          const filesMap = await getFilesFromDataTransfer(
+            dataTransfer,
+            fileTypes?.length
+              ? (fileName) => fileTypes.some((fileType) => fileName.endsWith(`.${fileType}`))
+              : undefined,
+          );
+          options.fileDropped(filesMap);
         }
       });
 

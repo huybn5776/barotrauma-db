@@ -6,6 +6,12 @@
     @click="downloadItems"
   />
   <ItemBlock
+    label="Item images"
+    :active="!!convertResult.images"
+    :clickable="!!convertResult.images"
+    @click="downloadImages"
+  />
+  <ItemBlock
     label="Texts"
     :active="!!convertResult.texts?.length"
     :clickable="!!convertResult.texts?.length"
@@ -38,7 +44,13 @@ import { Locale } from '@interfaces/locale';
 import { mergeItemsName } from '@services/game-data-parser';
 import { saveDataToJsonFile, downloadFile } from '@utils/file-utils';
 
-const props = defineProps<{ convertResult: { items?: ItemPrefab[]; texts?: Locale[] } }>();
+const props = defineProps<{
+  convertResult: {
+    items?: ItemPrefab[];
+    images?: Record<string, File>;
+    texts?: Locale[];
+  };
+}>();
 
 function downloadItems(): void {
   if (!props.convertResult.items) {
@@ -60,6 +72,22 @@ function downloadTexts(): void {
   archiveFilesAndDownload('texts', filesToArchive);
 }
 
+async function downloadImages(): Promise<void> {
+  if (!props.convertResult.images) {
+    return;
+  }
+  const filesToArchive: Record<string, Zippable | ZippableFile> = {};
+  const fileInU8Array = await Promise.all(
+    Object.entries(props.convertResult.images).map(async ([path, file]) => ({
+      path,
+      u8Array: new Uint8Array(await file.arrayBuffer()),
+      mtime: new Date(file.lastModified),
+    })),
+  );
+  fileInU8Array.map(({ path, u8Array, mtime }) => (filesToArchive[path] = [u8Array, { mtime }]));
+  archiveFilesAndDownload('images', filesToArchive, { level: 0 });
+}
+
 function archiveFilesAndDownload(
   fileName: string,
   files: Record<string, Zippable | ZippableFile>,
@@ -76,7 +104,11 @@ function downloadItemWithText(targetLocale: Locale): void {
   if (!items?.length || !texts?.length) {
     return;
   }
-  const itemsWithText = mergeItemsName(items, texts, targetLocale);
+  const itemsWithText = mergeItemsName(
+    items,
+    targetLocale,
+    targetLocale.name === 'English' ? undefined : texts.find((locale) => locale.name === 'English'),
+  );
   const fileName = `items_${targetLocale.language.replace(' ', '_').toLocaleLowerCase()}`;
   saveDataToJsonFile(itemsWithText, { fileName, space: 2 });
 }
