@@ -5,8 +5,12 @@ import { SpriteImage } from '@interfaces/sprite';
 
 export interface ItemPrefab {
   identifier: string;
+  nameIdentifier?: string;
+  descriptionIdentifier?: string;
   name?: string;
   englishName?: string;
+  description?: string;
+  variantOf?: string;
   category: string;
   tags: string[];
   price: PriceInfo;

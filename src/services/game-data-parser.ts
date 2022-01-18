@@ -14,10 +14,11 @@ import { deleteNilProperties, isNilOrEmpty } from '@utils/object-utils';
 export function parseItemXml(documents: Document[]): ItemPrefab[] {
   return documents.flatMap((document) => {
     const itemDocuments = Array.from(document.children).flatMap((element) => {
-      if (element.tagName === 'Items') {
+      const tagName = element.tagName.toLowerCase();
+      if (tagName === 'items') {
         return Array.from(element.children);
       }
-      if (element.tagName === 'Item') {
+      if (tagName === 'item') {
         return [element];
       }
       return [];
@@ -27,14 +28,17 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
       const priceElement = getChildrenOf(item, 'Price')[0];
 
       return deleteNilProperties({
-        identifier: item.getAttribute('identifier'),
-        category: item.getAttribute('category'),
-        tags: item.getAttribute('tags')?.split(','),
+        identifier: getAttrValue(item, 'identifier'),
+        nameIdentifier: getAttrValue(item, 'nameIdentifier'),
+        descriptionIdentifier: getAttrValue(item, 'descriptionIdentifier'),
+        category: getAttrValue(item, 'category'),
+        variantOf: getAttrValue(item, 'variantOf'),
+        tags: (getAttrValue(item, 'tags') || getAttrValue(item, 'Tags'))?.split(','),
         price: priceElement ? parsePrice(priceElement) : undefined,
         fabricationRecipes: parseRecipes(getChildrenOf(item, 'Fabricate')),
         deconstructTime: deconstruct?.time,
         deconstructItems: deconstruct?.items,
-        maxStackSize: +(item.getAttribute('maxstacksize') || 1),
+        maxStackSize: +(getAttrValue(item, 'maxStackSize') || 1),
         sprite: parseSprite(getChildrenOf(item, 'Sprite')[0]),
         infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0]),
         containedSprites: getChildrenOf(item, 'ContainedSprite').map(parseSprite),
@@ -45,9 +49,9 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
 
 export function parseTextXml(textDocuments: Document[]): Locale[] {
   return textDocuments.map((document) => {
-    const infoTextsElement = getChildrenOf(document, 'infotexts')[0];
-    const language = infoTextsElement.getAttribute('language');
-    const name = infoTextsElement.getAttribute('translatedname');
+    const infoTextsElement = getChildrenOf(document, 'infoTexts')[0];
+    const language = getAttrValue(infoTextsElement, 'language');
+    const name = getAttrValue(infoTextsElement, 'translatedName');
 
     const searchForTag = ['entityname.', 'entitydescription.', 'displayname.'];
     const labels: Record<string, string>[] = searchForTag.map(() => ({}));
@@ -62,17 +66,17 @@ export function parseTextXml(textDocuments: Document[]): Locale[] {
   });
 }
 
-export function mergeItemsName(items: ItemPrefab[], locales: Locale[], targetLocale: Locale): ItemPrefab[] {
-  const preferredLocale = targetLocale.entityNames;
-  const englishLocale =
-    targetLocale.language === 'English'
-      ? undefined
-      : locales.find((locale) => locale.language === 'English')?.entityNames;
+export function mergeItemsName(items: ItemPrefab[], targetLocale: Locale, englishLocale?: Locale): ItemPrefab[] {
+  const preferredEntities = targetLocale.entityNames;
+  const englishEntities = englishLocale?.entityNames;
   return items.map((item) => {
+    const nameIdentifier = item.nameIdentifier || item.identifier;
+    const descriptionIdentifier = item.descriptionIdentifier || nameIdentifier;
     return {
       identifier: item.identifier,
-      name: preferredLocale?.[item.identifier],
-      englishName: englishLocale?.[item.identifier],
+      name: preferredEntities?.[nameIdentifier],
+      englishName: englishEntities?.[nameIdentifier],
+      description: targetLocale.entityDescriptions[descriptionIdentifier],
       ...omit(['identifier', 'name', 'englishName'], item),
     };
   });
@@ -87,41 +91,44 @@ export function mergeVariant(items: ItemPrefab[]): ItemPrefab[] {
 }
 
 function getChildrenOf(node: ParentNode, tagName: string | string[]): Element[] {
-  const tagNames = Array.isArray(tagName) ? tagName : [tagName];
-  return Array.from(node.children).filter((e) => tagNames.includes(e.tagName));
+  const tagNames = (Array.isArray(tagName) ? tagName : [tagName]).map(toLower);
+  return Array.from(node.children).filter((e) => {
+    const lowerTagName = e.tagName.toLowerCase();
+    return tagNames.some((name) => name === lowerTagName);
+  });
 }
 
 function parsePrice(priceElement: Element): PriceInfo {
   return {
-    basePrice: parseNumberValue(priceElement.getAttribute('baseprice')),
-    soldEverywhere: parseBooleanValue(priceElement.getAttribute('soldeverywhere')),
-    canBeSpecial: parseBooleanValue(priceElement.getAttribute('canbespecial')),
-    minLevelDifficulty: parseNumberValue(priceElement.getAttribute('minleveldifficulty')),
+    basePrice: getNumberValue(priceElement, 'basePrice'),
+    soldEverywhere: getBooleanValue(priceElement, 'soldEverywhere'),
+    canBeSpecial: getBooleanValue(priceElement, 'canBeSpecial'),
+    minLevelDifficulty: getNumberValue(priceElement, 'minLevelDifficulty'),
     locations: getChildrenOf(priceElement, 'Price').map(parseLocationPrice),
   } as PriceInfo;
 }
 
 function parseLocationPrice(subPriceElement: Element): LocationPriceInfo {
   return {
-    locationType: subPriceElement.getAttribute('locationtype'),
-    multiplier: parseNumberValue(subPriceElement.getAttribute('multiplier')),
-    minAvailable: parseNumberValue(subPriceElement.getAttribute('minavailable')),
-    maxAvailable: parseNumberValue(subPriceElement.getAttribute('maxavailable')),
-    buyPrice: parseNumberValue(subPriceElement.getAttribute('buyprice')),
-    sold: parseBooleanValue(subPriceElement.getAttribute('sold')),
+    locationType: getAttrValue(subPriceElement, 'locationType'),
+    multiplier: getNumberValue(subPriceElement, 'multiplier'),
+    minAvailable: getNumberValue(subPriceElement, 'minAvailable'),
+    maxAvailable: getNumberValue(subPriceElement, 'maxAvailable'),
+    buyPrice: getNumberValue(subPriceElement, 'buyPrice'),
+    sold: getBooleanValue(subPriceElement, 'sold'),
   } as LocationPriceInfo;
 }
 
 function parseRecipes(recipeElements: Element[]): FabricationRecipe[] {
   return recipeElements.map((element) => {
     return deleteNilProperties({
-      displayName: element.getAttribute('displayname'),
+      displayName: getAttrValue(element, 'displayName'),
       requiredItems: parseRequiredItems(element),
-      requiredTime: parseNumberValue(element.getAttribute('requiredtime')),
-      requiresRecipe: parseBooleanValue(element.getAttribute('requiresrecipe')),
-      outCondition: parseNumberValue(element.getAttribute('outcondition')),
+      requiredTime: getNumberValue(element, 'requiredTime'),
+      requiresRecipe: getBooleanValue(element, 'requiresRecipe'),
+      outCondition: getNumberValue(element, 'outCondition'),
       requiredSkills: parseRequiredSkills(getChildrenOf(element, 'RequiredSkill')),
-      amount: parseNumberValue(element.getAttribute('amount')),
+      amount: getNumberValue(element, 'amount'),
     }) as FabricationRecipe;
   });
 }
@@ -129,8 +136,8 @@ function parseRecipes(recipeElements: Element[]): FabricationRecipe[] {
 function parseRequiredSkills(skillElements: Element[]): Skill[] {
   return Array.from(skillElements).map((element) => {
     return deleteNilProperties({
-      identifier: element.getAttribute('identifier'),
-      level: parseNumberValue(element.getAttribute('level')),
+      identifier: getAttrValue(element, 'identifier'),
+      level: getNumberValue(element, 'level'),
     }) as Skill;
   });
 }
@@ -140,11 +147,11 @@ function parseRequiredItems(recipeElement: Element): RequiredItem[] {
     .filter((element) => ['Item', 'RequiredItem'].includes(element.tagName))
     .map((element) => {
       return deleteNilProperties({
-        identifier: element.getAttribute('identifier'),
-        amount: parseNumberValue(element.getAttribute('amount')),
-        useCondition: parseBooleanValue(element.getAttribute('useCondition')),
-        minCondition: parseNumberValue(element.getAttribute('minCondition')),
-        maxCondition: parseNumberValue(element.getAttribute('maxCondition')),
+        identifier: getAttrValue(element, 'identifier'),
+        amount: getNumberValue(element, 'amount'),
+        useCondition: getBooleanValue(element, 'useCondition'),
+        minCondition: getNumberValue(element, 'minCondition'),
+        maxCondition: getNumberValue(element, 'maxCondition'),
       }) as RequiredItem;
     });
 }
@@ -156,17 +163,17 @@ function parseDeconstruct(deconstructElement: Element | null): {
   if (!deconstructElement) {
     return null;
   }
-  const time = parseNumberValue(deconstructElement.getAttribute('time')) || 0;
+  const time = getNumberValue(deconstructElement, 'time') || 0;
   const items = Array.from(getChildrenOf(deconstructElement, 'Item')).map((element) => {
     return deleteNilProperties({
-      identifier: element.getAttribute('identifier'),
-      minCondition: parseNumberValue(element.getAttribute('mincondition')),
-      maxCondition: parseNumberValue(element.getAttribute('maxcondition')),
-      outConditionMin: parseNumberValue(element.getAttribute('outconditionmin')),
-      outConditionMax: parseNumberValue(element.getAttribute('outconditionmax')),
-      copyCondition: parseBooleanValue(element.getAttribute('copycondition')),
-      requiredDeconstructor: element.getAttribute('requireddeconstructor'),
-      requiredOtherItem: element.getAttribute('requiredotheritem'),
+      identifier: getAttrValue(element, 'identifier'),
+      minCondition: getNumberValue(element, 'minCondition'),
+      maxCondition: getNumberValue(element, 'maxCondition'),
+      outConditionMin: getNumberValue(element, 'outConditionMin'),
+      outConditionMax: getNumberValue(element, 'outConditionMax'),
+      copyCondition: getBooleanValue(element, 'copyCondition'),
+      requiredDeconstructor: getAttrValue(element, 'requiredDeconstructor'),
+      requiredOtherItem: getAttrValue(element, 'requiredOtherItem'),
     }) as DeconstructItem;
   });
   return { time, items };
@@ -177,35 +184,43 @@ function parseSprite(spriteElement: Element): SpriteImage | undefined {
     return undefined;
   }
   return deleteNilProperties({
-    texture: spriteElement.getAttribute('texture')?.replace('/JobGear/', '/Jobgear/').replace('Content/Items/', ''),
-    sourceRect: parseNumberArray(spriteElement.getAttribute('sourcerect')),
-    origin: parseNumberArray(spriteElement.getAttribute('origin')),
-    depth: parseNumberValue(spriteElement.getAttribute('depth')),
-    sheetIndex: parseNumberArray(spriteElement.getAttribute('sheetindex')),
-    sheetElementSize: parseNumberArray(spriteElement.getAttribute('sheetelementsize')),
+    texture: getAttrValue(spriteElement, 'texture')?.replace('/JobGear/', '/Jobgear/').replace('Content/Items/', ''),
+    sourceRect: getNumberArray(spriteElement, 'sourceRect'),
+    origin: getNumberArray(spriteElement, 'origin'),
+    depth: getNumberValue(spriteElement, 'depth'),
+    sheetIndex: getNumberArray(spriteElement, 'sheetIndex'),
+    sheetElementSize: getNumberArray(spriteElement, 'sheetElementSize'),
   }) as SpriteImage;
 }
 
-function parseNumberValue(intString: string | undefined | null): number | undefined {
-  if (isNilOrEmpty(intString)) {
-    return undefined;
-  }
-  return +intString;
+function getAttrValue(element: Element, attributeName: string): string | undefined {
+  const lowerAttributeName = attributeName.toLowerCase();
+  return Array.from(element.attributes).find((attribute) => attribute.name.toLowerCase() === lowerAttributeName)?.value;
 }
 
-function parseBooleanValue(booleanValue: string | undefined | null): boolean | undefined {
-  if (isNilOrEmpty(booleanValue)) {
+function getNumberValue(element: Element, attributeName: string): number | undefined {
+  const value = getAttrValue(element, attributeName);
+  if (isNilOrEmpty(value)) {
     return undefined;
   }
-  return booleanValue === 'true';
+  return +value;
 }
 
-function parseNumberArray(numberArrayString: string | undefined | null): number[] | undefined {
-  if (isNilOrEmpty(numberArrayString)) {
+function getBooleanValue(element: Element, attributeName: string): boolean | undefined {
+  const value = getAttrValue(element, attributeName);
+  if (isNilOrEmpty(value)) {
     return undefined;
   }
-  return numberArrayString
+  return value === 'true';
+}
+
+function getNumberArray(element: Element, attributeName: string): number[] | undefined {
+  const value = getAttrValue(element, attributeName);
+  if (isNilOrEmpty(value)) {
+    return undefined;
+  }
+  return value
     .split(',')
-    .map((value) => +value)
+    .map((v) => +v)
     .filter((number) => !Number.isNaN(number));
 }
