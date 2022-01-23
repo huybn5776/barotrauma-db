@@ -1,5 +1,19 @@
 <template>
   <div class="items-container">
+    <div class="items-grid-header" />
+    <div class="items-grid-header">
+      <SearchInput placeholder="Name" @value="nameSearchTerm = $event" />
+    </div>
+    <div class="items-grid-header">
+      <span class="item-header-text">Recipes</span>
+    </div>
+    <div class="items-grid-header">
+      <span class="item-header-text">Deconstruct</span>
+    </div>
+    <div class="items-grid-header">
+      <span class="item-header-text">Price</span>
+    </div>
+
     <template v-for="item of availableItems" :key="item.identifier">
       <div class="item-image" :id="item.identifier">
         <ItemImage :item="item" />
@@ -40,6 +54,7 @@ import DeconstructRecipeView from '@components/DeconstructRecipeView/Deconstruct
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
+import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useProvideLocale } from '@compositions/use-provide-locale';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
@@ -49,11 +64,19 @@ const excludedNameIdentifiers = ['unidentifiedgeneticmaterial', 'geneticmaterial
 
 const allItems = ref<ItemPrefab[]>([]);
 const preferredLocale = useProvideLocale();
+const nameSearchTerm = ref('');
 
 const itemIdMap = computed<Record<string, ItemPrefab>>(() => indexBy((item) => item.identifier, allItems.value));
 const availableItems = computed<ItemPrefab[]>(() =>
   allItems.value
     .filter((item) => item.fabricationRecipes?.length || item.deconstructItems?.length || item.price)
+    .filter(
+      (item) =>
+        !nameSearchTerm.value ||
+        item.name?.includes(nameSearchTerm.value) ||
+        item.englishName?.includes(nameSearchTerm.value),
+    )
+    .filter((item) => item.name?.includes('燃') || item.name?.includes('彈藥'))
     .filter(({ nameIdentifier }) => !(nameIdentifier && excludedNameIdentifiers.includes(nameIdentifier))),
 );
 

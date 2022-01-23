@@ -14,6 +14,23 @@
   }
 }
 
+.items-grid-header {
+  padding: 0 8px;
+  text-align: center;
+
+  &:first-child {
+    background-color: transparent;
+  }
+}
+
+.item-header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .item-image {
   padding: 4px;
 }

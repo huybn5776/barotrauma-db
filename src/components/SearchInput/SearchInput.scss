@@ -1,0 +1,72 @@
+.search-input-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('/src/assets/svg/magnify.svg') no-repeat;
+    transform: translateY(-50%);
+    transition: opacity .3s;
+    content: '';
+  }
+
+  &:not(.empty-input)::after {
+    opacity: 0;
+  }
+}
+
+.search-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: white;
+    text-align: center;
+  }
+}
+
+.input-clear-button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  color: #d9d7bc;
+  font-size: 16px;
+  background-color: rgba(white, .1);
+  border: 0;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: opacity .3s, background-color .3s;
+
+  &:hover {
+    background-color: rgba(white, .2);
+  }
+
+  &.hide-clear-button {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.search-input-container:not(:hover) {
+  .input-clear-button {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
