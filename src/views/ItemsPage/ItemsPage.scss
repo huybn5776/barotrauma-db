@@ -1,6 +1,6 @@
 .items-container {
   display: grid;
-  grid-template-columns: auto minmax(64px, max-content) max-content max-content;
+  grid-template-columns: auto minmax(64px, max-content) max-content max-content max-content;
   gap: 4px;
   align-items: center;
   height: fit-content;

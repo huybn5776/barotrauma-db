@@ -23,6 +23,10 @@
       <div class="item-recipe">
         <DeconstructRecipeView :item="item" :itemsMap="itemIdMap" :allItems="availableItems" />
       </div>
+
+      <div>
+        <ItemPriceView :item="item" />
+      </div>
     </template>
   </div>
 </template>
@@ -35,6 +39,7 @@ import { indexBy } from 'ramda';
 import DeconstructRecipeView from '@components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
+import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
 import { useProvideLocale } from '@compositions/use-provide-locale';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
