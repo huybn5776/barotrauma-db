@@ -1,0 +1,17 @@
+.item-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.item-image {
+  position: absolute;
+  object-fit: none;
+
+  &.loading {
+    opacity: 0;
+  }
+}

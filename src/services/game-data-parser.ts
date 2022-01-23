@@ -148,6 +148,7 @@ function parseRequiredItems(recipeElement: Element): RequiredItem[] {
     .map((element) => {
       return deleteNilProperties({
         identifier: getAttrValue(element, 'identifier'),
+        tag: getAttrValue(element, 'tag'),
         amount: getNumberValue(element, 'amount'),
         useCondition: getBooleanValue(element, 'useCondition'),
         minCondition: getNumberValue(element, 'minCondition'),
@@ -169,6 +170,7 @@ function parseDeconstruct(deconstructElement: Element | null): {
       identifier: getAttrValue(element, 'identifier'),
       minCondition: getNumberValue(element, 'minCondition'),
       maxCondition: getNumberValue(element, 'maxCondition'),
+      outCondition: getNumberValue(element, 'outCondition'),
       outConditionMin: getNumberValue(element, 'outConditionMin'),
       outConditionMax: getNumberValue(element, 'outConditionMax'),
       copyCondition: getBooleanValue(element, 'copyCondition'),

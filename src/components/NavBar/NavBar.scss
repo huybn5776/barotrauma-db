@@ -1,0 +1,24 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-link {
+  display: inline-block;
+  min-width: 60px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  opacity: .7;
+  transition: background-color .1s;
+
+  &.router-link-active {
+    font-weight: 500;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: rgba(white, .1);
+    opacity: 1;
+  }
+}

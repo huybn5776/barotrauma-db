@@ -11,6 +11,7 @@ export interface DeconstructItem {
   /**
    * Condition of item on creation
    */
+  outCondition: number;
   outConditionMin: number;
   outConditionMax: number;
   /**

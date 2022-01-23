@@ -1,0 +1,11 @@
+.deconstruct-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 4px 0;
+
+  &:hover {
+    background-color: rgba(white, .04);
+  }
+}

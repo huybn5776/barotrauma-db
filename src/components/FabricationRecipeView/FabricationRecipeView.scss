@@ -1,0 +1,101 @@
+.fabrication-recipe {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+
+  &:hover {
+    background-color: rgba(white, .04);
+  }
+
+  & + & {
+    margin-top: 8px;
+
+    &::before {
+      position: absolute;
+      top: -4px;
+      right: 8px;
+      left: 8px;
+      display: block;
+      height: 1px;
+      background-color: rgba(white, .2);
+      content: '';
+    }
+  }
+}
+
+.recipe-items {
+  width: 100%;
+}
+
+.recipe-display-name {
+  margin: 0;
+  padding-left: 4px;
+  overflow-x: hidden;
+  color: gray;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.recipe-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  padding-right: 4px;
+}
+
+.product-amount {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: #191919;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #d9d7bc;
+    border-radius: 2px;
+    content: '';
+  }
+}
+
+.product-amount-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #d9d7bc;
+  border-radius: 2px;
+  box-shadow: -2px 2px 0 0 #131313;
+
+  &::before {
+    transform: scale(.8);
+    content: '×';
+  }
+}
+
+.book-open-variant-icon {
+  display: inline-block;
+  justify-self: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  background: url('/src/assets/svg/book-open-variant.svg') no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  border: 1px solid #d9d7bc;
+  border-radius: 4px;
+}

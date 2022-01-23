@@ -1,0 +1,43 @@
+.items-container {
+  display: grid;
+  grid-template-columns: auto minmax(64px, max-content) max-content max-content;
+  gap: 4px;
+  align-items: center;
+  height: fit-content;
+  background-color: #030404;
+
+  & > * {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+  }
+}
+
+.item-image {
+  padding: 4px;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+}
+
+.item-name-link {
+  width: 100%;
+  padding: 4px;
+
+  > * {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.item-recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

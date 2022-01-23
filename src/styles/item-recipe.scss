@@ -1,0 +1,27 @@
+.item-recipe-item {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding: 0 8px 0 4px;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(white, .08);
+  }
+}
+
+.item-recipe-markers {
+  display: flex;
+  gap: 8px;
+}
+
+.time-sand-icon {
+  display: inline-block;
+  justify-self: center;
+  width: 24px;
+  height: 24px;
+  background: url('/src/assets/svg/timer-sand-complete.svg') no-repeat;
+}
