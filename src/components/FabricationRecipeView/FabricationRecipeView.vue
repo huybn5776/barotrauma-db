@@ -2,13 +2,18 @@
   <div v-for="(recipe, index) of recipes" :key="index" class="fabrication-recipe">
     <div class="recipe-items">
       <p v-if="recipe.displayName" class="recipe-display-name">{{ recipe.displayName }}</p>
-      <div v-for="item of recipe.items" :key="item.item.identifier" class="item-recipe-item">
+      <a
+        v-for="item of recipe.items"
+        :key="item.item.identifier"
+        class="item-recipe-item"
+        :href="`#${item.item.identifier}`"
+      >
         <ItemImage :item="item.item" :size="32" />
         <div>
           <span>{{ item.item.name + (item.count === 1 ? '' : ` × ${item.count}`) }}</span>
           <span v-if="item.condition">&ensp;({{ item.condition }})</span>
         </div>
-      </div>
+      </a>
 
       <div class="item-recipe-markers">
         <div class="item-recipe-item">

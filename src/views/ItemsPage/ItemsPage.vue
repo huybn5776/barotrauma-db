@@ -1,7 +1,7 @@
 <template>
   <div class="items-container">
     <template v-for="item of availableItems" :key="item.identifier">
-      <div class="item-image">
+      <div class="item-image" :id="item.identifier">
         <ItemImage :item="item" />
       </div>
 

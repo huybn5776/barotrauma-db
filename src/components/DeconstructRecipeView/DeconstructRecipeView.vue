@@ -1,9 +1,9 @@
 <template>
   <div class="deconstruct-item">
-    <div v-for="itemRecipe of recipe" :key="itemRecipe.item.identifier" class="item-recipe-item">
-      <ItemImage :item="itemRecipe.item" :size="32" />
-      <span>{{ itemRecipe.item.name + (itemRecipe.count === 1 ? '' : ` × ${itemRecipe.count}`) }}</span>
-    </div>
+    <a v-for="item of recipe" :key="item.item.identifier" class="item-recipe-item" :href="`#${item.item.identifier}`">
+      <ItemImage :item="item.item" :size="32" />
+      <span>{{ item.item.name + (item.count === 1 ? '' : ` × ${item.count}`) }}</span>
+    </a>
     <div v-if="recipe.length && item.deconstructTime" class="item-recipe-item">
       <i class="time-sand-icon" />
       <span>{{ item.deconstructTime }} </span>
