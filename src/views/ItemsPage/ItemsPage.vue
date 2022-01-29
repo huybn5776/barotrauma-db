@@ -2,13 +2,13 @@
   <div class="items-container">
     <div class="items-grid-header" />
     <div class="items-grid-header">
-      <SearchInput placeholder="Name" @value="nameSearchTerm = $event" />
+      <SearchInput placeholder="Name" v-model="nameSearchTerm" />
     </div>
     <div class="items-grid-header">
-      <span class="item-header-text">Recipes</span>
+      <SearchInput placeholder="Recipe" v-model="recipeSearchTerm" />
     </div>
     <div class="items-grid-header">
-      <span class="item-header-text">Deconstruct</span>
+      <SearchInput placeholder="Deconstruct" v-model="deconstructSearchTerm" />
     </div>
     <div class="items-grid-header">
       <span class="item-header-text">Price</span>
@@ -55,9 +55,8 @@ import FabricationRecipeView from '@components/FabricationRecipeView/Fabrication
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
+import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { SettingKey } from '@enums/setting-key';
-import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
-import { FabricationRecipeInfo } from '@interfaces/fabrication-recipe-info';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
 import { Locale } from '@interfaces/locale';
@@ -68,16 +67,17 @@ import { getSettingFromStorage } from '@utils/storage-utils';
 const excludedNameIdentifiers = ['unidentifiedgeneticmaterial', 'geneticmaterial'];
 
 const nameSearchTerm = ref('');
+const recipeSearchTerm = ref('');
+const deconstructSearchTerm = ref('');
+
+const itemFilter = computed<ItemFilterCondition>(() => ({
+  name: nameSearchTerm.value,
+  recipe: recipeSearchTerm.value,
+  deconstruct: deconstructSearchTerm.value,
+}));
 
 const itemsViewData = ref<ItemViewData[]>([]);
-const visibleItems = computed<ItemViewData[]>(() =>
-  itemsViewData.value.filter(
-    ({ item }) =>
-      !nameSearchTerm.value ||
-      item.name?.includes(nameSearchTerm.value) ||
-      item.englishName?.includes(nameSearchTerm.value),
-  ),
-);
+const visibleItems = useFilterItem(itemsViewData, itemFilter);
 
 onMounted(async () => {
   const originalItems: ItemPrefab[] = await (await fetch('/data-source/items/items.json')).json();
