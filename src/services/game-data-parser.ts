@@ -114,7 +114,6 @@ function parseLocationPrice(subPriceElement: Element): LocationPriceInfo {
     multiplier: getNumberValue(subPriceElement, 'multiplier'),
     minAvailable: getNumberValue(subPriceElement, 'minAvailable'),
     maxAvailable: getNumberValue(subPriceElement, 'maxAvailable'),
-    buyPrice: getNumberValue(subPriceElement, 'buyPrice'),
     sold: getBooleanValue(subPriceElement, 'sold'),
   } as LocationPriceInfo;
 }

@@ -12,11 +12,11 @@ export interface ItemPrefab {
   description?: string;
   variantOf?: string;
   category: string;
-  tags: string[];
-  price: PriceInfo;
-  fabricationRecipes: FabricationRecipe[];
-  deconstructTime: number;
-  deconstructItems: DeconstructItem[];
+  tags?: string[];
+  price?: PriceInfo;
+  fabricationRecipes?: FabricationRecipe[];
+  deconstructTime?: number;
+  deconstructItems?: DeconstructItem[];
   maxStackSize: number;
   sprite?: SpriteImage;
   infectedIcon?: SpriteImage;

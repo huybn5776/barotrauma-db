@@ -1,8 +1,9 @@
+import { LocationType } from '@enums/location-type';
+
 export interface LocationPriceInfo {
-  locationType:string;
-  multiplier:number;
-  minAvailable: number;
-  maxAvailable: number;
-  buyPrice: number;
-  sold: boolean;
+  locationType: LocationType;
+  multiplier?: number;
+  minAvailable?: number;
+  maxAvailable?: number;
+  sold?: boolean;
 }

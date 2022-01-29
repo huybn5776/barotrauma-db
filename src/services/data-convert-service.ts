@@ -21,7 +21,10 @@ export function convertFabricationRecipe(
 
   const itemsCountMap: Record<string, { count: number; item: ItemPrefab; requiredItem: RequiredItem }> = {};
   fabricationRecipe.requiredItems.forEach((requiredItem) => {
-    const item = itemsMap[requiredItem.identifier] || allItems.find((i) => i.tags?.includes(requiredItem.tag));
+    const item = findRecipeItemByIdentifier(requiredItem, itemsMap) || findRecipeItemByTag(requiredItem, allItems);
+    if (!item) {
+      return;
+    }
     const itemCount =
       itemsCountMap[item.identifier] ?? (itemsCountMap[item.identifier] = { count: 0, item, requiredItem });
     itemCount.count += 1;
@@ -37,6 +40,18 @@ export function convertFabricationRecipe(
     displayName: getDisplayName(sourceItem, fabricationRecipe, context),
     items: countedItems,
   };
+}
+
+function findRecipeItemByIdentifier(
+  requiredItem: RequiredItem,
+  itemsMap: Record<string, ItemPrefab>,
+): ItemPrefab | undefined {
+  return (requiredItem.identifier && itemsMap[requiredItem.identifier]) || undefined;
+}
+
+function findRecipeItemByTag(requiredItem: RequiredItem, allItems: ItemPrefab[]): ItemPrefab | undefined {
+  const { tag } = requiredItem;
+  return (tag && allItems.find((item) => item.tags?.includes(tag))) || undefined;
 }
 
 function getRequiredItemCondition(item: RequiredItem): string | undefined {
@@ -73,7 +88,7 @@ export function convertDeconstructRecipe(
   sourceItem: ItemPrefab,
   context: DataConvertContext,
 ): DeconstructRecipeInfo | undefined {
-  if (!sourceItem.deconstructItems?.length) {
+  if (!sourceItem.deconstructItems?.length || !sourceItem.deconstructTime) {
     return undefined;
   }
   const itemsCountMap: Record<string, number> = {};

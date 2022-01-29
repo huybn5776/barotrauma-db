@@ -3,27 +3,27 @@ export interface DeconstructItem {
   /**
    * minCondition does <= check, meaning that below or equal to min condition will be skipped.
    */
-  minCondition: number;
+  minCondition?: number;
   /**
    * maxCondition does > check, meaning that above this max the deconstruct item will be skipped.
    */
-  maxCondition: number;
+  maxCondition?: number;
   /**
    * Condition of item on creation
    */
-  outCondition: number;
-  outConditionMin: number;
-  outConditionMax: number;
+  outCondition?: number;
+  outConditionMin?: number;
+  outConditionMax?: number;
   /**
    * should the condition of the deconstructed item be copied to the output items
    */
-  copyCondition: boolean;
+  copyCondition?: boolean;
   /**
    * tag/identifier of the deconstructor(s) that can be used to deconstruct the item into this
    */
-  requiredDeconstructor: string;
+  requiredDeconstructor?: string;
   /**
    * tag/identifier of other item(s) that that need to be present in the deconstructor to deconstruct the item into this
    */
-  requiredOtherItem: string;
+  requiredOtherItem?: string;
 }
