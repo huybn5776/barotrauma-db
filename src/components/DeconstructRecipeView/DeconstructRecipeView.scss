@@ -5,7 +5,7 @@
   height: 100%;
   padding: 4px 0;
 
-  &:hover {
+  &:not(.empty-deconstruct-item):hover {
     background-color: rgba(white, .04);
   }
 }

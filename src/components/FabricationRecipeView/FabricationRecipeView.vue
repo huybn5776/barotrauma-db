@@ -16,7 +16,7 @@
       </a>
 
       <div class="item-recipe-markers">
-        <div class="item-recipe-item">
+        <div class="recipe-required-time">
           <i class="time-sand-icon" />
           <span>{{ recipe.requiredTime }}</span>
         </div>

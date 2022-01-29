@@ -1,5 +1,5 @@
 <template>
-  <div class="deconstruct-item">
+  <div class="deconstruct-item" :class="{ 'empty-deconstruct-item': !recipe }">
     <a
       v-for="{ count, item } of recipe?.items"
       :key="item.identifier"
@@ -9,7 +9,7 @@
       <ItemImage :item="item" :size="32" />
       <span>{{ item.name + (count === 1 ? '' : ` × ${count}`) }}</span>
     </a>
-    <div v-if="recipe?.items.length && recipe.time" class="item-recipe-item">
+    <div v-if="recipe?.items.length && recipe.time" class="recipe-required-time">
       <i class="time-sand-icon" />
       <span>{{ recipe.time }} </span>
     </div>
@@ -21,7 +21,7 @@ import ItemImage from '@components/ItemImage/ItemImage.vue';
 import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = defineProps<{ recipe: DeconstructRecipeInfo }>();
+const props = defineProps<{ recipe: DeconstructRecipeInfo | undefined }>();
 </script>
 
 <style lang="scss" scoped>
