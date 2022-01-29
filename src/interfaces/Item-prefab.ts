@@ -21,4 +21,5 @@ export interface ItemPrefab {
   sprite?: SpriteImage;
   infectedIcon?: SpriteImage;
   containedSprites?: SpriteImage[];
+  decorativeSprite?: SpriteImage[];
 }

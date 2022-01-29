@@ -1,0 +1,43 @@
+.item-switch-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(white, .08);
+  }
+}
+
+.item-collectible {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4px;
+}
+
+.item-collectible-name {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+  margin: 0;
+  background-color: rgba(#191919, .8);
+  box-shadow: 6px 6px 6px -2px rgba(#191919, .8);
+}
+
+.item-collectible-images {
+  display: flex;
+  width: 100%;
+}
+
+.collectible-image {
+  margin-bottom: -6px;
+}

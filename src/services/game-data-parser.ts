@@ -42,6 +42,7 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
         sprite: parseSprite(getChildrenOf(item, 'Sprite')[0]),
         infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0]),
         containedSprites: getChildrenOf(item, 'ContainedSprite').map(parseSprite),
+        decorativeSprite: getChildrenOf(item, 'DecorativeSprite').map(parseSprite),
       }) as ItemPrefab;
     });
   });
@@ -191,6 +192,10 @@ function parseSprite(spriteElement: Element): SpriteImage | undefined {
     depth: getNumberValue(spriteElement, 'depth'),
     sheetIndex: getNumberArray(spriteElement, 'sheetIndex'),
     sheetElementSize: getNumberArray(spriteElement, 'sheetElementSize'),
+    randomGroupId: getNumberValue(spriteElement, 'randomGroupId'),
+    randomRotation: getNumberArray(spriteElement, 'randomRotation'),
+    randomScale: getNumberArray(spriteElement, 'randomScale'),
+    randomOffset: getNumberArray(spriteElement, 'randomOffset'),
   }) as SpriteImage;
 }
 

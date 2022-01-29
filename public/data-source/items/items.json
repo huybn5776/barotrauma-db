@@ -1172,7 +1172,37 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          338,
+          1768,
+          89,
+          92
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.75
+      },
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          428,
+          1778,
+          49,
+          49
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.7
+      }
+    ]
   },
   {
     "identifier": "artifactholder",
@@ -1192,7 +1222,79 @@
         425
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          746,
+          1246,
+          21,
+          153
+        ],
+        "origin": [
+          0.5,
+          0.7
+        ],
+        "depth": 0.7
+      },
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          776,
+          1246,
+          20,
+          153
+        ],
+        "origin": [
+          0.5,
+          0.7
+        ],
+        "depth": 0.9
+      },
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          805,
+          1251,
+          7,
+          153
+        ],
+        "origin": [
+          0.5,
+          0.7
+        ],
+        "depth": 0.7
+      },
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          818,
+          1246,
+          19,
+          153
+        ],
+        "origin": [
+          0.5,
+          0.7
+        ],
+        "depth": 0.9
+      },
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          837,
+          1246,
+          19,
+          153
+        ],
+        "origin": [
+          0.5,
+          0.7
+        ],
+        "depth": 0.7
+      }
+    ]
   },
   {
     "identifier": "aliengenerator",
@@ -1211,7 +1313,23 @@
         573
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Alien/Legacy/AlienRuin_Legacy.png",
+        "sourceRect": [
+          0,
+          468,
+          178,
+          178
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.799
+      }
+    ]
   },
   {
     "identifier": "alienpowercell",
@@ -1562,7 +1680,23 @@
         0.5
       ],
       "depth": 0.84
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Alien/AlienRuins_Items.png",
+        "sourceRect": [
+          226,
+          700,
+          301,
+          296
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.78
+      }
+    ]
   },
   {
     "identifier": "alienterminal",
@@ -1738,7 +1872,23 @@
         0.5
       ],
       "depth": 0.6
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Alien/guardianpod.png",
+        "sourceRect": [
+          345,
+          0,
+          338,
+          658
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.03
+      }
+    ]
   },
   {
     "identifier": "alienlight1",
@@ -2039,7 +2189,23 @@
         0.5
       ],
       "depth": 0.79
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "button.png",
+        "sourceRect": [
+          64,
+          63,
+          63,
+          62
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.78
+      }
+    ]
   },
   {
     "identifier": "navterminal",
@@ -2377,7 +2543,79 @@
         0.5
       ],
       "depth": 0.84
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "DivingSuitLocker.png",
+        "sourceRect": [
+          0,
+          340,
+          232,
+          69
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "DivingSuitLocker.png",
+        "sourceRect": [
+          0,
+          340,
+          232,
+          69
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "DivingSuitLocker.png",
+        "sourceRect": [
+          0,
+          340,
+          232,
+          69
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "DivingSuitLocker.png",
+        "sourceRect": [
+          0,
+          340,
+          232,
+          69
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "DivingSuitLocker.png",
+        "sourceRect": [
+          0,
+          340,
+          232,
+          69
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      }
+    ]
   },
   {
     "identifier": "oxygentankshelf",
@@ -2629,7 +2867,23 @@
         0.5
       ],
       "depth": 0.85
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "containers.png",
+        "sourceRect": [
+          188,
+          682,
+          124,
+          33
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.5
+      }
+    ]
   },
   {
     "identifier": "loosepanel",
@@ -2849,7 +3103,23 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "UnitLoadDevice.png",
+        "sourceRect": [
+          0,
+          457,
+          567,
+          446
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.85
+      }
+    ]
   },
   {
     "identifier": "metalcrate_event",
@@ -7561,7 +7831,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "door.png",
+        "sourceRect": [
+          49,
+          0,
+          49,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "windoweddoor",
@@ -7582,7 +7868,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "door.png",
+        "sourceRect": [
+          49,
+          0,
+          49,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "hatch",
@@ -7624,7 +7926,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "door2.png",
+        "sourceRect": [
+          0,
+          0,
+          170,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "windoweddoorwbuttons",
@@ -7645,7 +7963,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "door2.png",
+        "sourceRect": [
+          0,
+          0,
+          170,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "hatchwbuttons",
@@ -7666,7 +8000,23 @@
         0.5
       ],
       "depth": 0.7
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "hatch.png",
+        "sourceRect": [
+          0,
+          234,
+          256,
+          193
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "dockingport",
@@ -12806,7 +13156,23 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Engines.png",
+        "sourceRect": [
+          0,
+          0,
+          659,
+          317
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.7999
+      }
+    ]
   },
   {
     "identifier": "largeengine",
@@ -12828,7 +13194,23 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Engines.png",
+        "sourceRect": [
+          0,
+          317,
+          1613,
+          592
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.7999
+      }
+    ]
   },
   {
     "identifier": "shuttleengine",
@@ -12850,7 +13232,23 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Engines.png",
+        "sourceRect": [
+          1615,
+          318,
+          426,
+          178
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.7999
+      }
+    ]
   },
   {
     "identifier": "fabricator",
@@ -12869,7 +13267,57 @@
         400
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          908,
+          301,
+          116,
+          87
+        ],
+        "depth": 0.84
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          825,
+          395,
+          114,
+          83
+        ],
+        "depth": 0.81
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.83
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          805,
+          537,
+          54,
+          54
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.83
+      }
+    ]
   },
   {
     "identifier": "medicalfabricator",
@@ -12911,7 +13359,103 @@
         320
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          866,
+          484,
+          156,
+          105
+        ],
+        "depth": 0.84
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.83
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.81
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.83
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "Fabricators/FabricatorsAndDeconstructors.png",
+        "sourceRect": [
+          944,
+          395,
+          74,
+          74
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.81
+      }
+    ]
   },
   {
     "identifier": "op_researchterminal",
@@ -16403,6 +16947,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          0,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          0,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          0,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -16486,6 +17212,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          382,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          416,
+          254,
+          96,
+          116
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          382,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          416,
+          254,
+          96,
+          116
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          382,
+          0,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          416,
+          254,
+          96,
+          116
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -16571,6 +17479,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          128,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          128,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          128,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          128,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          128,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          128,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -16655,6 +17745,134 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          382,
+          128,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          412,
+          374,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          382,
+          128,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          412,
+          374,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -16738,6 +17956,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          256,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          256,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          256,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          256,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          95,
+          256,
+          97,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/LootablePlants.png",
+        "sourceRect": [
+          191,
+          256,
+          96,
+          128
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -16824,6 +18224,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -16903,6 +18485,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          731,
+          85,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          731,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          731,
+          85,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          731,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          731,
+          85,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          731,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -16981,6 +18745,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -17064,6 +19010,188 @@
         ],
         "depth": 0.5
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          170,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          170,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          170,
+          3,
+          84,
+          144
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17146,6 +19274,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          585,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          585,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          585,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          0,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17225,6 +19535,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17303,6 +19795,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          585,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          585,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          585,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          585,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          585,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          585,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -17386,6 +20060,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17467,6 +20323,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          293,
+          86,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          293,
+          86,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          293,
+          86,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -17550,6 +20588,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17625,6 +20845,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          292,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          292,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          292,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          292,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -17708,6 +21110,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17786,6 +21370,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          438,
+          87,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          438,
+          84,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          438,
+          87,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          438,
+          84,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          438,
+          87,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          438,
+          84,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -17869,6 +21635,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -17951,6 +21899,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18026,6 +22156,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          341,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          0,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -18108,6 +22420,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          146,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          146,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          146,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -18194,6 +22688,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          441,
+          86,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          441,
+          86,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          441,
+          86,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18279,6 +22955,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          438,
+          88,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          440,
+          84,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          438,
+          88,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          440,
+          84,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          84,
+          438,
+          88,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          440,
+          84,
+          146
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18358,6 +23216,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          853,
+          146,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18436,6 +23476,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          0,
+          84,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          0,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          0,
+          84,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          0,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          0,
+          84,
+          145
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          0,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -18519,6 +23741,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          597,
+          877,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18598,6 +24002,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          256,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          426,
+          731,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18676,6 +24262,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          438,
+          86,
+          148
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -18759,6 +24527,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          512,
+          877,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          681,
+          877,
+          87,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18837,6 +24787,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          146,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          146,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -18917,6 +25049,188 @@
         ],
         "depth": 0.55
       }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          292,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          292,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          292,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          292,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          85,
+          292,
+          88,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          172,
+          292,
+          84,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
+      }
     ]
   },
   {
@@ -18992,6 +25306,188 @@
           0.5
         ],
         "depth": 0.55
+      }
+    ],
+    "decorativeSprite": [
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.49,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.48,
+        "randomGroupId": 1,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.51,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.52,
+        "randomGroupId": 2,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          30
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          938,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.491,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/MineralEnvironment.png",
+        "sourceRect": [
+          768,
+          585,
+          86,
+          147
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.53,
+        "randomGroupId": 3,
+        "randomRotation": [
+          -20,
+          20
+        ],
+        "randomScale": [
+          0.8,
+          1.5
+        ],
+        "randomOffset": [
+          30,
+          10
+        ]
+      },
+      {
+        "texture": "Materials/Minerals.png",
+        "sourceRect": [
+          810,
+          893,
+          173,
+          131
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.4,
+        "randomRotation": [
+          -20,
+          20
+        ]
       }
     ]
   },
@@ -23112,7 +29608,93 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          400,
+          416,
+          48
+        ],
+        "origin": [
+          0.5,
+          3.5
+        ],
+        "depth": 0.85
+      },
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          480,
+          416,
+          32
+        ],
+        "origin": [
+          0.5,
+          5
+        ],
+        "depth": 0.82
+      },
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          512,
+          416,
+          32
+        ],
+        "origin": [
+          0.5,
+          4.5
+        ],
+        "depth": 0.83
+      },
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          544,
+          416,
+          32
+        ],
+        "origin": [
+          0.5,
+          4
+        ],
+        "depth": 0.84
+      },
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          578,
+          416,
+          32
+        ],
+        "origin": [
+          0.5,
+          3.5
+        ],
+        "depth": 0.85
+      },
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          416,
+          656,
+          416,
+          112
+        ],
+        "origin": [
+          0.5,
+          0.8
+        ],
+        "depth": 0.86
+      }
+    ]
   },
   {
     "identifier": "shuttleoxygenerator",
@@ -23149,7 +29731,19 @@
         143
       ],
       "depth": 0.91
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          852,
+          180,
+          121,
+          121
+        ],
+        "depth": 0.92
+      }
+    ]
   },
   {
     "identifier": "loosevent",
@@ -23168,7 +29762,19 @@
         143
       ],
       "depth": 0.91
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "oxygengenerator.png",
+        "sourceRect": [
+          852,
+          180,
+          121,
+          121
+        ],
+        "depth": 0.92
+      }
+    ]
   },
   {
     "identifier": "pump",
@@ -23190,7 +29796,33 @@
         0.5
       ],
       "depth": 0.8
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Pump/Pumps.png",
+        "sourceRect": [
+          52,
+          456,
+          43,
+          43
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.79
+      },
+      {
+        "texture": "Pump/Pumps.png",
+        "sourceRect": [
+          109,
+          456,
+          43,
+          43
+        ],
+        "depth": 0.78
+      }
+    ]
   },
   {
     "identifier": "smallpump",
@@ -26220,7 +32852,23 @@
         0.5
       ],
       "depth": 0.78
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Loaders.png",
+        "sourceRect": [
+          31,
+          569,
+          117,
+          200
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.8
+      }
+    ]
   },
   {
     "identifier": "coilgunbolt",
@@ -26782,7 +33430,23 @@
         0.5
       ],
       "depth": 0.78
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Loaders.png",
+        "sourceRect": [
+          31,
+          569,
+          117,
+          200
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.8
+      }
+    ]
   },
   {
     "identifier": "chaingunbolt",
@@ -28114,7 +34778,23 @@
         0.5
       ],
       "depth": 0.785
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Loaders.png",
+        "sourceRect": [
+          31,
+          569,
+          117,
+          200
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.8
+      }
+    ]
   },
   {
     "identifier": "pulselaserbolt",
@@ -28440,7 +35120,23 @@
         0.5
       ],
       "depth": 0.78
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "Loaders.png",
+        "sourceRect": [
+          31,
+          569,
+          117,
+          200
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.8
+      }
+    ]
   },
   {
     "identifier": "railgunshell",
@@ -32820,7 +39516,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems2.png",
+        "sourceRect": [
+          817,
+          212,
+          44,
+          417
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "windoweddoorwrecked",
@@ -32843,7 +39555,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems2.png",
+        "sourceRect": [
+          816,
+          212,
+          46,
+          417
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "hatchwrecked",
@@ -32889,7 +39617,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems.png",
+        "sourceRect": [
+          335,
+          566,
+          170,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "windoweddoorwbuttonswrecked",
@@ -32912,7 +39656,23 @@
         0.5
       ],
       "depth": 0.51
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems.png",
+        "sourceRect": [
+          335,
+          566,
+          170,
+          416
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "hatchwbuttonswrecked",
@@ -32935,7 +39695,23 @@
         0.5
       ],
       "depth": 0.7
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems2.png",
+        "sourceRect": [
+          478,
+          829,
+          256,
+          193
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.89
+      }
+    ]
   },
   {
     "identifier": "dockingportwrecked",
@@ -33293,7 +40069,23 @@
         0.5
       ],
       "depth": 0.85
-    }
+    },
+    "decorativeSprite": [
+      {
+        "texture": "WreckedItems.png",
+        "sourceRect": [
+          622,
+          702,
+          124,
+          33
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.5
+      }
+    ]
   },
   {
     "identifier": "navterminalwrecked",

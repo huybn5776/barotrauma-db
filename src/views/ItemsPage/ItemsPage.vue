@@ -41,13 +41,22 @@
 
       <div class="item-name">
         <a
+          v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
           class="item-name-link"
           target="_blank"
-          :href="`https://barotraumagame.com/baro-wiki/index.php?search=${item.englishName || item.name}`"
+          :href="`https://barotraumagame.com/baro-wiki/index.php?search=${
+            viewData.item.englishName || viewData.item.name
+          }`"
         >
           <p>{{ viewData.item.name }}</p>
           <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
         </a>
+        <CollectibleItemImage
+          v-if="viewData.collectibleItemImages?.length"
+          :item="viewData"
+          :showCollectibleImage="showCollectibleImage"
+          @toggleView="showCollectibleImage = !showCollectibleImage"
+        />
       </div>
 
       <div class="item-recipe">
@@ -87,6 +96,7 @@ import { onMounted, ref, computed } from 'vue';
 
 import { indexBy } from 'ramda';
 
+import CollectibleItemImage from '@components/CollectibleItemImage/CollectibleItemImage.vue';
 import DeconstructRecipeView from '@components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
@@ -105,6 +115,7 @@ import {
   convertDeconstructRecipe,
   convertSoldIn,
   checkGainAndUsage,
+  convertCollectibleItemImages,
 } from '@services/data-convert-service';
 import { mergeItemsName, mergeVariant } from '@services/game-data-parser';
 import { getSettingFromStorage } from '@utils/storage-utils';
@@ -117,6 +128,8 @@ const deconstructSearchTerm = ref('');
 
 const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
+
+const showCollectibleImage = ref(false);
 
 const itemFilter = computed<ItemFilterCondition>(() => ({
   name: nameSearchTerm.value,
@@ -157,8 +170,15 @@ function itemPrefabToViewData(items: ItemPrefab[], context: DataConvertContext):
         ) || [];
       const deconstructRecipe = convertDeconstructRecipe(item, context);
       const soldPrices = convertSoldIn(item);
+      const collectibleItemImages = convertCollectibleItemImages(item);
 
-      return { item, fabricationRecipes, deconstructRecipe, soldPrices } as ItemViewData;
+      return {
+        item,
+        fabricationRecipes,
+        deconstructRecipe,
+        soldPrices,
+        collectibleItemImages,
+      } as ItemViewData;
     })
     .map((viewData) => ({ ...viewData, ...checkGainAndUsage(viewData, context) }));
 }

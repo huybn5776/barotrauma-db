@@ -36,13 +36,15 @@
 }
 
 .item-name {
+  position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .item-name-link {
-  width: 100%;
   padding: 4px;
+  overflow-x: hidden;
 
   > * {
     width: 100%;

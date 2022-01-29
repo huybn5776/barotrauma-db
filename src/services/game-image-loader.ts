@@ -10,7 +10,9 @@ export function getAllRequiredImages(items: ItemPrefab[], filesMap: Record<strin
     .filter((item) => item.fabricationRecipes?.length || item.deconstructItems?.length || item.price)
     .flatMap((item) => [
       item.infectedIcon || item.sprite,
-      ...(item.tags?.includes('ore') ? item.containedSprites || [] : []),
+      ...(item.tags?.includes('ore') || item.tags?.includes('plant')
+        ? [...(item.containedSprites || []), ...(item.decorativeSprite || [])]
+        : []),
     ])
     .filter(isNotNil)
     .map((sprite) => sprite.texture);

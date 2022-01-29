@@ -5,4 +5,8 @@ export interface SpriteImage {
   origin?: [number, number];
   sheetIndex?: [number, number];
   sheetElementSize?: [number, number];
+  randomGroupId?: number;
+  randomRotation?: [number, number];
+  randomScale?: [number, number];
+  randomOffset?: [number, number];
 }

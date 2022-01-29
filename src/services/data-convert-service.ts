@@ -1,3 +1,5 @@
+import { indexBy, sortBy } from 'ramda';
+
 import { LocationType } from '@enums/location-type';
 import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
@@ -7,6 +9,7 @@ import { ItemViewData } from '@interfaces/item-view-data';
 import { Locale } from '@interfaces/locale';
 import { RecipeItem } from '@interfaces/recipe-item';
 import { RequiredItem } from '@interfaces/required-item';
+import { SpriteImage } from '@interfaces/sprite';
 import { isNotNilOrEmpty } from '@utils/object-utils';
 
 export interface DataConvertContext {
@@ -161,4 +164,20 @@ function checkItemHasUsage(itemId: string, allItems: ItemPrefab[]): boolean {
       fabricationRecipe.requiredItems.some((requiredItem) => requiredItem.identifier === itemId),
     ),
   );
+}
+
+export function convertCollectibleItemImages(sourceItem: ItemPrefab): SpriteImage[] | undefined {
+  const targetTags = ['ore', 'plant'];
+  const isCollectibleTarget = targetTags.some((tag) => sourceItem.tags?.includes(tag));
+  if (!isCollectibleTarget || !sourceItem.containedSprites?.length) {
+    return undefined;
+  }
+
+  const sprites = [
+    ...sourceItem.containedSprites,
+    ...(sourceItem.decorativeSprite || []).filter((sprite) => sprite.randomGroupId !== undefined),
+  ];
+  const spritesIndex = indexBy((sprite) => sprite.sourceRect?.join(','), sprites);
+  const nonDuplicatedSprites = Object.values(spritesIndex).filter(isNotNilOrEmpty);
+  return sortBy((sprite) => sprite.sourceRect?.[0] || 0, nonDuplicatedSprites);
 }
