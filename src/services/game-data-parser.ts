@@ -99,13 +99,13 @@ function getChildrenOf(node: ParentNode, tagName: string | string[]): Element[] 
 }
 
 function parsePrice(priceElement: Element): PriceInfo {
-  return {
+  return deleteNilProperties({
     basePrice: getNumberValue(priceElement, 'basePrice'),
     soldEverywhere: getBooleanValue(priceElement, 'soldEverywhere'),
     canBeSpecial: getBooleanValue(priceElement, 'canBeSpecial'),
     minLevelDifficulty: getNumberValue(priceElement, 'minLevelDifficulty'),
     locations: getChildrenOf(priceElement, 'Price').map(parseLocationPrice),
-  } as PriceInfo;
+  }) as PriceInfo;
 }
 
 function parseLocationPrice(subPriceElement: Element): LocationPriceInfo {

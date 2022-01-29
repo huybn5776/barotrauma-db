@@ -8,8 +8,7 @@
     ],
     "price": {
       "basePrice": 10,
-      "soldEverywhere": false,
-      "locations": []
+      "soldEverywhere": false
     },
     "maxStackSize": 1,
     "sprite": {
@@ -45,8 +44,7 @@
     ],
     "price": {
       "basePrice": 10,
-      "soldEverywhere": false,
-      "locations": []
+      "soldEverywhere": false
     },
     "maxStackSize": 1,
     "sprite": {
@@ -12757,8 +12755,7 @@
     ],
     "price": {
       "basePrice": 100,
-      "soldEverywhere": false,
-      "locations": []
+      "soldEverywhere": false
     },
     "maxStackSize": 1,
     "sprite": {
@@ -32164,8 +32161,7 @@
     ],
     "price": {
       "basePrice": 10,
-      "soldEverywhere": true,
-      "locations": []
+      "soldEverywhere": true
     },
     "maxStackSize": 1,
     "sprite": {
@@ -39119,8 +39115,7 @@
     ],
     "price": {
       "basePrice": 150,
-      "soldEverywhere": false,
-      "locations": []
+      "soldEverywhere": false
     },
     "fabricationRecipes": [
       {
