@@ -1,0 +1,10 @@
+.usage-item-container {
+  display: flex;
+  grid-column: 2 / 6;
+  align-items: center;
+  padding: 4px;
+
+  > p {
+    margin: 0;
+  }
+}

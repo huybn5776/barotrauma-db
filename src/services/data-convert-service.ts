@@ -1,10 +1,13 @@
+import { LocationType } from '@enums/location-type';
 import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
 import { FabricationRecipeInfo } from '@interfaces/fabrication-recipe-info';
 import { ItemPrefab } from '@interfaces/Item-prefab';
+import { ItemViewData } from '@interfaces/item-view-data';
 import { Locale } from '@interfaces/locale';
 import { RecipeItem } from '@interfaces/recipe-item';
 import { RequiredItem } from '@interfaces/required-item';
+import { isNotNilOrEmpty } from '@utils/object-utils';
 
 export interface DataConvertContext {
   itemsMap: Record<string, ItemPrefab>;
@@ -118,4 +121,44 @@ function orderItemInFabricationRecipe(sourceItem: ItemPrefab, deconstructItems: 
     }
   });
   return [...sortingItems, ...pickingItems];
+}
+
+export function convertSoldIn(sourceItem: ItemPrefab): Partial<Record<LocationType, number>> | undefined {
+  const { price } = sourceItem;
+  if (!price || !price.locations) {
+    return undefined;
+  }
+  const soldPrices: Partial<Record<LocationType, number>> = {};
+  price.locations.forEach((location) => {
+    if (location.sold !== false) {
+      soldPrices[location.locationType] = price.basePrice * (location.multiplier || 1);
+    }
+  });
+  return soldPrices;
+}
+
+export function checkGainAndUsage(
+  itemViewData: ItemViewData,
+  context: DataConvertContext,
+): { hasGain: boolean; hasUsage: boolean } {
+  const hasGain =
+    isNotNilOrEmpty(itemViewData.soldPrices) ||
+    itemViewData.fabricationRecipes.length > 0 ||
+    checkItemHasDeconstructRecipeForIt(itemViewData.item.identifier, context.allItems);
+  const hasUsage = checkItemHasUsage(itemViewData.item.identifier, context.allItems);
+  return { hasGain, hasUsage };
+}
+
+function checkItemHasDeconstructRecipeForIt(itemId: string, allItems: ItemPrefab[]): boolean {
+  return allItems.some((item) =>
+    item.deconstructItems?.some((deconstructItem) => deconstructItem.identifier === itemId),
+  );
+}
+
+function checkItemHasUsage(itemId: string, allItems: ItemPrefab[]): boolean {
+  return allItems.some((item) =>
+    item.fabricationRecipes?.some((fabricationRecipe) =>
+      fabricationRecipe.requiredItems.some((requiredItem) => requiredItem.identifier === itemId),
+    ),
+  );
 }

@@ -1,6 +1,6 @@
 .items-container {
   display: grid;
-  grid-template-columns: auto minmax(64px, max-content) max-content max-content max-content;
+  grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content auto;
   gap: 4px;
   align-items: center;
   height: fit-content;
@@ -18,7 +18,7 @@
   padding: 0 8px;
   text-align: center;
 
-  &:first-child {
+  &.empty-header {
     background-color: transparent;
   }
 }
@@ -57,4 +57,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-around;
+  padding: 4px 8px;
+}
+
+.b-button.item-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  height: 28px;
+  overflow-x: hidden;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gain-item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }

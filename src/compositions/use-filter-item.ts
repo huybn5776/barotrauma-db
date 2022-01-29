@@ -2,6 +2,7 @@ import { computed, ComputedRef, Ref } from 'vue';
 
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
+import { isNotNilOrEmpty } from '@utils/object-utils';
 
 export interface ItemFilterCondition {
   name?: string;
@@ -24,7 +25,9 @@ export function useFilterItem(
       return (
         filterByName(itemViewData.item, name) &&
         filterByRecipe(itemViewData, recipe) &&
-        filterByDeconstruct(itemViewData, deconstruct)
+        filterByDeconstruct(itemViewData, deconstruct) &&
+        filterByGain(itemViewData, gainItemId) &&
+        filterByUsage(itemViewData, usageItemId)
       );
     });
   });
@@ -48,4 +51,22 @@ function filterByRecipe(itemViewData: ItemViewData, term: string | undefined): b
 
 function filterByDeconstruct(itemViewData: ItemViewData, term: string | undefined): boolean | undefined {
   return !term || itemViewData.deconstructRecipe?.items.some(({ item }) => filterByName(item, term));
+}
+
+function filterByGain(itemViewData: ItemViewData, gainItemId: string | undefined): boolean | undefined {
+  return (
+    !gainItemId ||
+    (itemViewData.item.identifier === gainItemId && isNotNilOrEmpty(itemViewData.item.fabricationRecipes)) ||
+    itemViewData.deconstructRecipe?.items.some(({ item }) => item.identifier === gainItemId)
+  );
+}
+
+function filterByUsage(itemViewData: ItemViewData, usageItemId: string | undefined): boolean | undefined {
+  return (
+    !usageItemId ||
+    (itemViewData.item.identifier === usageItemId && isNotNilOrEmpty(itemViewData.item.deconstructItems)) ||
+    itemViewData.fabricationRecipes.some((fabricationRecipe) =>
+      fabricationRecipe.items.some(({ item }) => item.identifier === usageItemId),
+    )
+  );
 }

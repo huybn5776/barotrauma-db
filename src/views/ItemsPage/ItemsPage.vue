@@ -1,6 +1,6 @@
 <template>
   <div class="items-container">
-    <div class="items-grid-header" />
+    <div class="items-grid-header empty-header" />
     <div class="items-grid-header">
       <SearchInput placeholder="Name" v-model="nameSearchTerm" />
     </div>
@@ -13,10 +13,30 @@
     <div class="items-grid-header">
       <span class="item-header-text">Price</span>
     </div>
+    <div class="items-grid-header empty-header" />
 
-    <template v-for="{ item, fabricationRecipes, deconstructRecipe } of visibleItems" :key="item.identifier">
-      <div class="item-image" :id="item.identifier">
-        <ItemImage :item="item" />
+    <template v-if="gainItem">
+      <div class="gain-item-image">
+        <ItemImage :item="gainItem?.item" :size="32" />
+      </div>
+      <ItemGainView v-if="gainItem" :item="gainItem" />
+      <div class="item-actions">
+        <button class="b-button item-action-button" @click="resetFilter">Reset</button>
+      </div>
+    </template>
+    <template v-if="usageItem">
+      <div class="gain-item-image">
+        <ItemImage :item="usageItem?.item" :size="32" />
+      </div>
+      <ItemUsageView v-if="usageItem" :item="usageItem" />
+      <div class="item-actions">
+        <button class="b-button item-action-button" @click="resetFilter">Reset</button>
+      </div>
+    </template>
+
+    <template v-for="viewData of visibleItems" :key="viewData.item.identifier">
+      <div class="item-image" :id="viewData.item.identifier">
+        <ItemImage :item="viewData.item" :size="64" />
       </div>
 
       <div class="item-name">
@@ -25,21 +45,38 @@
           target="_blank"
           :href="`https://barotraumagame.com/baro-wiki/index.php?search=${item.englishName || item.name}`"
         >
-          <p>{{ item.name }}</p>
-          <p v-if="item.englishName">{{ item.englishName }}</p>
+          <p>{{ viewData.item.name }}</p>
+          <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
         </a>
       </div>
 
       <div class="item-recipe">
-        <FabricationRecipeView :recipes="fabricationRecipes" />
+        <FabricationRecipeView :recipes="viewData.fabricationRecipes" />
       </div>
 
       <div class="item-recipe">
-        <DeconstructRecipeView :recipe="deconstructRecipe" />
+        <DeconstructRecipeView :recipe="viewData.deconstructRecipe" />
       </div>
 
       <div>
-        <ItemPriceView :item="item" />
+        <ItemPriceView :item="viewData.item" />
+      </div>
+
+      <div class="item-actions">
+        <button
+          v-if="viewData.hasGain"
+          class="b-button item-action-button deconstruct-button"
+          @click="findItemGain(viewData)"
+        >
+          Gain
+        </button>
+        <button
+          v-if="viewData.hasUsage"
+          class="b-button item-action-button recipe-button"
+          @click="findItemUsage(viewData)"
+        >
+          Usage
+        </button>
       </div>
     </template>
   </div>
@@ -52,15 +89,23 @@ import { indexBy } from 'ramda';
 
 import DeconstructRecipeView from '@components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
+import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
+import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
 import { Locale } from '@interfaces/locale';
-import { DataConvertContext, convertFabricationRecipe, convertDeconstructRecipe } from '@services/data-convert-service';
+import {
+  DataConvertContext,
+  convertFabricationRecipe,
+  convertDeconstructRecipe,
+  convertSoldIn,
+  checkGainAndUsage,
+} from '@services/data-convert-service';
 import { mergeItemsName, mergeVariant } from '@services/game-data-parser';
 import { getSettingFromStorage } from '@utils/storage-utils';
 
@@ -70,10 +115,15 @@ const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
 const deconstructSearchTerm = ref('');
 
+const gainItem = ref<ItemViewData>();
+const usageItem = ref<ItemViewData>();
+
 const itemFilter = computed<ItemFilterCondition>(() => ({
   name: nameSearchTerm.value,
   recipe: recipeSearchTerm.value,
   deconstruct: deconstructSearchTerm.value,
+  gainItemId: gainItem.value?.item.identifier,
+  usageItemId: usageItem.value?.item.identifier,
 }));
 
 const itemsViewData = ref<ItemViewData[]>([]);
@@ -99,16 +149,42 @@ onMounted(async () => {
 });
 
 function itemPrefabToViewData(items: ItemPrefab[], context: DataConvertContext): ItemViewData[] {
-  return items.map((item) => {
-    const fabricationRecipes = item.fabricationRecipes?.map((fabricationRecipe) =>
-      convertFabricationRecipe(item, fabricationRecipe, context),
-    ) || [];
-    const deconstructRecipe = convertDeconstructRecipe(item, context);
-    return { item, fabricationRecipes, deconstructRecipe };
-  });
+  return items
+    .map((item) => {
+      const fabricationRecipes =
+        item.fabricationRecipes?.map((fabricationRecipe) =>
+          convertFabricationRecipe(item, fabricationRecipe, context),
+        ) || [];
+      const deconstructRecipe = convertDeconstructRecipe(item, context);
+      const soldPrices = convertSoldIn(item);
+
+      return { item, fabricationRecipes, deconstructRecipe, soldPrices } as ItemViewData;
+    })
+    .map((viewData) => ({ ...viewData, ...checkGainAndUsage(viewData, context) }));
+}
+
+function resetFilter(): void {
+  nameSearchTerm.value = '';
+  recipeSearchTerm.value = '';
+  deconstructSearchTerm.value = '';
+  usageItem.value = undefined;
+  gainItem.value = undefined;
+}
+
+function findItemGain(item: ItemViewData): void {
+  resetFilter();
+  gainItem.value = item;
+  document.getElementsByClassName('app')[0].scrollTop = 0;
+}
+
+function findItemUsage(item: ItemViewData): void {
+  resetFilter();
+  usageItem.value = item;
+  document.getElementsByClassName('app')[0].scrollTop = 0;
 }
 </script>
 
 <style lang="scss" scoped>
 @import './ItemsPage';
+@import '/src/styles/common';
 </style>
