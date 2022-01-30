@@ -33,7 +33,7 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
         descriptionIdentifier: getAttrValue(item, 'descriptionIdentifier'),
         category: getAttrValue(item, 'category'),
         variantOf: getAttrValue(item, 'variantOf'),
-        tags: (getAttrValue(item, 'tags') || getAttrValue(item, 'Tags'))?.split(','),
+        tags: (getAttrValue(item, 'tags') || getAttrValue(item, 'Tags'))?.split(',').map((s) => s.trim()),
         price: priceElement ? parsePrice(priceElement) : undefined,
         fabricationRecipes: parseRecipes(getChildrenOf(item, 'Fabricate')),
         deconstructTime: deconstruct?.time,
