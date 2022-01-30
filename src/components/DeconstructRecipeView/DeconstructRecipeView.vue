@@ -5,6 +5,7 @@
       :key="item.identifier"
       class="item-recipe-item"
       :href="`#${item.identifier}`"
+      @click="emits('itemClick', $event, item)"
     >
       <ItemImage :item="item" :size="32" />
       <span>{{ item.name + (count === 1 ? '' : ` × ${count}`) }}</span>
@@ -19,9 +20,11 @@
 <script lang="ts" setup>
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
+import { ItemPrefab } from '@interfaces/Item-prefab';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<{ recipe: DeconstructRecipeInfo | undefined }>();
+const emits = defineEmits<{ (e: 'itemClick', event: MouseEvent, item: ItemPrefab): void }>();
 </script>
 
 <style lang="scss" scoped>

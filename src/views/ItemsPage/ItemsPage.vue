@@ -35,11 +35,15 @@
     </template>
 
     <template v-for="viewData of visibleItems" :key="viewData.item.identifier">
-      <div class="item-image" :id="viewData.item.identifier">
+      <div
+        class="item-image"
+        :id="viewData.item.identifier"
+        :class="{ 'highlight-item': highlightItem === viewData.item.identifier }"
+      >
         <ItemImage :item="viewData.item" :size="64" />
       </div>
 
-      <div class="item-name">
+      <div class="item-name" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
         <a
           v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
           class="item-name-link"
@@ -59,19 +63,25 @@
         />
       </div>
 
-      <div class="item-recipe">
-        <FabricationRecipeView :recipes="viewData.fabricationRecipes" />
+      <div class="item-recipe" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+        <FabricationRecipeView
+          :recipes="viewData.fabricationRecipes"
+          @itemClick="(event, item) => onNavigateToItem(event, item)"
+        />
       </div>
 
-      <div class="item-recipe">
-        <DeconstructRecipeView :recipe="viewData.deconstructRecipe" />
+      <div class="item-recipe" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+        <DeconstructRecipeView
+          :recipe="viewData.deconstructRecipe"
+          @itemClick="(event, item) => onNavigateToItem(event, item)"
+        />
       </div>
 
-      <div>
+      <div :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
         <ItemPriceView :item="viewData.item" />
       </div>
 
-      <div class="item-actions">
+      <div class="item-actions" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
         <button
           v-if="viewData.hasGain"
           class="b-button item-action-button deconstruct-button"
@@ -128,6 +138,7 @@ const deconstructSearchTerm = ref('');
 
 const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
+const highlightItem = ref<string>();
 
 const showCollectibleImage = ref(false);
 
@@ -201,6 +212,22 @@ function findItemUsage(item: ItemViewData): void {
   resetFilter();
   usageItem.value = item;
   document.getElementsByClassName('app')[0].scrollTop = 0;
+}
+
+function onNavigateToItem(event: MouseEvent, item: ItemPrefab): void {
+  const isTargetItemVisibleOnPage = visibleItems.value.find((i) => i.item.identifier === item.identifier);
+  if (isTargetItemVisibleOnPage) {
+    highLightOneItem(item.identifier);
+  }
+}
+
+function highLightOneItem(identifier: string): void {
+  highlightItem.value = identifier;
+  setTimeout(() => {
+    if (highlightItem.value === identifier) {
+      highlightItem.value = undefined;
+    }
+  }, 1000);
 }
 </script>
 

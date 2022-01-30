@@ -55,6 +55,20 @@
   }
 }
 
+.highlight-item {
+  animation: blink 1s;
+}
+
+@keyframes blink {
+  from {
+    background-color: rgba(yellow, .5);
+  }
+
+  to {
+    background-color: #191919;
+  }
+}
+
 .item-recipe {
   display: flex;
   flex-direction: column;
