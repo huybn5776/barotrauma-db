@@ -115,6 +115,7 @@ import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
+import { useHighlightItem } from '@compositions/use-highlight-item';
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
@@ -128,7 +129,7 @@ const deconstructSearchTerm = ref('');
 
 const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
-const highlightItem = ref<string>();
+const { highlightItem, highLightOneItem } = useHighlightItem('highlight-item');
 
 const showCollectibleImage = ref(false);
 
@@ -177,15 +178,6 @@ function onNavigateToItem(event: MouseEvent, item: ItemPrefab): void {
   if (isTargetItemVisibleOnPage) {
     highLightOneItem(item.identifier);
   }
-}
-
-function highLightOneItem(identifier: string): void {
-  highlightItem.value = identifier;
-  setTimeout(() => {
-    if (highlightItem.value === identifier) {
-      highlightItem.value = undefined;
-    }
-  }, 1000);
 }
 </script>
 
