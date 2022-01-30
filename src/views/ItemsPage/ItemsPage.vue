@@ -118,19 +118,9 @@ import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-ite
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
-import { Locale } from '@interfaces/locale';
-import {
-  DataConvertContext,
-  convertFabricationRecipe,
-  convertDeconstructRecipe,
-  convertSoldIn,
-  checkGainAndUsage,
-  convertCollectibleItemImages,
-} from '@services/data-convert-service';
-import { mergeItemsName, mergeVariant } from '@services/game-data-parser';
+import { DataConvertContext, itemsToViewData } from '@services/data-convert-service';
+import { getAllItemsAndLocale, filterAvailableItems } from '@services/data-source-service';
 import { getSettingFromStorage } from '@utils/storage-utils';
-
-const excludedNameIdentifiers = ['unidentifiedgeneticmaterial', 'geneticmaterial'];
 
 const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
@@ -154,45 +144,13 @@ const itemsViewData = ref<ItemViewData[]>([]);
 const visibleItems = useFilterItem(itemsViewData, itemFilter);
 
 onMounted(async () => {
-  const originalItems: ItemPrefab[] = await (await fetch('/data-source/items/items.json')).json();
-  const englishLocale: Locale = await (await fetch(`/data-source/texts/english.json`)).json();
   const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'traditional-chinese';
-  const targetLocale: Locale = await (await fetch(`/data-source/texts/${preferredLocale}.json`)).json();
-
-  const validItems = originalItems.filter((item) => item.category !== 'Legacy');
-  const itemsWithLocale = mergeItemsName(validItems, targetLocale, englishLocale);
-  const allItems = mergeVariant(itemsWithLocale);
-
-  const availableItems = allItems
-    .filter((item) => item.fabricationRecipes?.length || item.deconstructItems?.length || item.price)
-    .filter(({ nameIdentifier }) => !(nameIdentifier && excludedNameIdentifiers.includes(nameIdentifier)));
-
-  const itemsMap = indexBy((item) => item.identifier, allItems);
-  const context: DataConvertContext = { itemsMap, allItems, locale: targetLocale };
-  itemsViewData.value = itemPrefabToViewData(availableItems, context);
+  const { items, locale } = await getAllItemsAndLocale(preferredLocale);
+  const availableItems = filterAvailableItems(items);
+  const itemsMap = indexBy((item) => item.identifier, items);
+  const context: DataConvertContext = { itemsMap, items, locale };
+  itemsViewData.value = itemsToViewData(availableItems, context);
 });
-
-function itemPrefabToViewData(items: ItemPrefab[], context: DataConvertContext): ItemViewData[] {
-  return items
-    .map((item) => {
-      const fabricationRecipes =
-        item.fabricationRecipes?.map((fabricationRecipe) =>
-          convertFabricationRecipe(item, fabricationRecipe, context),
-        ) || [];
-      const deconstructRecipe = convertDeconstructRecipe(item, context);
-      const soldPrices = convertSoldIn(item);
-      const collectibleItemImages = convertCollectibleItemImages(item);
-
-      return {
-        item,
-        fabricationRecipes,
-        deconstructRecipe,
-        soldPrices,
-        collectibleItemImages,
-      } as ItemViewData;
-    })
-    .map((viewData) => ({ ...viewData, ...checkGainAndUsage(viewData, context) }));
-}
 
 function resetFilter(): void {
   nameSearchTerm.value = '';

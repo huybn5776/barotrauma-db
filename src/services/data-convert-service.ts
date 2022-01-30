@@ -14,8 +14,30 @@ import { isNotNilOrEmpty } from '@utils/object-utils';
 
 export interface DataConvertContext {
   itemsMap: Record<string, ItemPrefab>;
-  allItems: ItemPrefab[];
+  items: ItemPrefab[];
   locale: Locale;
+}
+
+export function itemsToViewData(items: ItemPrefab[], context: DataConvertContext): ItemViewData[] {
+  return items
+    .map((item) => {
+      const fabricationRecipes =
+        item.fabricationRecipes?.map((fabricationRecipe) =>
+          convertFabricationRecipe(item, fabricationRecipe, context),
+        ) || [];
+      const deconstructRecipe = convertDeconstructRecipe(item, context);
+      const soldPrices = convertSoldIn(item);
+      const collectibleItemImages = convertCollectibleItemImages(item);
+
+      return {
+        item,
+        fabricationRecipes,
+        deconstructRecipe,
+        soldPrices,
+        collectibleItemImages,
+      } as ItemViewData;
+    })
+    .map((viewData) => ({ ...viewData, ...checkGainAndUsage(viewData, context) }));
 }
 
 export function convertFabricationRecipe(
@@ -23,11 +45,11 @@ export function convertFabricationRecipe(
   fabricationRecipe: FabricationRecipe,
   context: DataConvertContext,
 ): FabricationRecipeInfo {
-  const { itemsMap, allItems } = context;
+  const { itemsMap, items } = context;
 
   const itemsCountMap: Record<string, { count: number; item: ItemPrefab; requiredItem: RequiredItem }> = {};
   fabricationRecipe.requiredItems.forEach((requiredItem) => {
-    const item = findRecipeItemByIdentifier(requiredItem, itemsMap) || findRecipeItemByTag(requiredItem, allItems);
+    const item = findRecipeItemByIdentifier(requiredItem, itemsMap) || findRecipeItemByTag(requiredItem, items);
     if (!item) {
       return;
     }
@@ -147,8 +169,8 @@ export function checkGainAndUsage(
   const hasGain =
     isNotNilOrEmpty(itemViewData.soldPrices) ||
     itemViewData.fabricationRecipes.length > 0 ||
-    checkItemHasDeconstructRecipeForIt(itemViewData.item.identifier, context.allItems);
-  const hasUsage = checkItemHasUsage(itemViewData.item.identifier, context.allItems);
+    checkItemHasDeconstructRecipeForIt(itemViewData.item.identifier, context.items);
+  const hasUsage = checkItemHasUsage(itemViewData.item.identifier, context.items);
   return { hasGain, hasUsage };
 }
 
