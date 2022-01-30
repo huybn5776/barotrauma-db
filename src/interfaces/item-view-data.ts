@@ -12,4 +12,5 @@ export interface ItemViewData {
   collectibleItemImages: SpriteImage[];
   hasGain?: boolean;
   hasUsage?: boolean;
+  isTemporaryRow?: boolean;
 }

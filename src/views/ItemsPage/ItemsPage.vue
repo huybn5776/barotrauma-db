@@ -34,16 +34,25 @@
       </div>
     </template>
 
-    <template v-for="viewData of visibleItems" :key="viewData.item.identifier">
+    <template v-for="viewData of itemsToShow" :key="viewData.item.identifier">
       <div
         class="item-image"
         :id="viewData.item.identifier"
-        :class="{ 'highlight-item': highlightItem === viewData.item.identifier }"
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
       >
         <ItemImage :item="viewData.item" :size="64" />
       </div>
 
-      <div class="item-name" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+      <div
+        class="item-name"
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
+      >
         <a
           v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
           class="item-name-link"
@@ -63,25 +72,48 @@
         />
       </div>
 
-      <div class="item-recipe" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+      <div
+        class="item-recipe"
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
+      >
         <FabricationRecipeView
           :recipes="viewData.fabricationRecipes"
-          @itemClick="(event, item) => onNavigateToItem(event, item)"
+          @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
         />
       </div>
 
-      <div class="item-recipe" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+      <div
+        class="item-recipe"
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
+      >
         <DeconstructRecipeView
           :recipe="viewData.deconstructRecipe"
-          @itemClick="(event, item) => onNavigateToItem(event, item)"
+          @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
         />
       </div>
 
-      <div :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+      <div
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
+      >
         <ItemPriceView :item="viewData.item" />
       </div>
 
-      <div class="item-actions" :class="{ 'highlight-item': highlightItem === viewData.item.identifier }">
+      <div
+        class="item-actions"
+        :class="{
+          'highlight-item': highlightItem === viewData.item.identifier,
+          'temporary-row': viewData.isTemporaryRow,
+        }"
+      >
         <button
           v-if="viewData.hasGain"
           class="b-button item-action-button deconstruct-button"
@@ -116,6 +148,7 @@ import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { useHighlightItem } from '@compositions/use-highlight-item';
+import { useTemporaryItem } from '@compositions/use-temporary-item';
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
@@ -143,6 +176,12 @@ const itemFilter = computed<ItemFilterCondition>(() => ({
 
 const itemsViewData = ref<ItemViewData[]>([]);
 const visibleItems = useFilterItem(itemsViewData, itemFilter);
+const {
+  visibleItemsWithInsert: itemsWithTemporaryItems,
+  setTemporaryItem,
+  clearTemporaryItems,
+} = useTemporaryItem(visibleItems, itemsViewData);
+const itemsToShow = itemsWithTemporaryItems;
 
 onMounted(async () => {
   const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'traditional-chinese';
@@ -159,6 +198,7 @@ function resetFilter(): void {
   deconstructSearchTerm.value = '';
   usageItem.value = undefined;
   gainItem.value = undefined;
+  clearTemporaryItems();
 }
 
 function findItemGain(item: ItemViewData): void {
@@ -173,11 +213,15 @@ function findItemUsage(item: ItemViewData): void {
   document.getElementsByClassName('app')[0].scrollTop = 0;
 }
 
-function onNavigateToItem(event: MouseEvent, item: ItemPrefab): void {
+function onNavigateToItem(event: MouseEvent, item: ItemPrefab, sourceViewData: ItemViewData): void {
   const isTargetItemVisibleOnPage = visibleItems.value.find((i) => i.item.identifier === item.identifier);
   if (isTargetItemVisibleOnPage) {
-    highLightOneItem(item.identifier);
+    highLightOneItem(event, item.identifier);
+    return;
   }
+  setTemporaryItem(item, sourceViewData);
+  event.preventDefault();
+  setTimeout(() => highLightOneItem(event, item.identifier));
 }
 </script>
 
