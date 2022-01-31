@@ -152,6 +152,7 @@ import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { useHighlightItem } from '@compositions/use-highlight-item';
+import { useMitt } from '@compositions/use-mitt';
 import { useTemporaryItem } from '@compositions/use-temporary-item';
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
@@ -159,6 +160,8 @@ import { ItemViewData } from '@interfaces/item-view-data';
 import { DataConvertContext, itemsToViewData } from '@services/data-convert-service';
 import { getAllItemsAndLocale, filterAvailableItems } from '@services/data-source-service';
 import { getSettingFromStorage } from '@utils/storage-utils';
+
+const { onEvent } = useMitt();
 
 const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
@@ -189,13 +192,18 @@ const {
 } = useTemporaryItem(visibleItems, itemsViewData);
 const itemsToShow = itemsWithTemporaryItems;
 
-onMounted(async () => {
+async function getItemsViewData(): Promise<ItemViewData[]> {
   const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'english';
   const { items, locale } = await getAllItemsAndLocale(preferredLocale);
   const availableItems = filterAvailableItems(items);
   const itemsMap = indexBy((item) => item.identifier, items);
   const context: DataConvertContext = { itemsMap, items, locale };
-  itemsViewData.value = itemsToViewData(availableItems, context);
+  return itemsToViewData(availableItems, context);
+}
+
+onMounted(async () => {
+  itemsViewData.value = await getItemsViewData();
+  onEvent('locale-updated', async () => (itemsViewData.value = await getItemsViewData()));
 });
 
 function resetFilter(): void {
