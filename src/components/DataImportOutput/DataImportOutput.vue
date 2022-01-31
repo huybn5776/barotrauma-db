@@ -66,10 +66,18 @@ function downloadTexts(): void {
   const filesToArchive: Record<string, Uint8Array> = {};
   props.convertResult.texts.forEach((locale) => {
     const json = JSON.stringify(locale, null, 2);
-    const fileName = `${locale.language.replace(' ', '-').toLocaleLowerCase()}.json`;
+    const fileName = `${getLocaleKey(locale)}.json`;
     filesToArchive[fileName] = strToU8(json);
   });
+
+  const locales = props.convertResult.texts.map((locale) => ({ key: getLocaleKey(locale), name: locale.name }));
+  filesToArchive['locales.json'] = strToU8(JSON.stringify(locales, null, 2));
+
   archiveFilesAndDownload('texts', filesToArchive);
+}
+
+function getLocaleKey(locale: Locale): string {
+  return locale.language.replace(' ', '-').toLocaleLowerCase();
 }
 
 async function downloadImages(): Promise<void> {

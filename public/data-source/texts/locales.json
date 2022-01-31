@@ -1,0 +1,54 @@
+[
+  {
+    "key": "english",
+    "name": "English"
+  },
+  {
+    "key": "german",
+    "name": "Deutsch"
+  },
+  {
+    "key": "french",
+    "name": "Français"
+  },
+  {
+    "key": "russian",
+    "name": "Русский"
+  },
+  {
+    "key": "polish",
+    "name": "Polski"
+  },
+  {
+    "key": "brazilian-portuguese",
+    "name": "Português brasileiro"
+  },
+  {
+    "key": "castilian-spanish",
+    "name": "Castellano"
+  },
+  {
+    "key": "latinamerican-spanish",
+    "name": "Español Latinoamericano"
+  },
+  {
+    "key": "simplified-chinese",
+    "name": "中文(简体)"
+  },
+  {
+    "key": "traditional-chinese",
+    "name": "中文(繁體)"
+  },
+  {
+    "key": "japanese",
+    "name": "日本語"
+  },
+  {
+    "key": "turkish",
+    "name": "Türkçe"
+  },
+  {
+    "key": "korean",
+    "name": "한국어"
+  }
+]

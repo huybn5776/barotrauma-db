@@ -1,5 +1,6 @@
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
+import { LocaleSelection } from '@interfaces/locale-selection';
 import { mergeItemsName, mergeVariant } from '@services/game-data-parser';
 
 export async function getAllItemsAndLocale(preferredLocale: string): Promise<{ items: ItemPrefab[]; locale: Locale }> {
@@ -13,6 +14,10 @@ export async function getAllItemsAndLocale(preferredLocale: string): Promise<{ i
   const validItems = originalItems.filter((item) => item.category !== 'Legacy');
   const itemsWithLocale = mergeItemsName(validItems, targetLocale, englishLocale);
   return { items: mergeVariant(itemsWithLocale), locale: targetLocale };
+}
+
+export async function getLocales(): Promise<LocaleSelection[]> {
+  return (await fetch(`/data-source/texts/locales.json`)).json();
 }
 
 export function filterAvailableItems(items: ItemPrefab[]): ItemPrefab[] {

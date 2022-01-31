@@ -190,7 +190,7 @@ const {
 const itemsToShow = itemsWithTemporaryItems;
 
 onMounted(async () => {
-  const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'traditional-chinese';
+  const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'english';
   const { items, locale } = await getAllItemsAndLocale(preferredLocale);
   const availableItems = filterAvailableItems(items);
   const itemsMap = indexBy((item) => item.identifier, items);
