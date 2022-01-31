@@ -1,135 +1,138 @@
 <template>
-  <div class="items-container">
-    <div class="items-grid-header empty-header" />
-    <div class="items-grid-header">
-      <SearchInput placeholder="Name" v-model="nameSearchTerm" />
-    </div>
-    <div class="items-grid-header">
-      <SearchInput placeholder="Recipe" v-model="recipeSearchTerm" />
-    </div>
-    <div class="items-grid-header">
-      <SearchInput placeholder="Deconstruct" v-model="deconstructSearchTerm" />
-    </div>
-    <div class="items-grid-header">
-      <span class="item-header-text">Price</span>
-    </div>
-    <div class="items-grid-header empty-header" />
+  <div class="items-page">
+    <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
+    <div class="items-container">
+      <div class="items-grid-header empty-header" />
+      <div class="items-grid-header">
+        <SearchInput placeholder="Name" v-model="nameSearchTerm" />
+      </div>
+      <div class="items-grid-header">
+        <SearchInput placeholder="Recipe" v-model="recipeSearchTerm" />
+      </div>
+      <div class="items-grid-header">
+        <SearchInput placeholder="Deconstruct" v-model="deconstructSearchTerm" />
+      </div>
+      <div class="items-grid-header">
+        <span class="item-header-text">Price</span>
+      </div>
+      <div class="items-grid-header empty-header" />
 
-    <template v-if="gainItem">
-      <div class="gain-item-image">
-        <ItemImage :item="gainItem?.item" :size="32" />
-      </div>
-      <ItemGainView v-if="gainItem" :item="gainItem" />
-      <div class="item-actions">
-        <button class="b-button item-action-button" @click="resetFilter">Reset</button>
-      </div>
-    </template>
-    <template v-if="usageItem">
-      <div class="gain-item-image">
-        <ItemImage :item="usageItem?.item" :size="32" />
-      </div>
-      <ItemUsageView v-if="usageItem" :item="usageItem" />
-      <div class="item-actions">
-        <button class="b-button item-action-button" @click="resetFilter">Reset</button>
-      </div>
-    </template>
+      <template v-if="gainItem">
+        <div class="gain-item-image">
+          <ItemImage :item="gainItem?.item" :size="32" />
+        </div>
+        <ItemGainView v-if="gainItem" :item="gainItem" />
+        <div class="item-actions">
+          <button class="b-button item-action-button" @click="resetFilter">Reset</button>
+        </div>
+      </template>
+      <template v-if="usageItem">
+        <div class="gain-item-image">
+          <ItemImage :item="usageItem?.item" :size="32" />
+        </div>
+        <ItemUsageView v-if="usageItem" :item="usageItem" />
+        <div class="item-actions">
+          <button class="b-button item-action-button" @click="resetFilter">Reset</button>
+        </div>
+      </template>
 
-    <template v-for="viewData of itemsToShow" :key="viewData.item.identifier">
-      <div
-        class="item-image"
-        :id="viewData.item.identifier"
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <ItemImage :item="viewData.item" :size="64" />
-      </div>
-
-      <div
-        class="item-name"
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <a
-          v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
-          class="item-name-link"
-          target="_blank"
-          :href="`https://barotraumagame.com/baro-wiki/index.php?search=${
-            viewData.item.englishName || viewData.item.name
-          }`"
+      <template v-for="viewData of itemsToShow" :key="viewData.item.identifier">
+        <div
+          class="item-image"
+          :id="viewData.item.identifier"
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
         >
-          <p>{{ viewData.item.name }}</p>
-          <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
-        </a>
-        <CollectibleItemImage
-          v-if="viewData.collectibleItemImages?.length"
-          :item="viewData"
-          :showCollectibleImage="showCollectibleImage"
-          @toggleView="showCollectibleImage = !showCollectibleImage"
-        />
-      </div>
+          <ItemImage :item="viewData.item" :size="64" />
+        </div>
 
-      <div
-        class="item-recipe"
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <FabricationRecipeView
-          :recipes="viewData.fabricationRecipes"
-          @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
-        />
-      </div>
-
-      <div
-        class="item-recipe"
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <DeconstructRecipeView
-          :recipe="viewData.deconstructRecipe"
-          @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
-        />
-      </div>
-
-      <div
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <ItemPriceView :item="viewData.item" />
-      </div>
-
-      <div
-        class="item-actions"
-        :class="{
-          'highlight-item': highlightItem === viewData.item.identifier,
-          'temporary-row': viewData.isTemporaryRow,
-        }"
-      >
-        <button
-          v-if="viewData.hasGain"
-          class="b-button item-action-button deconstruct-button"
-          @click="findItemGain(viewData)"
+        <div
+          class="item-name"
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
         >
-          Gain
-        </button>
-        <button
-          v-if="viewData.hasUsage"
-          class="b-button item-action-button recipe-button"
-          @click="findItemUsage(viewData)"
+          <a
+            v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
+            class="item-name-link"
+            target="_blank"
+            :href="`https://barotraumagame.com/baro-wiki/index.php?search=${
+              viewData.item.englishName || viewData.item.name
+            }`"
+          >
+            <p>{{ viewData.item.name }}</p>
+            <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
+          </a>
+          <CollectibleItemImage
+            v-if="viewData.collectibleItemImages?.length"
+            :item="viewData"
+            :showCollectibleImage="showCollectibleImage"
+            @toggleView="showCollectibleImage = !showCollectibleImage"
+          />
+        </div>
+
+        <div
+          class="item-recipe"
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
         >
-          Usage
-        </button>
-      </div>
-    </template>
+          <FabricationRecipeView
+            :recipes="viewData.fabricationRecipes"
+            @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
+          />
+        </div>
+
+        <div
+          class="item-recipe"
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
+        >
+          <DeconstructRecipeView
+            :recipe="viewData.deconstructRecipe"
+            @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
+          />
+        </div>
+
+        <div
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
+        >
+          <ItemPriceView :item="viewData.item" />
+        </div>
+
+        <div
+          class="item-actions"
+          :class="{
+            'highlight-item': highlightItem === viewData.item.identifier,
+            'temporary-row': viewData.isTemporaryRow,
+          }"
+        >
+          <button
+            v-if="viewData.hasGain"
+            class="b-button item-action-button deconstruct-button"
+            @click="findItemGain(viewData)"
+          >
+            Gain
+          </button>
+          <button
+            v-if="viewData.hasUsage"
+            class="b-button item-action-button recipe-button"
+            @click="findItemUsage(viewData)"
+          >
+            Usage
+          </button>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
 
@@ -144,6 +147,7 @@ import FabricationRecipeView from '@components/FabricationRecipeView/Fabrication
 import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
+import ItemTagsBar from '@components/ItemTagsBar/ItemTagsBar.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
@@ -159,6 +163,7 @@ import { getSettingFromStorage } from '@utils/storage-utils';
 const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
 const deconstructSearchTerm = ref('');
+const selectedTags = ref<string[]>([]);
 
 const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
@@ -170,6 +175,7 @@ const itemFilter = computed<ItemFilterCondition>(() => ({
   name: nameSearchTerm.value,
   recipe: recipeSearchTerm.value,
   deconstruct: deconstructSearchTerm.value,
+  tags: selectedTags.value,
   gainItemId: gainItem.value?.item.identifier,
   usageItemId: usageItem.value?.item.identifier,
 }));
@@ -196,6 +202,7 @@ function resetFilter(): void {
   nameSearchTerm.value = '';
   recipeSearchTerm.value = '';
   deconstructSearchTerm.value = '';
+  selectedTags.value = [];
   usageItem.value = undefined;
   gainItem.value = undefined;
   clearTemporaryItems();

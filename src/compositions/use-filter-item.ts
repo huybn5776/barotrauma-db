@@ -8,6 +8,7 @@ export interface ItemFilterCondition {
   name?: string;
   recipe?: string;
   deconstruct?: string;
+  tags?: string[];
   gainItemId?: string;
   usageItemId?: string;
 }
@@ -17,8 +18,8 @@ export function useFilterItem(
   filter: Ref<ItemFilterCondition>,
 ): ComputedRef<ItemViewData[]> {
   return computed(() => {
-    const { name, recipe, deconstruct, usageItemId, gainItemId } = filter.value;
-    if (!name && !recipe && !deconstruct && !usageItemId && !gainItemId) {
+    const { name, tags, recipe, deconstruct, usageItemId, gainItemId } = filter.value;
+    if (!name && !tags?.length && !recipe && !deconstruct && !usageItemId && !gainItemId) {
       return viewDataArrayRef.value;
     }
     return viewDataArrayRef.value.filter((itemViewData) => {
@@ -26,6 +27,7 @@ export function useFilterItem(
         filterByName(itemViewData.item, name) &&
         filterByRecipe(itemViewData, recipe) &&
         filterByDeconstruct(itemViewData, deconstruct) &&
+        filterByTags(itemViewData.item, tags) &&
         filterByGain(itemViewData, gainItemId) &&
         filterByUsage(itemViewData, usageItemId)
       );
@@ -51,6 +53,10 @@ function filterByRecipe(itemViewData: ItemViewData, term: string | undefined): b
 
 function filterByDeconstruct(itemViewData: ItemViewData, term: string | undefined): boolean | undefined {
   return !term || itemViewData.deconstructRecipe?.items.some(({ item }) => filterByName(item, term));
+}
+
+function filterByTags(item: ItemPrefab, tags: string[] | undefined): boolean | undefined {
+  return !tags?.length || tags.some((tag) => item.tags?.includes(tag));
 }
 
 function filterByGain(itemViewData: ItemViewData, gainItemId: string | undefined): boolean | undefined {

@@ -1,3 +1,7 @@
+.items-page {
+  height: 100%;
+}
+
 .items-container {
   display: grid;
   grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content auto;
