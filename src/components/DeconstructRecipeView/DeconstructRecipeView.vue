@@ -9,8 +9,8 @@
     >
       <ItemImage :item="item" :size="32" />
       <span>{{ item.name }}</span>
-      <span>{{ count === 1 ? '' : ` × ${count}` }}</span>
-      <span>{{ recipe?.[0]?.commonness ? ` ${recipe?.[0]?.commonness * 100}%` : '' }}</span>
+      <span v-if="count !== 1">{{ ` × ${count}` }}</span>
+      <span v-if="recipe?.[0]?.commonness">{{ ` ${recipe?.[0]?.commonness * 100}%` }}</span>
     </a>
     <div v-if="recipe?.items.length && recipe.time" class="recipe-required-time">
       <i class="time-sand-icon" />
