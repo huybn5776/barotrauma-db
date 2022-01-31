@@ -1,14 +1,16 @@
 <template>
   <div class="deconstruct-item" :class="{ 'empty-deconstruct-item': !recipe }">
     <a
-      v-for="{ count, item } of recipe?.items"
+      v-for="{ count, item, recipe } of recipe?.items"
       :key="item.identifier"
       class="item-recipe-item"
       :href="`#${item.identifier}`"
       @click="emits('itemClick', $event, item)"
     >
       <ItemImage :item="item" :size="32" />
-      <span>{{ item.name + (count === 1 ? '' : ` × ${count}`) }}</span>
+      <span>{{ item.name }}</span>
+      <span>{{ count === 1 ? '' : ` × ${count}` }}</span>
+      <span>{{ recipe?.[0]?.commonness ? ` ${recipe?.[0]?.commonness * 100}%` : '' }}</span>
     </a>
     <div v-if="recipe?.items.length && recipe.time" class="recipe-required-time">
       <i class="time-sand-icon" />

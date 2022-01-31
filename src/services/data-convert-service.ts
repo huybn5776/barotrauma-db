@@ -1,6 +1,7 @@
 import { indexBy, sortBy } from 'ramda';
 
 import { LocationType } from '@enums/location-type';
+import { DeconstructItem } from '@interfaces/deconstruct-item';
 import { DeconstructRecipeInfo } from '@interfaces/deconstruct-recipe-info';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
 import { FabricationRecipeInfo } from '@interfaces/fabrication-recipe-info';
@@ -61,6 +62,7 @@ export function convertFabricationRecipe(
     count,
     item,
     condition: getRequiredItemCondition(requiredItem),
+    recipe: fabricationRecipe.requiredItems.filter((i) => i.identifier === item.identifier),
   }));
 
   return {
@@ -116,28 +118,33 @@ export function convertDeconstructRecipe(
   sourceItem: ItemPrefab,
   context: DataConvertContext,
 ): DeconstructRecipeInfo | undefined {
-  if (!sourceItem.deconstructItems?.length || !sourceItem.deconstructTime) {
+  const { deconstructItems } = sourceItem;
+  if (!deconstructItems?.length || !sourceItem.deconstructTime) {
     return undefined;
   }
   const itemsCountMap: Record<string, number> = {};
-  sourceItem.deconstructItems.forEach((item) => {
+  deconstructItems.forEach((item) => {
     itemsCountMap[item.identifier] = (itemsCountMap[item.identifier] || 0) + (item.outCondition || 1);
   });
-  let deconstructItems: RecipeItem[] = Object.entries(itemsCountMap).map(([identifier, count]) => ({
+  let recipeItems: RecipeItem<DeconstructItem>[] = Object.entries(itemsCountMap).map(([identifier, count]) => ({
     count,
     item: context.itemsMap[identifier],
+    recipe: deconstructItems.filter((item) => item.identifier === identifier),
   }));
-  deconstructItems = orderItemInFabricationRecipe(sourceItem, deconstructItems);
-  return { time: sourceItem.deconstructTime, items: deconstructItems };
+  recipeItems = orderItemInFabricationRecipe(sourceItem, recipeItems);
+  return { time: sourceItem.deconstructTime, items: recipeItems };
 }
 
-function orderItemInFabricationRecipe(sourceItem: ItemPrefab, deconstructItems: RecipeItem[]): RecipeItem[] {
+function orderItemInFabricationRecipe(
+  sourceItem: ItemPrefab,
+  deconstructItems: RecipeItem<DeconstructItem>[],
+): RecipeItem<DeconstructItem>[] {
   const recipeItems = sourceItem.fabricationRecipes?.[0]?.requiredItems;
   if (!recipeItems) {
     return deconstructItems;
   }
   let pickingItems = [...deconstructItems];
-  const sortingItems: RecipeItem[] = [];
+  const sortingItems: RecipeItem<DeconstructItem>[] = [];
   recipeItems.forEach((recipeItem) => {
     const sameItem = pickingItems.find((pickingItem) => pickingItem.item.identifier === recipeItem.identifier);
     if (sameItem) {

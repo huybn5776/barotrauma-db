@@ -16805,39 +16805,48 @@
     "deconstructItems": [
       {
         "identifier": "iron",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.8
       },
       {
         "identifier": "thorium",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.2
       },
       {
         "identifier": "steel",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.6
       },
       {
         "identifier": "aluminium",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.6
       },
       {
         "identifier": "titaniumaluminiumalloy",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.3
       },
       {
         "identifier": "copper",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.8
       },
       {
         "identifier": "rubber",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.5
       },
       {
         "identifier": "carbon",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.6
       },
       {
         "identifier": "lead",
-        "copyCondition": true
+        "copyCondition": true,
+        "commonness": 0.7
       }
     ],
     "maxStackSize": 8,

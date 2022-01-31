@@ -176,6 +176,7 @@ function parseDeconstruct(deconstructElement: Element | null): {
       copyCondition: getBooleanValue(element, 'copyCondition'),
       requiredDeconstructor: getAttrValue(element, 'requiredDeconstructor'),
       requiredOtherItem: getAttrValue(element, 'requiredOtherItem'),
+      commonness: getNumberValue(element, 'commonness'),
     }) as DeconstructItem;
   });
   return { time, items };

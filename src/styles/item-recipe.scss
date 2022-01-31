@@ -1,7 +1,7 @@
 .item-recipe-item,
 .recipe-required-time {
-  display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
+  display: flex;
+  gap: 4px;
   align-items: center;
   box-sizing: border-box;
   width: 100%;

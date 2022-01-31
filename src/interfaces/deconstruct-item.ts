@@ -26,4 +26,6 @@ export interface DeconstructItem {
    * tag/identifier of other item(s) that that need to be present in the deconstructor to deconstruct the item into this
    */
   requiredOtherItem?: string;
+
+  commonness?: number;
 }
