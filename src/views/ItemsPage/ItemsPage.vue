@@ -38,8 +38,7 @@
 
       <template v-for="viewData of itemsToShow" :key="viewData.item.identifier">
         <div
-          class="item-image"
-          :id="viewData.item.identifier"
+          class="item-cell item-image"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -49,7 +48,9 @@
         </div>
 
         <div
-          class="item-name"
+          class="item-cell item-name"
+          v-item-intersection="{ enter: () => onItemRowEnter(viewData) }"
+          :id="viewData.item.identifier"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -75,7 +76,7 @@
         </div>
 
         <div
-          class="item-recipe"
+          class="item-cell item-recipe"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -88,7 +89,7 @@
         </div>
 
         <div
-          class="item-recipe"
+          class="item-cell item-recipe"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -101,6 +102,7 @@
         </div>
 
         <div
+          class="item-cell"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -110,7 +112,7 @@
         </div>
 
         <div
-          class="item-actions"
+          class="item-cell item-actions"
           :class="{
             'highlight-item': highlightItem === viewData.item.identifier,
             'temporary-row': viewData.isTemporaryRow,
@@ -132,6 +134,14 @@
           </button>
         </div>
       </template>
+
+      <p
+        class="items-lazy-render-padding"
+        :style="{ height: `${fillUpHeight}px` }"
+        v-padding-intersection="{ enter: () => onLazyRenderPaddingVisible() }"
+      >
+        ⇊ View all ⇊
+      </p>
     </div>
   </div>
 </template>
@@ -152,8 +162,10 @@ import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { useHighlightItem } from '@compositions/use-highlight-item';
+import { useLazyRender } from '@compositions/use-lazy-render';
 import { useMitt } from '@compositions/use-mitt';
 import { useTemporaryItem } from '@compositions/use-temporary-item';
+import { intersectionDirectiveFactory } from '@directives/IntersectionDirective';
 import { SettingKey } from '@enums/setting-key';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
@@ -162,6 +174,9 @@ import { getAllItemsAndLocale, filterAvailableItems } from '@services/data-sourc
 import { getSettingFromStorage } from '@utils/storage-utils';
 
 const { onEvent } = useMitt();
+
+const vItemIntersection = intersectionDirectiveFactory({ threshold: 0.1 });
+const vPaddingIntersection = intersectionDirectiveFactory({ threshold: 0 });
 
 const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
@@ -190,7 +205,11 @@ const {
   setTemporaryItem,
   clearTemporaryItems,
 } = useTemporaryItem(visibleItems, itemsViewData);
-const itemsToShow = itemsWithTemporaryItems;
+const { lazyRenderItems, fillUpHeight, onItemRowEnter, onLazyRenderPaddingVisible, renderAll } = useLazyRender(
+  visibleItems,
+  itemsWithTemporaryItems,
+);
+const itemsToShow = lazyRenderItems;
 
 async function getItemsViewData(): Promise<ItemViewData[]> {
   const preferredLocale = (await getSettingFromStorage(SettingKey.PreferredLocale)) || 'english';
@@ -228,7 +247,8 @@ function findItemUsage(item: ItemViewData): void {
   document.getElementsByClassName('app')[0].scrollTop = 0;
 }
 
-function onNavigateToItem(event: MouseEvent, item: ItemPrefab, sourceViewData: ItemViewData): void {
+async function onNavigateToItem(event: MouseEvent, item: ItemPrefab, sourceViewData: ItemViewData): Promise<void> {
+  await renderAll();
   const isTargetItemVisibleOnPage = visibleItems.value.find((i) => i.item.identifier === item.identifier);
   if (isTargetItemVisibleOnPage) {
     highLightOneItem(event, item.identifier);

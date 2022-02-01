@@ -4,7 +4,7 @@
 
 .items-container {
   display: grid;
-  grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content auto;
+  grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content 72px;
   gap: 4px;
   align-items: center;
   height: fit-content;
@@ -21,6 +21,10 @@
 .temporary-row {
   background-image: repeating-linear-gradient(135deg, rgba(white, .04), rgba(white, .04) 30px, transparent 30px, transparent 60px);
   background-size: 200% 100%;
+}
+
+.item-cell {
+  min-height: 72px;
 }
 
 .items-grid-header {
@@ -109,4 +113,13 @@
   align-items: center;
   justify-content: center;
   padding: 2px;
+}
+
+.items-lazy-render-padding {
+  grid-column: 1 / 7;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  background: transparent;
 }
