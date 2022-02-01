@@ -31,18 +31,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  width: 100%;
-  max-width: fit-content;
+  min-width: 100%;
+  max-width: min-content;
   padding: 16px 0;
 
   :not(.tags-expanded) > & {
     position: absolute;
     flex-wrap: nowrap;
     height: min-content;
-  }
-
-  .tags-expanded > & {
-    padding-right: 30px;
   }
 
   &::after {
