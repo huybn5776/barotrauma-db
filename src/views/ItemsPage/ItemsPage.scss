@@ -44,6 +44,16 @@
   height: 100%;
 }
 
+:deep(.item-column-filter-input) {
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &::placeholder {
+    color: white;
+    text-align: center;
+  }
+}
+
 .item-image {
   padding: 4px;
 }

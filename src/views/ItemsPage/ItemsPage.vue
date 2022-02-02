@@ -4,13 +4,13 @@
     <div class="items-container">
       <div class="items-grid-header empty-header" />
       <div class="items-grid-header">
-        <SearchInput placeholder="Name" v-model="nameSearchTerm" />
+        <SearchInput class="item-column-filter-input" placeholder="Name" v-model="nameSearchTerm" />
       </div>
       <div class="items-grid-header">
-        <SearchInput placeholder="Recipe" v-model="recipeSearchTerm" />
+        <SearchInput class="item-column-filter-input" placeholder="Recipe" v-model="recipeSearchTerm" />
       </div>
       <div class="items-grid-header">
-        <SearchInput placeholder="Deconstruct" v-model="deconstructSearchTerm" />
+        <SearchInput class="item-column-filter-input" placeholder="Deconstruct" v-model="deconstructSearchTerm" />
       </div>
       <div class="items-grid-header">
         <span class="item-header-text">Price</span>

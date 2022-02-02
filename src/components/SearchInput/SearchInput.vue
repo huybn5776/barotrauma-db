@@ -2,9 +2,11 @@
   <div class="search-input-container">
     <label class="search-input-label" :class="{ 'empty-input': !value }">
       <input
+        ref="inputRef"
         class="search-input"
         type="text"
         :placeholder="placeholder"
+        :class="$attrs.class"
         v-model.trim="value"
         @focus="focused = true"
         @blur="focused = false"
@@ -39,6 +41,12 @@ watchEffect(() => {
 watch(debouncedValue, () => {
   emits('update:modelValue', debouncedValue.value);
 });
+</script>
+
+<script lang="ts">
+export default {
+  inheritAttrs: false,
+};
 </script>
 
 <style lang="scss" scoped>
