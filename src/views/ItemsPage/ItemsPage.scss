@@ -2,6 +2,12 @@
   height: 100%;
 }
 
+.items-top-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px;
+}
+
 .items-container {
   display: grid;
   grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content 72px;

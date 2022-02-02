@@ -30,10 +30,13 @@ import { useDebounce } from '@compositions/use-debounce';
 const props = defineProps<{ modelValue?: string; placeholder: string }>();
 const emits = defineEmits<{ (e: 'update:modelValue', value: string): void }>();
 
+const inputRef = ref<HTMLInputElement>();
 const focused = ref(false);
 const value = ref('');
 const placeholder = computed<string | undefined>(() => (focused.value ? undefined : props.placeholder));
 const debouncedValue = useDebounce(value, { immediatelyClear: true });
+
+defineExpose({ input: inputRef });
 
 watchEffect(() => {
   value.value = props.modelValue || '';

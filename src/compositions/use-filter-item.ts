@@ -5,6 +5,7 @@ import { ItemViewData } from '@interfaces/item-view-data';
 import { isNotNilOrEmpty } from '@utils/object-utils';
 
 export interface ItemFilterCondition {
+  quickFilter?: string;
   name?: string;
   recipe?: string;
   deconstruct?: string;
@@ -18,12 +19,13 @@ export function useFilterItem(
   filter: Ref<ItemFilterCondition>,
 ): ComputedRef<ItemViewData[]> {
   return computed(() => {
-    const { name, tags, recipe, deconstruct, usageItemId, gainItemId } = filter.value;
-    if (!name && !tags?.length && !recipe && !deconstruct && !usageItemId && !gainItemId) {
+    const { quickFilter, name, tags, recipe, deconstruct, usageItemId, gainItemId } = filter.value;
+    if (!quickFilter && !name && !tags?.length && !recipe && !deconstruct && !usageItemId && !gainItemId) {
       return viewDataArrayRef.value;
     }
     return viewDataArrayRef.value.filter((itemViewData) => {
       return (
+        filterByQuickFilter(itemViewData, quickFilter) &&
         filterByName(itemViewData.item, name) &&
         filterByRecipe(itemViewData, recipe) &&
         filterByDeconstruct(itemViewData, deconstruct) &&
@@ -35,8 +37,17 @@ export function useFilterItem(
   });
 }
 
+function filterByQuickFilter(viewData: ItemViewData, quickFilter: string | undefined): boolean | undefined {
+  return (
+    !quickFilter ||
+    filterByName(viewData.item, quickFilter) ||
+    filterByRecipe(viewData, quickFilter) ||
+    filterByDeconstruct(viewData, quickFilter)
+  );
+}
+
 function filterByName(item: ItemPrefab, term: string | undefined): boolean | undefined {
-  return !term || item.name?.includes(term) || item.englishName?.includes(term);
+  return !term || item.name?.includes(term) || item.englishName?.toLowerCase()?.includes(term.toLowerCase());
 }
 
 function filterByRecipe(itemViewData: ItemViewData, term: string | undefined): boolean | undefined {

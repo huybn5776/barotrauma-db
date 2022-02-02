@@ -1,6 +1,10 @@
 <template>
   <div class="items-page">
-    <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
+    <div class="items-top-bar">
+      <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
+      <ItemQuickFilter v-model="quickFilter" />
+    </div>
+
     <div class="items-container">
       <div class="items-grid-header empty-header" />
       <div class="items-grid-header">
@@ -157,6 +161,7 @@ import FabricationRecipeView from '@components/FabricationRecipeView/Fabrication
 import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
+import ItemQuickFilter from '@components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@components/ItemTagsBar/ItemTagsBar.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
@@ -178,6 +183,7 @@ const { onEvent } = useMitt();
 const vItemIntersection = intersectionDirectiveFactory({ threshold: 0.1 });
 const vPaddingIntersection = intersectionDirectiveFactory({ threshold: 0 });
 
+const quickFilter = ref('');
 const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
 const deconstructSearchTerm = ref('');
@@ -190,6 +196,7 @@ const { highlightItem, highLightOneItem } = useHighlightItem('highlight-item');
 const showCollectibleImage = ref(false);
 
 const itemFilter = computed<ItemFilterCondition>(() => ({
+  quickFilter: quickFilter.value,
   name: nameSearchTerm.value,
   recipe: recipeSearchTerm.value,
   deconstruct: deconstructSearchTerm.value,
@@ -226,6 +233,7 @@ onMounted(async () => {
 });
 
 function resetFilter(): void {
+  quickFilter.value = '';
   nameSearchTerm.value = '';
   recipeSearchTerm.value = '';
   deconstructSearchTerm.value = '';

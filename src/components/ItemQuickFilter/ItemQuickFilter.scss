@@ -1,0 +1,36 @@
+.quick-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 30px;
+  height: 59px;
+}
+
+:deep(.quick-filter-input) {
+  width: 150px;
+  margin-left: 4px;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.search-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 28px;
+  padding: 0;
+  background: #333 url('/src/assets/svg/magnify.svg') center;
+  background-size: 24px 24px;
+  border: 0;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.4);
+  }
+}
