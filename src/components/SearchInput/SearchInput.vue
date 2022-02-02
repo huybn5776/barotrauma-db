@@ -16,9 +16,7 @@
       :class="{ 'hide-clear-button': !value }"
       aria-label="clear"
       @click="value = ''"
-    >
-      ×
-    </button>
+    />
   </div>
 </template>
 
