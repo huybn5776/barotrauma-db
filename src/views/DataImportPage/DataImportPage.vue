@@ -20,6 +20,7 @@
         </div>
       </ToolPanel>
     </FileDropZone>
+    <GithubFooter />
   </div>
 </template>
 
@@ -32,6 +33,7 @@ import DataImportInput from '@components/DataImportInput/DataImportInput.vue';
 import DataImportOutput from '@components/DataImportOutput/DataImportOutput.vue';
 import DateImportInstruction from '@components/DateImportInstruction/DateImportInstruction.vue';
 import FileDropZone from '@components/FileDropZone.vue';
+import GithubFooter from '@components/GithubFooter/GithubFooter.vue';
 import ToolPanel from '@components/ToolPanel/ToolPanel.vue';
 import ToolPanelSectionHeader from '@components/ToolPanelSectionHeader/ToolPanelSectionHeader.vue';
 import { RequiredImportType } from '@enums/required-import-type';
@@ -49,7 +51,7 @@ const loadedData = ref<{
   texts?: Record<string, File>;
 }>({});
 const percentageMap = ref<Partial<Record<RequiredImportType, number>>>({});
-const convertResult = ref<{ items?: ItemPrefab[]; texts?: Locale[], images?: Record<string, File> }>({});
+const convertResult = ref<{ items?: ItemPrefab[]; texts?: Locale[]; images?: Record<string, File> }>({});
 
 async function onFile(files: Record<string, File>): Promise<void> {
   const { contentPackage, items, texts } = await loadGameData(files, loadedData.value.contentPackage);
