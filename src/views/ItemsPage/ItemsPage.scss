@@ -33,7 +33,7 @@
   min-height: 72px;
 }
 
-.items-grid-header {
+:where(.items-grid-header) {
   padding: 0 8px;
   text-align: center;
 

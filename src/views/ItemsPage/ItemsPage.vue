@@ -16,9 +16,9 @@
       <div class="items-grid-header">
         <SearchInput class="item-column-filter-input" placeholder="Deconstruct" v-model="deconstructSearchTerm" />
       </div>
-      <div class="items-grid-header">
-        <span class="item-header-text">Price</span>
-      </div>
+      <SortableColumnHeader class="items-grid-header" v-model:sort="priceSorting" @update:sort="onSortingChange">
+        Price
+      </SortableColumnHeader>
       <div class="items-grid-header empty-header" />
 
       <template v-if="gainItem">
@@ -165,13 +165,16 @@ import ItemQuickFilter from '@components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@components/ItemTagsBar/ItemTagsBar.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
+import SortableColumnHeader from '@components/SortableColumnHeader/SortableColumnHeader.vue';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { useHighlightItem } from '@compositions/use-highlight-item';
+import { useItemsSorting, ItemSorts } from '@compositions/use-items-sorting';
 import { useLazyRender } from '@compositions/use-lazy-render';
 import { useMitt } from '@compositions/use-mitt';
 import { useTemporaryItem } from '@compositions/use-temporary-item';
 import { intersectionDirectiveFactory } from '@directives/IntersectionDirective';
 import { SettingKey } from '@enums/setting-key';
+import { SortDirection } from '@enums/sort-direction';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
 import { DataConvertContext, itemsToViewData } from '@services/data-convert-service';
@@ -188,6 +191,7 @@ const nameSearchTerm = ref('');
 const recipeSearchTerm = ref('');
 const deconstructSearchTerm = ref('');
 const selectedTags = ref<string[]>([]);
+const priceSorting = ref<SortDirection>();
 
 const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
@@ -204,16 +208,20 @@ const itemFilter = computed<ItemFilterCondition>(() => ({
   gainItemId: gainItem.value?.item.identifier,
   usageItemId: usageItem.value?.item.identifier,
 }));
+const itemSorting = computed<ItemSorts>(() => ({
+  price: priceSorting.value,
+}));
 
 const itemsViewData = ref<ItemViewData[]>([]);
 const visibleItems = useFilterItem(itemsViewData, itemFilter);
+const sortedItems = useItemsSorting(visibleItems, itemSorting);
 const {
   visibleItemsWithInsert: itemsWithTemporaryItems,
   setTemporaryItem,
   clearTemporaryItems,
-} = useTemporaryItem(visibleItems, itemsViewData);
+} = useTemporaryItem(sortedItems, itemsViewData);
 const { lazyRenderItems, fillUpHeight, onItemRowEnter, onLazyRenderPaddingVisible, renderAll } = useLazyRender(
-  visibleItems,
+  sortedItems,
   itemsWithTemporaryItems,
 );
 const itemsToShow = lazyRenderItems;
@@ -265,6 +273,10 @@ async function onNavigateToItem(event: MouseEvent, item: ItemPrefab, sourceViewD
   setTemporaryItem(item, sourceViewData);
   event.preventDefault();
   setTimeout(() => highLightOneItem(event, item.identifier));
+}
+
+function onSortingChange(): void {
+  clearTemporaryItems();
 }
 </script>
 

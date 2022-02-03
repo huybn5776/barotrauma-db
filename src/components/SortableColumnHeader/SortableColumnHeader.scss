@@ -1,0 +1,40 @@
+.sortable-column-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 16px;
+  padding-left: 12px;
+  border: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.sort-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 18px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateY(-50%);
+
+  &-up {
+    background-image: url('/src/assets/svg/triangle-up.svg');
+  }
+
+  &-down {
+    background-image: url('/src/assets/svg/triangle-down.svg');
+  }
+
+  &-up-down {
+    background-image: url('/src/assets/svg/triangle-up-down.svg');
+  }
+}
