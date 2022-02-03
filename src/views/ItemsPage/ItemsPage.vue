@@ -71,6 +71,7 @@
             <p>{{ viewData.item.name }}</p>
             <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
           </a>
+          <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
           <CollectibleItemImage
             v-if="viewData.collectibleItemImages?.length"
             :item="viewData"
@@ -163,6 +164,7 @@ import ItemImage from '@components/ItemImage/ItemImage.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
 import ItemQuickFilter from '@components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@components/ItemTagsBar/ItemTagsBar.vue';
+import ItemTagsView from '@components/ItemTagsView/ItemTagsView.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import SortableColumnHeader from '@components/SortableColumnHeader/SortableColumnHeader.vue';

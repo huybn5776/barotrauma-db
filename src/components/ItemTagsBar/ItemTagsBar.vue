@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
 
 import { countBy, sortBy, without } from 'ramda';
 
@@ -37,6 +37,8 @@ const emits = defineEmits<{ (e: 'update:selected', value: string[]): void }>();
 
 const selected = ref<string[]>([]);
 const expanded = ref(false);
+
+watchEffect(() => (selected.value = props.selected || []));
 
 const tagCounts = computed<{ tag: string; count: number }[]>(() => {
   const tagsList = props.viewDataArray.flatMap((viewData) => viewData.item.tags).filter(isNotNilOrEmpty);
