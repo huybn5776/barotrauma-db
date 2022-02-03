@@ -19,16 +19,16 @@
   text-overflow: ellipsis;
   background-color: rgba(white, .08);
   border: 1px solid #333;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    filter: brightness(1.2);
+    background-color: rgba(#add4ba, .3);
   }
 
   &-selected {
     color: white;
-    background-color: rgba(white, .2);
+    background-color: rgba(#add4ba, .4);
     border-color: gray;
   }
 }

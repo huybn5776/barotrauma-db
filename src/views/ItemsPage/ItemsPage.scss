@@ -3,9 +3,10 @@
 }
 
 .items-top-bar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 4px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
 }
 
 .items-container {

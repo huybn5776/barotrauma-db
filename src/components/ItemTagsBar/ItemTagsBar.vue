@@ -1,17 +1,18 @@
 <template>
   <div class="item-tags-bar">
+    <h3 class="item-tags-title">Item tags:</h3>
     <div class="item-tags-container" :class="{ 'tags-expanded': expanded }">
       <div class="item-tag-overflow-container">
         <button
           v-for="{ tag, count } of tagCounts"
           :key="tag"
-          class="item-tag"
+          class="item-tags-bar-tag"
           :class="{ 'selected-tag': selected.includes(tag) }"
           @click="toggleSelected(tag)"
         >
-          <span>{{ tag }}</span>
-          <span> / </span>
-          <span>{{ count }}</span>
+          <span class="item-tag-bar-tag-content">{{ tag }}</span>
+          <span class="item-tag-bar-tag-count">-</span>
+          <span class="item-tag-bar-tag-count">{{ count }}</span>
         </button>
       </div>
     </div>

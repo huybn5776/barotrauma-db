@@ -1,9 +1,9 @@
 <template>
   <div class="items-page">
     <div class="items-top-bar">
-      <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
       <ItemQuickFilter v-model="quickFilter" />
     </div>
+    <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
 
     <div class="items-container">
       <div class="items-grid-header empty-header" />
