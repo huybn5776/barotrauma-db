@@ -11,7 +11,6 @@
 
 .items-container {
   display: grid;
-  grid-template-columns: auto minmax(120px, max-content) max-content max-content max-content 72px;
   gap: 4px;
   align-items: center;
   height: fit-content;
@@ -39,7 +38,14 @@
   text-align: center;
 
   &.empty-header {
+    color: transparent;
     background-color: transparent;
+  }
+
+  &.normal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
