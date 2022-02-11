@@ -24,23 +24,35 @@ function scanFiles(itemEntry: FileSystemEntry, filter?: (fileName: string) => bo
   });
 }
 
-function scanDirectory(
+async function scanDirectory(
   itemEntry: FileSystemDirectoryEntry,
   filter?: (fileName: string) => boolean,
 ): Promise<Record<string, File>> {
-  return new Promise((resolve) => {
-    const files: Record<string, File> = {};
-    itemEntry.createReader().readEntries(async (entries) => {
-      const directoryFilesArray = await Promise.all(entries.map((entry) => scanFiles(entry, filter)));
-      directoryFilesArray.forEach((directoryFiles) => {
-        Object.entries(directoryFiles).forEach(([directoryFilePath, file]) => {
-          const filePath = `${itemEntry.name}/${directoryFilePath}`;
-          files[filePath] = file;
+  const files: Record<string, File> = {};
+  const reader = itemEntry.createReader();
+
+  const readDirectory = (): Promise<void> => {
+    return new Promise<void>((resolve) => {
+      reader.readEntries(async (entries) => {
+        if (!entries.length) {
+          resolve();
+          return;
+        }
+        const directoryFilesArray = await Promise.all(entries.map((entry) => scanFiles(entry, filter)));
+        directoryFilesArray.forEach((directoryFiles) => {
+          Object.entries(directoryFiles).forEach(([directoryFilePath, file]) => {
+            const filePath = `${itemEntry.name}/${directoryFilePath}`;
+            files[filePath] = file;
+          });
         });
+        await readDirectory();
+        resolve();
       });
-      resolve(files);
     });
-  });
+  };
+  await readDirectory();
+
+  return files;
 }
 
 export function saveDataToJsonFile(data: unknown, config: { fileName?: string; space?: number }): void {
