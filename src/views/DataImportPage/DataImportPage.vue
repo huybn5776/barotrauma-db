@@ -27,7 +27,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { isNil } from 'ramda';
+import { isNil, groupBy } from 'ramda';
 
 import DataImportInput from '@components/DataImportInput/DataImportInput.vue';
 import DataImportOutput from '@components/DataImportOutput/DataImportOutput.vue';
@@ -41,7 +41,7 @@ import { ContentPackageEntry } from '@interfaces/content-package-entry';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
 import { loadGameData, readXmlFile } from '@services/game-data-loader';
-import { parseItemXml, parseTextXml } from '@services/game-data-parser';
+import { parseItemXml, parseTextXml, mergeLocale } from '@services/game-data-parser';
 import { getAllRequiredImages } from '@services/game-image-loader';
 import { isNotNilOrEmpty } from '@utils/object-utils';
 
@@ -55,15 +55,27 @@ const convertResult = ref<{ items?: ItemPrefab[]; texts?: Locale[]; images?: Rec
 
 async function onFile(files: Record<string, File>): Promise<void> {
   const { contentPackage, items, texts } = await loadGameData(files, loadedData.value.contentPackage);
-  loadedData.value.contentPackage = contentPackage || loadedData.value.contentPackage;
+  loadedData.value.contentPackage = mergeContentPackage(contentPackage, loadedData.value.contentPackage);
   loadedData.value.items = { ...(items || {}), ...(loadedData.value.items || {}) };
   loadedData.value.texts = { ...(texts || {}), ...(loadedData.value.texts || {}) };
 
   updatePercentages();
   await checkFilesReadyAndConvert();
   if (items && convertResult.value.items?.length) {
-    convertResult.value.images = await getAllRequiredImages(convertResult.value.items, files);
+    convertResult.value.images = {
+      ...(convertResult.value.images || {}),
+      ...(await getAllRequiredImages(convertResult.value.items, files)),
+    };
   }
+}
+
+function mergeContentPackage(
+  content1: ContentPackageEntry | undefined,
+  content2: ContentPackageEntry | undefined,
+): ContentPackageEntry {
+  const items = Array.from(new Set([...[...(content1?.items || [])], ...[...(content2?.items || [])]]));
+  const texts = Array.from(new Set([...[...(content1?.texts || [])], ...[...(content2?.texts || [])]]));
+  return { items, texts };
 }
 
 function updatePercentages(): void {
@@ -92,15 +104,20 @@ async function checkFilesReadyAndConvert(): Promise<void> {
   }
 
   if (isNotNilOrEmpty(items)) {
-    const itemDocuments = await Promise.all(Object.values(items).map(readXmlFile));
-    const itemPrefabs = parseItemXml(itemDocuments);
+    const itemDocumentFiles = await Promise.all(
+      Object.entries(items).map(async ([path, file]) => ({ path, document: await readXmlFile(file) })),
+    );
+    const itemPrefabs = parseItemXml(itemDocumentFiles);
     convertResult.value = { ...convertResult.value, items: itemPrefabs };
   }
 
   if (isNotNilOrEmpty(texts)) {
     const textDocuments = await Promise.all(Object.values(texts).map(readXmlFile));
-    const locales = parseTextXml(textDocuments);
-    convertResult.value = { ...convertResult.value, texts: locales };
+    const allLocales = parseTextXml(textDocuments);
+    const groupedLocales = Object.values(groupBy((locale) => locale.language, allLocales)).map((locales) =>
+      locales.reduce((mergedLocale, locale) => mergeLocale(mergedLocale, locale), {} as Locale),
+    );
+    convertResult.value = { ...convertResult.value, texts: groupedLocales };
   }
 }
 </script>

@@ -9,10 +9,12 @@ import { PriceInfo } from '@interfaces/price-info';
 import { RequiredItem } from '@interfaces/required-item';
 import { Skill } from '@interfaces/skill';
 import { SpriteImage } from '@interfaces/sprite';
-import { deleteNilProperties, isNilOrEmpty } from '@utils/object-utils';
+import { getAttrValue, getNumberArray, getBooleanValue, getNumberValue } from '@utils/element-utils';
+import { deleteNilProperties } from '@utils/object-utils';
 
-export function parseItemXml(documents: Document[]): ItemPrefab[] {
-  return documents.flatMap((document) => {
+export function parseItemXml(documentFiles: { path: string; document: Document }[]): ItemPrefab[] {
+  return documentFiles.flatMap(({ path, document }) => {
+    const modName = path.startsWith('Mods/') ? path.split('/')[1] : undefined;
     const itemDocuments = Array.from(document.children).flatMap((element) => {
       const tagName = element.tagName.toLowerCase();
       if (tagName === 'items') {
@@ -26,11 +28,15 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
     return Array.from(itemDocuments).map((item) => {
       const deconstruct = parseDeconstruct(getChildrenOf(item, 'Deconstruct')[0]);
       const priceElement = getChildrenOf(item, 'Price')[0];
+      const documentDirectory = getFileDirectory(path);
 
       return deleteNilProperties({
         identifier: getAttrValue(item, 'identifier'),
         nameIdentifier: getAttrValue(item, 'nameIdentifier'),
         descriptionIdentifier: getAttrValue(item, 'descriptionIdentifier'),
+        name: getAttrValue(item, 'name'),
+        description: getAttrValue(item, 'description'),
+        modName,
         category: getAttrValue(item, 'category'),
         variantOf: getAttrValue(item, 'variantOf'),
         tags: (getAttrValue(item, 'tags') || getAttrValue(item, 'Tags'))?.split(',').map((s) => s.trim()),
@@ -39,10 +45,15 @@ export function parseItemXml(documents: Document[]): ItemPrefab[] {
         deconstructTime: deconstruct?.time,
         deconstructItems: deconstruct?.items,
         maxStackSize: +(getAttrValue(item, 'maxStackSize') || 1),
-        sprite: parseSprite(getChildrenOf(item, 'Sprite')[0]),
-        infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0]),
-        containedSprites: getChildrenOf(item, 'ContainedSprite').map(parseSprite),
-        decorativeSprite: getChildrenOf(item, 'DecorativeSprite').map(parseSprite),
+        sprite: parseSprite(getChildrenOf(item, 'Sprite')[0], documentDirectory),
+        infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0], documentDirectory),
+        containedSprites: getChildrenOf(item, 'ContainedSprite').map((element) =>
+          parseSprite(element, documentDirectory),
+        ),
+        decorativeSprite: getChildrenOf(item, 'DecorativeSprite').map((element) =>
+          parseSprite(element, documentDirectory),
+        ),
+        sourceXml: path,
       }) as ItemPrefab;
     });
   });
@@ -73,10 +84,15 @@ export function mergeItemsName(items: ItemPrefab[], targetLocale: Locale, englis
   return items.map((item) => {
     const nameIdentifier = item.nameIdentifier || item.identifier;
     const descriptionIdentifier = item.descriptionIdentifier || nameIdentifier;
+    const name = preferredEntities?.[nameIdentifier] || item.name;
+    let englishName = englishEntities?.[nameIdentifier] || item.name;
+    if (name === englishName) {
+      englishName = undefined;
+    }
     return {
       identifier: item.identifier,
-      name: preferredEntities?.[nameIdentifier],
-      englishName: englishEntities?.[nameIdentifier],
+      name,
+      englishName,
       description: targetLocale.entityDescriptions[descriptionIdentifier],
       ...omit(['identifier', 'name', 'englishName'], item),
     };
@@ -89,6 +105,15 @@ export function mergeVariant(items: ItemPrefab[]): ItemPrefab[] {
     const variantSource = item.variantOf && itemIdMap[item.variantOf];
     return variantSource ? (mergeDeepRight(variantSource, item) as ItemPrefab) : item;
   });
+}
+
+export function mergeLocale(locale1: Locale, locale2: Locale): Locale {
+  return {
+    ...locale2,
+    entityNames: { ...locale1.entityNames, ...locale2.entityNames },
+    entityDescriptions: { ...locale1.entityDescriptions, ...locale2.entityDescriptions },
+    displayNames: { ...locale1.displayNames, ...locale2.displayNames },
+  };
 }
 
 function getChildrenOf(node: ParentNode, tagName: string | string[]): Element[] {
@@ -182,12 +207,18 @@ function parseDeconstruct(deconstructElement: Element | null): {
   return { time, items };
 }
 
-function parseSprite(spriteElement: Element): SpriteImage | undefined {
+function parseSprite(spriteElement: Element, documentDirectory: string): SpriteImage | undefined {
   if (!spriteElement) {
     return undefined;
   }
+
+  let texture = getAttrValue(spriteElement, 'texture')?.replace('/JobGear/', '/Jobgear/');
+  if (texture && !texture.includes('/')) {
+    texture = `${documentDirectory}/${texture}`;
+  }
+
   return deleteNilProperties({
-    texture: getAttrValue(spriteElement, 'texture')?.replace('/JobGear/', '/Jobgear/').replace('Content/Items/', ''),
+    texture,
     sourceRect: getNumberArray(spriteElement, 'sourceRect'),
     origin: getNumberArray(spriteElement, 'origin'),
     depth: getNumberValue(spriteElement, 'depth'),
@@ -199,35 +230,7 @@ function parseSprite(spriteElement: Element): SpriteImage | undefined {
     randomOffset: getNumberArray(spriteElement, 'randomOffset'),
   }) as SpriteImage;
 }
-
-function getAttrValue(element: Element, attributeName: string): string | undefined {
-  const lowerAttributeName = attributeName.toLowerCase();
-  return Array.from(element.attributes).find((attribute) => attribute.name.toLowerCase() === lowerAttributeName)?.value;
-}
-
-function getNumberValue(element: Element, attributeName: string): number | undefined {
-  const value = getAttrValue(element, attributeName);
-  if (isNilOrEmpty(value)) {
-    return undefined;
-  }
-  return +value;
-}
-
-function getBooleanValue(element: Element, attributeName: string): boolean | undefined {
-  const value = getAttrValue(element, attributeName);
-  if (isNilOrEmpty(value)) {
-    return undefined;
-  }
-  return value === 'true';
-}
-
-function getNumberArray(element: Element, attributeName: string): number[] | undefined {
-  const value = getAttrValue(element, attributeName);
-  if (isNilOrEmpty(value)) {
-    return undefined;
-  }
-  return value
-    .split(',')
-    .map((v) => +v)
-    .filter((number) => !Number.isNaN(number));
+function getFileDirectory(path: string): string {
+  const lastDirectory = path.lastIndexOf('/');
+  return lastDirectory > -1 ? path.substring(0, lastDirectory) : '';
 }

@@ -17,10 +17,11 @@ export function getAllRequiredImages(items: ItemPrefab[], filesMap: Record<strin
     .filter(isNotNil)
     .map((sprite) => sprite.texture);
 
-  new Set(allTexturePaths).forEach((texture) => {
-    const file = fileEntries.find(([p]) => p.match(`(^|/)${texture}`))?.[1];
+  new Set(allTexturePaths).forEach((path) => {
+    const targetFilePath = path.replace('Mods/', '').replace('Content/', '');
+    const file = fileEntries.find(([p]) => p.match(`(^|/)${targetFilePath}`))?.[1];
     if (file) {
-      requiredImagesMap[texture] = file;
+      requiredImagesMap[path] = file;
     }
   });
 

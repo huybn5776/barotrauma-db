@@ -10,6 +10,7 @@ export interface ItemPrefab {
   name?: string;
   englishName?: string;
   description?: string;
+  modName?: string;
   variantOf?: string;
   category: string;
   tags?: string[];
