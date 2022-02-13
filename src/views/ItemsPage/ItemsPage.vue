@@ -102,17 +102,7 @@
             'temporary-row': viewData.isTemporaryRow,
           }"
         >
-          <a
-            v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length"
-            class="item-name-link"
-            target="_blank"
-            :href="`https://barotraumagame.com/baro-wiki/index.php?search=${
-              viewData.item.englishName || viewData.item.name
-            }`"
-          >
-            <p>{{ viewData.item.name }}</p>
-            <p v-if="viewData.item.englishName">{{ viewData.item.englishName }}</p>
-          </a>
+          <ItemNameView v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length" :item="viewData.item" />
           <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
           <CollectibleItemImage
             v-if="viewData.collectibleItemImages?.length"
@@ -216,6 +206,7 @@ import DeconstructRecipeView from '@components/DeconstructRecipeView/Deconstruct
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
+import ItemNameView from '@components/ItemNameView.vue';
 import ItemPriceView from '@components/ItemPriceView/ItemPriceView.vue';
 import ItemQuickFilter from '@components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@components/ItemTagsBar/ItemTagsBar.vue';
