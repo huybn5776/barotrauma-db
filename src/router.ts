@@ -12,6 +12,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@views/DataImportPage/DataImportPage.vue'),
     name: 'dataImport',
   },
+  { path: '/:catchAll(.*)', redirect: { name: 'items' } },
 ];
 
 const route = createRouter({
