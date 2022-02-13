@@ -25,10 +25,10 @@ export function useFilterItem(
     }
     return viewDataArrayRef.value.filter((itemViewData) => {
       return (
-        filterByQuickFilter(itemViewData, quickFilter) &&
-        filterByName(itemViewData.item, name) &&
-        filterByRecipe(itemViewData, recipe) &&
-        filterByDeconstruct(itemViewData, deconstruct) &&
+        filterByQuickFilter(itemViewData, quickFilter?.toLowerCase()) &&
+        filterByName(itemViewData.item, name?.toLowerCase()) &&
+        filterByRecipe(itemViewData, recipe?.toLowerCase()) &&
+        filterByDeconstruct(itemViewData, deconstruct?.toLowerCase()) &&
         filterByTags(itemViewData.item, tags) &&
         filterByGain(itemViewData, gainItemId) &&
         filterByUsage(itemViewData, usageItemId)
@@ -47,7 +47,9 @@ function filterByQuickFilter(viewData: ItemViewData, quickFilter: string | undef
 }
 
 function filterByName(item: ItemPrefab, term: string | undefined): boolean | undefined {
-  return !term || item.name?.includes(term) || item.englishName?.toLowerCase()?.includes(term.toLowerCase());
+  return (
+    !term || item.name?.toLowerCase().includes(term) || item.englishName?.toLowerCase()?.includes(term.toLowerCase())
+  );
 }
 
 function filterByRecipe(itemViewData: ItemViewData, term: string | undefined): boolean | undefined {
@@ -55,7 +57,7 @@ function filterByRecipe(itemViewData: ItemViewData, term: string | undefined): b
     !term ||
     itemViewData.fabricationRecipes.some((fabricationRecipe) => {
       return (
-        fabricationRecipe.displayName?.includes(term) ||
+        fabricationRecipe.displayName?.toLowerCase().includes(term) ||
         fabricationRecipe.items.some(({ item }) => filterByName(item, term))
       );
     })
