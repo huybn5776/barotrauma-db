@@ -228,6 +228,7 @@ import { useHighlightItem } from '@compositions/use-highlight-item';
 import { useItemsSorting, ItemSorts } from '@compositions/use-items-sorting';
 import { useLazyRender } from '@compositions/use-lazy-render';
 import { useMitt } from '@compositions/use-mitt';
+import { useProvideLocaleFile } from '@compositions/use-provide-locale-file';
 import { useTemporaryItem } from '@compositions/use-temporary-item';
 import { intersectionDirectiveFactory } from '@directives/IntersectionDirective';
 import { SettingKey } from '@enums/setting-key';
@@ -243,6 +244,7 @@ const { onEvent } = useMitt();
 
 const vItemIntersection = intersectionDirectiveFactory({ threshold: 0.1 });
 const vPaddingIntersection = intersectionDirectiveFactory({ threshold: 0 });
+useProvideLocaleFile();
 
 const columnDefines = ref<ColumnDefine[]>([
   { id: 'image', label: 'Image' },

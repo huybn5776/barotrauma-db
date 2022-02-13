@@ -23,6 +23,12 @@
   </div>
 
   <template v-if="convertResult.items?.length && convertResult.texts?.length">
+    <div class="items-output-actions-container">
+      <NSpin :show="savingDataSource">
+        <button class="b-button items-output-button" @click="saveDataSourceToDb">Append data source</button>
+      </NSpin>
+    </div>
+
     <p class="items-with-description">Items with locale</p>
     <ItemBlock
       v-for="locale of convertResult.texts"
@@ -36,12 +42,16 @@
 </template>
 
 <script lang="ts" setup>
+import { toRaw, ref } from 'vue';
+
 import { strToU8, zipSync, ZipOptions, Zippable, ZippableFile } from 'fflate';
+import { NSpin, useMessage } from 'naive-ui';
 
 import ItemBlock from '@components/ItemBlock/ItemBlock.vue';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
 import { mergeItemsName } from '@services/game-data-parser';
+import { saveFileToDb, saveItemsToDb, saveLocalesToDb } from '@services/locale-data-source-service';
 import { saveDataToJsonFile, downloadFile } from '@utils/file-utils';
 
 const props = defineProps<{
@@ -51,6 +61,9 @@ const props = defineProps<{
     texts?: Locale[];
   };
 }>();
+
+const message = useMessage();
+const savingDataSource = ref(false);
 
 function downloadItems(): void {
   if (!props.convertResult.items) {
@@ -120,8 +133,24 @@ function downloadItemWithText(targetLocale: Locale): void {
   const fileName = `items_${targetLocale.language.replace(' ', '_').toLocaleLowerCase()}`;
   saveDataToJsonFile(itemsWithText, { fileName, space: 2 });
 }
+
+async function saveDataSourceToDb(): Promise<void> {
+  savingDataSource.value = true;
+  if (props.convertResult.items) {
+    await saveItemsToDb(props.convertResult.items.map((item) => toRaw(item)));
+  }
+  if (props.convertResult.texts) {
+    await saveLocalesToDb(props.convertResult.texts.map((locale) => toRaw(locale)));
+  }
+  if (props.convertResult.images) {
+    await Promise.all(Object.entries(props.convertResult.images).map(async ([path, file]) => saveFileToDb(path, file)));
+  }
+  savingDataSource.value = false;
+  message.success('Data source saved');
+}
 </script>
 
 <style lang="scss" scoped>
 @import './DataImportOutput';
+@import 'src/styles/common';
 </style>

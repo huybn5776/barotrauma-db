@@ -128,7 +128,7 @@ export function convertDeconstructRecipe(
   });
   let recipeItems: RecipeItem<DeconstructItem>[] = Object.entries(itemsCountMap).map(([identifier, count]) => ({
     count,
-    item: context.itemsMap[identifier],
+    item: context.itemsMap[identifier] || { identifier },
     recipe: deconstructItems.filter((item) => item.identifier === identifier),
   }));
   recipeItems = orderItemInFabricationRecipe(sourceItem, recipeItems);

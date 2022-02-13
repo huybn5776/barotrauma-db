@@ -16,11 +16,13 @@
 </template>
 
 <script lang="ts" setup>
-import { StyleValue, computed, ref } from 'vue';
+import { StyleValue, ref, onMounted } from 'vue';
 
+import { provideGetLocaleFileKey } from '@/symbols';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Rect } from '@interfaces/rect';
 import { SpriteImage } from '@interfaces/sprite';
+import { injectStrict } from '@utils/inject-utils';
 
 interface ItemImageInfo {
   src: string;
@@ -39,9 +41,15 @@ const props = defineProps<{
 }>();
 
 const loaded = ref(false);
-const imageInfo = computed(() => getItemImageInfo(props.image || props.item?.infectedIcon || props.item?.sprite));
+const imageInfo = ref<ItemImageInfo>();
+const getLocaleFileURL = injectStrict(provideGetLocaleFileKey);
 
-function getItemImageInfo(sprite: SpriteImage | undefined): ItemImageInfo | undefined {
+onMounted(async () => {
+  imageInfo.value = await getItemImageInfo();
+});
+
+async function getItemImageInfo(): Promise<ItemImageInfo | undefined> {
+  const sprite = props.image || props.item?.infectedIcon || props.item?.sprite;
   if (!sprite) {
     console.error(`Cannot find image of item: ${props.name || props.item?.name}`);
     return undefined;
@@ -55,8 +63,11 @@ function getItemImageInfo(sprite: SpriteImage | undefined): ItemImageInfo | unde
   const { x, y, width: originalWidth, height: originalHeight } = rect;
   const { width, height, zoom } = calcSizeAndZoom(originalWidth, originalHeight);
 
+  const localImage = await getLocaleFileURL(sprite.texture);
+  const src = localImage || `/data-source/images/${sprite.texture}`;
+
   return {
-    src: `/data-source/images/${sprite?.texture}`,
+    src,
     style: {
       objectPosition: `${-x}px ${-y}px`,
       width: `${originalWidth}px`,

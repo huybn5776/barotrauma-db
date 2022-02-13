@@ -13,3 +13,16 @@
   margin: 8px 0 -8px 0;
   font-size: 15px;
 }
+
+.items-output-actions-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / 5;
+  gap: 8px;
+  justify-content: end;
+}
+
+.items-output-button {
+  padding: 0 16px;
+  white-space: nowrap;
+}

@@ -29,3 +29,15 @@ export function isNestedEmpty<T>(value: T): boolean {
   }
   return Object.values(value).every((v) => isNilOrEmpty(v) && isNestedEmpty(v));
 }
+
+export function indexWith<T, K extends string | number, V>(
+  entries: T[],
+  keySelector: (entry: T) => K,
+  valueSelector: (entry: T) => V,
+): Record<K, V> {
+  const index = {} as Record<K, V>;
+  entries.forEach((entry) => {
+    index[keySelector(entry)] = valueSelector(entry);
+  });
+  return index;
+}
