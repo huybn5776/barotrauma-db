@@ -177,7 +177,7 @@ export function checkGainAndUsage(
     isNotNilOrEmpty(itemViewData.soldPrices) ||
     itemViewData.fabricationRecipes.length > 0 ||
     checkItemHasDeconstructRecipeForIt(itemViewData.item.identifier, context.items);
-  const hasUsage = checkItemHasUsage(itemViewData.item.identifier, context.items);
+  const hasUsage = checkItemHasUsage(itemViewData.item.identifier, itemViewData.item.tags, context.items);
   return { hasGain, hasUsage };
 }
 
@@ -187,10 +187,14 @@ function checkItemHasDeconstructRecipeForIt(itemId: string, allItems: ItemPrefab
   );
 }
 
-function checkItemHasUsage(itemId: string, allItems: ItemPrefab[]): boolean {
+function checkItemHasUsage(itemId: string, itemTags: string[] | undefined, allItems: ItemPrefab[]): boolean {
   return allItems.some((item) =>
     item.fabricationRecipes?.some((fabricationRecipe) =>
-      fabricationRecipe.requiredItems.some((requiredItem) => requiredItem.identifier === itemId),
+      fabricationRecipe.requiredItems.some(
+        (requiredItem) =>
+          requiredItem.identifier === itemId ||
+          (requiredItem.tag && itemTags?.length && itemTags.includes(requiredItem.tag)),
+      ),
     ),
   );
 }
