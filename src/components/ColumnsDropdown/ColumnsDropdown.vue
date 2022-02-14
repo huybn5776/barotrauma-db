@@ -1,14 +1,6 @@
 <template>
-  <div ref="columnsDropdownRef" class="columns-dropdown-container">
-    <button
-      class="columns-dropdown-button"
-      :class="{ 'columns-dropdown-button-active': expanded }"
-      @click="expanded = !expanded"
-    />
-
+  <TopBarDropdown buttonClass="table-icon">
     <ListDragSort
-      v-if="expanded"
-      class="column-rows"
       :class="{ 'column-row-dragging': columnsDragging }"
       :items="columnsRows"
       @dragging="columnsDragging = $event"
@@ -20,7 +12,7 @@
         <NSwitch :value="asColumnInfo(item).selected" :disabled="asColumnInfo(item).column.disableHide" />
       </button>
     </ListDragSort>
-  </div>
+  </TopBarDropdown>
 </template>
 
 <script lang="ts" setup>
@@ -29,7 +21,7 @@ import { computed, ref } from 'vue';
 import { NSwitch } from 'naive-ui';
 
 import ListDragSort from '@components/ListDragSort/ListDragSort.vue';
-import { useClickOutside } from '@compositions/use-click-outside';
+import TopBarDropdown from '@components/TopBarDropdown.vue';
 import { ColumnDefine } from '@interfaces/columnDefine';
 import { toggleEntry } from '@utils/array-utils';
 
@@ -44,7 +36,6 @@ const emits = defineEmits<{
   (e: 'update:selectedColumns', value: string[]): void;
 }>();
 
-const columnsDropdownRef = ref<HTMLElement>();
 const columnsRows = computed(() => {
   return props.columns.map((column) => ({
     id: column.id,
@@ -52,14 +43,7 @@ const columnsRows = computed(() => {
     selected: props.selectedColumns.includes(column.id),
   }));
 });
-const expanded = ref(false);
 const columnsDragging = ref(false);
-
-useClickOutside({
-  element: columnsDropdownRef,
-  whenToListen: expanded,
-  clickOutsideCallback: () => (expanded.value = false),
-});
 
 function onSortChanged(columnsInfo: object[]): void {
   const items = columnsInfo as ColumnDefineWithSelected[];
