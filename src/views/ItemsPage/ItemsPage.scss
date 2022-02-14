@@ -4,9 +4,13 @@
 
 .items-top-bar {
   display: flex;
-  gap: 16px;
+  gap: 8px;
   align-items: center;
   padding: 8px 0;
+
+  > :first-child {
+    margin-right: 8px;
+  }
 }
 
 .items-container {

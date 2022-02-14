@@ -1,0 +1,20 @@
+:deep(.setting-button) {
+  background-image: url('/src/assets/svg/cog.svg');
+}
+
+.column-setting-toggle-button {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-align: start;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+}

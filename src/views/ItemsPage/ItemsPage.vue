@@ -3,6 +3,7 @@
     <div class="items-top-bar">
       <ItemQuickFilter v-model="quickFilter" />
       <ColumnsDropdown v-model:columns="columnDefines" v-model:selectedColumns="selectedColumns" />
+      <ColumnSettingModal v-model="columnSettings" />
     </div>
     <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
 
@@ -102,13 +103,16 @@
             'temporary-row': viewData.isTemporaryRow,
           }"
         >
-          <ItemNameView v-if="!showCollectibleImage || !viewData.collectibleItemImages?.length" :item="viewData.item" />
+          <ItemNameView
+            v-if="!columnSettings.showCollectibleImage || !viewData.collectibleItemImages?.length"
+            :item="viewData.item"
+          />
           <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
           <CollectibleItemImage
             v-if="viewData.collectibleItemImages?.length"
             :item="viewData"
-            :showCollectibleImage="showCollectibleImage"
-            @toggleView="showCollectibleImage = !showCollectibleImage"
+            :showCollectibleImage="columnSettings.showCollectibleImage"
+            @toggleView="columnSettings.showCollectibleImage = !columnSettings.showCollectibleImage"
           />
         </div>
 
@@ -202,6 +206,7 @@ import { indexBy } from 'ramda';
 
 import CollectibleItemImage from '@components/CollectibleItemImage/CollectibleItemImage.vue';
 import ColumnsDropdown from '@components/ColumnsDropdown/ColumnsDropdown.vue';
+import ColumnSettingModal from '@components/ColumnSettingModal/ColumnSettingModal.vue';
 import DeconstructRecipeView from '@components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemGainView from '@components/ItemGainView/ItemGainView.vue';
@@ -214,6 +219,7 @@ import ItemTagsView from '@components/ItemTagsView/ItemTagsView.vue';
 import ItemUsageView from '@components/ItemUsageView/ItemUsageView.vue';
 import SearchInput from '@components/SearchInput/SearchInput.vue';
 import SortableColumnHeader from '@components/SortableColumnHeader/SortableColumnHeader.vue';
+import { useColumnSettings } from '@compositions/use-column-settings';
 import { useFilterItem, ItemFilterCondition } from '@compositions/use-filter-item';
 import { useHighlightItem } from '@compositions/use-highlight-item';
 import { useItemsSorting, ItemSorts } from '@compositions/use-items-sorting';
@@ -283,7 +289,7 @@ const gainItem = ref<ItemViewData>();
 const usageItem = ref<ItemViewData>();
 const { highlightItem, highLightOneItem } = useHighlightItem('highlight-item');
 
-const showCollectibleImage = ref(false);
+const columnSettings = useColumnSettings();
 
 const itemFilter = computed<ItemFilterCondition>(() => ({
   quickFilter: quickFilter.value,
