@@ -1,4 +1,5 @@
 export enum LocationType {
+  All = 'all',
   Outpost = 'outpost',
   City = 'city',
   Research = 'research',

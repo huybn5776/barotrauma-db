@@ -1,6 +1,15 @@
 <template>
   <a
-    v-if="type === LocationType.Outpost"
+    v-if="type === LocationType.All"
+    class="location-link"
+    href="https://barotraumagame.com/wiki/Campaign#Outposts"
+    target="_blank"
+    title="All outposts"
+  >
+    <img class="location-image" src="/src/assets/icon/location-outposts.png" alt="All outposts" />
+  </a>
+  <a
+    v-else-if="type === LocationType.Outpost"
     class="location-link"
     href="https://barotraumagame.com/wiki/Campaign#Habitation_Outpost"
     target="_blank"
