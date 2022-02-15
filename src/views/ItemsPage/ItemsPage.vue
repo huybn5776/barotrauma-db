@@ -155,7 +155,7 @@
             'temporary-row': viewData.isTemporaryRow,
           }"
         >
-          <ItemPriceView :item="viewData.item" />
+          <ItemPriceView :viewData="viewData" :detail="columnSettings.showPriceDetail" />
         </div>
 
         <div

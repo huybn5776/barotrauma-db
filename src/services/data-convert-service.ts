@@ -8,6 +8,7 @@ import { FabricationRecipeInfo } from '@interfaces/fabrication-recipe-info';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { ItemViewData } from '@interfaces/item-view-data';
 import { Locale } from '@interfaces/locale';
+import { LocationPriceViewData } from '@interfaces/location-price-view-data';
 import { RecipeItem } from '@interfaces/recipe-item';
 import { RequiredItem } from '@interfaces/required-item';
 import { SpriteImage } from '@interfaces/sprite';
@@ -27,7 +28,7 @@ export function itemsToViewData(items: ItemPrefab[], context: DataConvertContext
           convertFabricationRecipe(item, fabricationRecipe, context),
         ) || [];
       const deconstructRecipe = convertDeconstructRecipe(item, context);
-      const soldPrices = convertSoldIn(item);
+      const soldPrices = convertPrice(item);
       const collectibleItemImages = convertCollectibleItemImages(item);
 
       return {
@@ -155,18 +156,44 @@ function orderItemInFabricationRecipe(
   return [...sortingItems, ...pickingItems];
 }
 
-export function convertSoldIn(sourceItem: ItemPrefab): Partial<Record<LocationType, number>> | undefined {
+export function convertPrice(sourceItem: ItemPrefab): LocationPriceViewData[] {
+  const sellPriceMultiplier = 0.8;
   const { price } = sourceItem;
-  if (!price || !price.locations) {
-    return undefined;
+  if (!price?.basePrice) {
+    return [];
   }
-  const soldPrices: Partial<Record<LocationType, number>> = {};
-  price.locations.forEach((location) => {
-    if (location.sold !== false) {
-      soldPrices[location.locationType] = price.basePrice * (location.multiplier || 1);
-    }
-  });
-  return soldPrices;
+  const defaultSoldValue = price.soldEverywhere !== false;
+  const rows = Object.values(LocationType)
+    .filter((location) => location !== LocationType.All)
+    .map((location) => {
+      const locationPriceInfo = price.locations?.find((priceInfo) => priceInfo.locationType === location);
+      const multiplier = locationPriceInfo?.multiplier || 1;
+      const sold = locationPriceInfo ? locationPriceInfo.sold ?? true : defaultSoldValue;
+      return {
+        location,
+        buy: sold ? Math.floor(price.basePrice * multiplier) : 0,
+        sell: Math.max(1, Math.floor(price.basePrice * (multiplier || 1) * sellPriceMultiplier)),
+      };
+    });
+
+  if ((soldNoWhere(rows) || isSameBuyPriceAnywhere(rows)) && isSameSellPriceAnywhere(rows)) {
+    return [{ location: LocationType.All, buy: rows[0].buy, sell: rows[0].sell }];
+  }
+  return rows;
+}
+
+function soldNoWhere(prices: LocationPriceViewData[]): boolean {
+  return prices.every((price) => price.sell === 0);
+}
+
+function isSameBuyPriceAnywhere(prices: LocationPriceViewData[]): boolean {
+  const firstBuyPrice = prices[0].buy;
+  return prices.every((price) => price.buy === firstBuyPrice);
+}
+
+function isSameSellPriceAnywhere(prices: LocationPriceViewData[]): boolean {
+  const firstSellPrice = prices[0].sell;
+  return prices.every((price) => price.sell === firstSellPrice);
 }
 
 export function checkGainAndUsage(

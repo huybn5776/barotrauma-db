@@ -2,7 +2,53 @@
   display: flex;
   align-items: center;
   justify-content: start;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
+}
+
+.item-base-price {
   padding: 4px 8px;
+}
+
+.detail-price-view {
+  width: 100%;
+  padding: 4px 0;
+}
+
+.sold-min-difficulty {
+  padding: 0 4px;
+  color: #eee;
+}
+
+.location-price-row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8px 0 4px;
+
+  &:hover {
+    background-color: rgba(white, .08);
+  }
+}
+
+.price-view-location-icon {
+  margin-right: 4px;
+}
+
+.location-price {
+  min-width: 3ch;
+
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+.location-buy {
+  color: lightgreen;
+}
+
+.location-sell {
+  color: lightcoral;
 }
