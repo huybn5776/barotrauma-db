@@ -1,4 +1,5 @@
 <template>
+  <div class="site-header-placeholder" />
   <header class="site-header">
     <div class="site-header-content-container">
       <router-link :to="{ name: 'home' }" class="site-logo-link">

@@ -7,10 +7,16 @@
   display: inline-block;
   min-width: 60px;
   padding: 8px;
+  white-space: nowrap;
   text-align: center;
   border-radius: 4px;
   opacity: .7;
   transition: background-color .1s;
+
+  @media (max-width: 400px) {
+    min-width: initial;
+    padding: 8px 6px;
+  }
 
   &.router-link-active {
     font-weight: 500;
