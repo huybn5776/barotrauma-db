@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   height: 38px;
-  padding-left: 8px;
+  padding: 2px 0 0 8px;
   background: none;
   border: 0;
   border-radius: 4px;
@@ -32,33 +32,4 @@
   height: 12px;
   background: url('/src/assets/svg/chevron-down.svg') no-repeat;
   background-size: contain;
-}
-
-.locale-selector-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 2;
-  padding: 8px 0;
-  background-color: #333;
-  box-shadow: 4px 4px 8px 2px rgba(black, .3);
-
-  &-collapsed {
-    display: none;
-  }
-}
-
-.locale-dropdown-item {
-  width: 100%;
-  padding: 8px 12px;
-  white-space: nowrap;
-  text-align: start;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba(white, .1);
-  }
 }

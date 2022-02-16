@@ -1,27 +1,19 @@
 <template>
-  <div class="locale-selector" ref="selectorRef">
-    <button class="locale-selector-button" type="button" @click="expanded = !expanded">
-      <i class="web-icon" />
-      <i class="chevron-down-icon" />
-    </button>
-    <div class="locale-selector-dropdown" :class="{ 'locale-selector-dropdown-collapsed': !expanded }">
-      <button
-        v-for="{ key, name } of locales"
-        :key="key"
-        class="locale-dropdown-item"
-        type="button"
-        @click="updateLocale(key)"
-      >
-        {{ name }}
+  <div class="locale-selector">
+    <NDropdown trigger="click" placement="bottom" :options="locales" labelField="name" @select="updateLocale">
+      <button class="locale-selector-button" type="button">
+        <i class="web-icon" />
+        <i class="chevron-down-icon" />
       </button>
-    </div>
+    </NDropdown>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 
-import { useClickOutside } from '@compositions/use-click-outside';
+import { NDropdown } from 'naive-ui';
+
 import { useMitt } from '@compositions/use-mitt';
 import { SettingKey } from '@enums/setting-key';
 import { LocaleSelection } from '@interfaces/locale-selection';
@@ -31,16 +23,11 @@ import { saveSettingToStorage } from '@utils/storage-utils';
 const { emitter } = useMitt();
 
 const locales = ref<LocaleSelection[]>([]);
-const expanded = ref(false);
-const selectorRef = ref<HTMLElement>();
-
-useClickOutside({ element: selectorRef, whenToListen: expanded, clickOutsideCallback: () => (expanded.value = false) });
 
 onMounted(async () => (locales.value = await getLocales()));
 
 function updateLocale(localeKey: string): void {
   saveSettingToStorage(SettingKey.PreferredLocale, localeKey);
-  expanded.value = false;
   emitter.emit('locale-updated');
 }
 </script>
