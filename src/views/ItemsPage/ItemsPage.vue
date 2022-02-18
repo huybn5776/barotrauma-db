@@ -103,11 +103,10 @@
             'temporary-row': viewData.isTemporaryRow,
           }"
         >
-          <ItemNameView
-            v-if="!columnSettings.showCollectibleImage || !viewData.collectibleItemImages?.length"
-            :item="viewData.item"
-          />
-          <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
+          <template v-if="!columnSettings.showCollectibleImage || !viewData.collectibleItemImages?.length">
+            <ItemNameView :item="viewData.item" />
+            <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
+          </template>
           <CollectibleItemImage
             v-if="viewData.collectibleItemImages?.length"
             :item="viewData"
