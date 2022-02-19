@@ -201,7 +201,7 @@ export function checkGainAndUsage(
   context: DataConvertContext,
 ): { hasGain: boolean; hasUsage: boolean } {
   const hasGain =
-    isNotNilOrEmpty(itemViewData.soldPrices) ||
+    itemViewData.soldPrices.some((price) => price.buy) ||
     itemViewData.fabricationRecipes.length > 0 ||
     checkItemHasDeconstructRecipeForIt(itemViewData.item.identifier, context.items);
   const hasUsage = checkItemHasUsage(itemViewData.item.identifier, itemViewData.item.tags, context.items);
