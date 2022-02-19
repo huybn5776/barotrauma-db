@@ -8,48 +8,15 @@
     <ItemTagsBar :viewDataArray="itemsViewData" v-model:selected="selectedTags" />
 
     <div class="items-container" :style="{ 'grid-template-columns': gridTemplateColumns }">
-      <span
-        v-if="selectedColumns.includes('image')"
-        class="items-grid-header normal-header"
-        :style="{ order: columnsOrder.indexOf('image') }"
-        :class="{ 'empty-header': columnsOrder.indexOf('image') === 0 }"
-      >
-        Image
-      </span>
-      <div class="items-grid-header" :style="{ order: columnsOrder.indexOf('name') }">
-        <SearchInput class="item-column-filter-input" placeholder="Name" v-model="nameSearchTerm" />
-      </div>
-      <div
-        v-if="selectedColumns.includes('recipe')"
-        class="items-grid-header"
-        :style="{ order: columnsOrder.indexOf('recipe') }"
-      >
-        <SearchInput class="item-column-filter-input" placeholder="Recipe" v-model="recipeSearchTerm" />
-      </div>
-      <div
-        v-if="selectedColumns.includes('deconstruct')"
-        class="items-grid-header"
-        :style="{ order: columnsOrder.indexOf('deconstruct') }"
-      >
-        <SearchInput class="item-column-filter-input" placeholder="Deconstruct" v-model="deconstructSearchTerm" />
-      </div>
-      <SortableColumnHeader
-        v-if="selectedColumns.includes('price')"
-        class="items-grid-header"
-        :style="{ order: columnsOrder.indexOf('price') }"
-        v-model:sort="priceSorting"
-        @update:sort="onSortingChange"
-      >
-        Price
-      </SortableColumnHeader>
-      <span
-        v-if="selectedColumns.includes('action')"
-        class="items-grid-header normal-header"
-        :style="{ order: columnsOrder.indexOf('action') }"
-        :class="{ 'empty-header': columnsOrder.indexOf('action') === columnsOrder.length - 1 }"
-      >
-        Actions
-      </span>
+      <ItemListHeader
+        :selectedColumns="selectedColumns"
+        :columnsOrder="columnsOrder"
+        v-model:nameSearchTerm="nameSearchTerm"
+        v-model:recipeSearchTerm="recipeSearchTerm"
+        v-model:deconstructSearchTerm="deconstructSearchTerm"
+        v-model:priceSorting="priceSorting"
+        @update:priceSorting="onSortingChange"
+      />
 
       <template v-if="gainItem">
         <div v-if="selectedColumns.includes('image')" class="gain-item-image" style="order: 7">
@@ -204,7 +171,6 @@ import { onMounted, ref, computed } from 'vue';
 import { indexBy } from 'ramda';
 
 import ItemImage from '@components/ItemImage/ItemImage.vue';
-import SearchInput from '@components/SearchInput/SearchInput.vue';
 import { useMitt } from '@compositions/use-mitt';
 import { intersectionDirectiveFactory } from '@directives/IntersectionDirective';
 import { SettingKey } from '@enums/setting-key';
@@ -218,13 +184,13 @@ import ColumnSettingModal from '@modules/items/components/ColumnSettingModal/Col
 import DeconstructRecipeView from '@modules/items/components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@modules/items/components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemGainView from '@modules/items/components/ItemGainView/ItemGainView.vue';
+import ItemListHeader from '@modules/items/components/ItemListHeader/ItemListHeader.vue';
 import ItemNameView from '@modules/items/components/ItemNameView/ItemNameView.vue';
 import ItemPriceView from '@modules/items/components/ItemPriceView/ItemPriceView.vue';
 import ItemQuickFilter from '@modules/items/components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@modules/items/components/ItemTagsBar/ItemTagsBar.vue';
 import ItemTagsView from '@modules/items/components/ItemTagsView/ItemTagsView.vue';
 import ItemUsageView from '@modules/items/components/ItemUsageView/ItemUsageView.vue';
-import SortableColumnHeader from '@modules/items/components/SortableColumnHeader/SortableColumnHeader.vue';
 import { useColumnSettings } from '@modules/items/compositions/use-column-settings';
 import { useFilterItem, ItemFilterCondition } from '@modules/items/compositions/use-filter-item';
 import { useHighlightItem } from '@modules/items/compositions/use-highlight-item';

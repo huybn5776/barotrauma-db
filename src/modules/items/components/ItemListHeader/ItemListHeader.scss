@@ -1,0 +1,25 @@
+:where(.items-grid-header) {
+  padding: 0 8px;
+  text-align: center;
+
+  &.empty-header {
+    color: transparent;
+    background-color: transparent;
+  }
+
+  &.normal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+:deep(.item-column-filter-input) {
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &::placeholder {
+    color: white;
+    text-align: center;
+  }
+}
