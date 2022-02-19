@@ -18,34 +18,12 @@
         @update:priceSorting="onSortingChange"
       />
 
-      <template v-if="gainItem">
-        <div v-if="selectedColumns.includes('image')" class="gain-item-image" style="order: 7">
-          <ItemImage :item="gainItem?.item" :size="32" />
-        </div>
-        <ItemGainView
-          v-if="gainItem"
-          style="order: 8"
-          :style="{ 'grid-column': gainViewGridColumn }"
-          :item="gainItem"
-        />
-        <div class="item-actions" style="order: 9">
-          <button class="b-button item-action-button" @click="resetFilter">Reset</button>
-        </div>
-      </template>
-      <template v-if="usageItem">
-        <div class="gain-item-image" style="order: 7">
-          <ItemImage :item="usageItem?.item" :size="32" />
-        </div>
-        <ItemUsageView
-          v-if="usageItem"
-          style="order: 8"
-          :style="{ 'grid-column': gainViewGridColumn }"
-          :item="usageItem"
-        />
-        <div class="item-actions" style="order: 9">
-          <button class="b-button item-action-button" @click="resetFilter">Reset</button>
-        </div>
-      </template>
+      <ItemActionInfoRow
+        :selectedColumns="selectedColumns"
+        :gainItem="gainItem"
+        :usageItem="usageItem"
+        @reset="resetFilter"
+      />
 
       <template v-for="(viewData, index) of itemsToShow" :key="viewData.item.identifier">
         <div
@@ -183,14 +161,13 @@ import ColumnsDropdown from '@modules/items/components/ColumnsDropdown/ColumnsDr
 import ColumnSettingModal from '@modules/items/components/ColumnSettingModal/ColumnSettingModal.vue';
 import DeconstructRecipeView from '@modules/items/components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@modules/items/components/FabricationRecipeView/FabricationRecipeView.vue';
-import ItemGainView from '@modules/items/components/ItemGainView/ItemGainView.vue';
+import ItemActionInfoRow from '@modules/items/components/ItemActionInfoRow/ItemActionInfoRow.vue';
 import ItemListHeader from '@modules/items/components/ItemListHeader/ItemListHeader.vue';
 import ItemNameView from '@modules/items/components/ItemNameView/ItemNameView.vue';
 import ItemPriceView from '@modules/items/components/ItemPriceView/ItemPriceView.vue';
 import ItemQuickFilter from '@modules/items/components/ItemQuickFilter/ItemQuickFilter.vue';
 import ItemTagsBar from '@modules/items/components/ItemTagsBar/ItemTagsBar.vue';
 import ItemTagsView from '@modules/items/components/ItemTagsView/ItemTagsView.vue';
-import ItemUsageView from '@modules/items/components/ItemUsageView/ItemUsageView.vue';
 import { useColumnSettings } from '@modules/items/compositions/use-column-settings';
 import { useFilterItem, ItemFilterCondition } from '@modules/items/compositions/use-filter-item';
 import { useHighlightItem } from '@modules/items/compositions/use-highlight-item';
@@ -218,16 +195,6 @@ const columnDefines = ref<ColumnDefine[]>([
 ]);
 const columnsOrder = computed(() => columnDefines.value.map(({ id }) => id));
 const selectedColumns = ref<string[]>(columnDefines.value.map((column) => column.id));
-const gainViewGridColumn = computed(() => {
-  const start = +selectedColumns.value.includes('image') + 1;
-  const columnSpan =
-    start +
-    +selectedColumns.value.includes('recipe') +
-    +selectedColumns.value.includes('deconstruct') +
-    +selectedColumns.value.includes('price') +
-    1;
-  return `${start} / ${columnSpan}`;
-});
 const gridWidths: Record<string, string> = {
   image: 'auto',
   name: 'minmax(120px, max-content)',

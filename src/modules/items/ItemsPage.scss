@@ -21,6 +21,20 @@
   background-color: #030404;
 }
 
+:deep(.items-container) {
+  .b-button.item-action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    height: 28px;
+    overflow-x: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
 :where(.items-container) > :where(*) {
   box-sizing: border-box;
   width: 100%;
@@ -74,18 +88,6 @@
   gap: 8px;
   justify-content: center;
   padding: 4px 8px;
-}
-
-.b-button.item-action-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  height: 28px;
-  overflow-x: hidden;
-  font-size: 12px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .gain-item-image {

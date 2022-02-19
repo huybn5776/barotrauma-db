@@ -1,0 +1,16 @@
+.item-action-row {
+  display: flex;
+  gap: 4px;
+}
+
+.item-action-row-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  padding: 2px;
+}
+
+.item-action-row-button {
+  margin: auto 8px auto auto;
+}
