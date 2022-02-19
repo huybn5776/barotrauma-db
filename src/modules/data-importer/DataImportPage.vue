@@ -29,17 +29,17 @@ import { ref } from 'vue';
 
 import { isNil, groupBy } from 'ramda';
 
-import DataImportInput from '@components/DataImportInput/DataImportInput.vue';
-import DataImportOutput from '@components/DataImportOutput/DataImportOutput.vue';
-import DateImportInstruction from '@components/DateImportInstruction/DateImportInstruction.vue';
-import FileDropZone from '@components/FileDropZone.vue';
+import FileDropZone from '@components/FileDropZone/FileDropZone.vue';
 import GithubFooter from '@components/GithubFooter/GithubFooter.vue';
-import ToolPanel from '@components/ToolPanel/ToolPanel.vue';
-import ToolPanelSectionHeader from '@components/ToolPanelSectionHeader/ToolPanelSectionHeader.vue';
 import { RequiredImportType } from '@enums/required-import-type';
 import { ContentPackageEntry } from '@interfaces/content-package-entry';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
+import DataImportInput from '@modules/data-importer/components/DataImportInput/DataImportInput.vue';
+import DataImportOutput from '@modules/data-importer/components/DataImportOutput/DataImportOutput.vue';
+import DateImportInstruction from '@modules/data-importer/components/DateImportInstruction/DateImportInstruction.vue';
+import ToolPanel from '@modules/data-importer/components/ToolPanel/ToolPanel.vue';
+import ToolPanelSectionHeader from '@modules/data-importer/components/ToolPanelSectionHeader/ToolPanelSectionHeader.vue';
 import { loadGameData, readXmlFile } from '@services/game-data-loader';
 import { parseItemXml, parseTextXml, mergeLocale } from '@services/game-data-parser';
 import { getAllRequiredImages } from '@services/game-image-loader';

@@ -17,8 +17,8 @@ import { ref, computed } from 'vue';
 
 import { omit } from 'ramda';
 
-import ItemBlock from '@components/ItemBlock/ItemBlock.vue';
 import { RequiredImportType } from '@enums/required-import-type';
+import ItemBlock from '@modules/data-importer/components/ItemBlock/ItemBlock.vue';
 import { selectFile } from '@utils/file-utils';
 
 interface ItemBlockInfo {

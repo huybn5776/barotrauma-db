@@ -4,12 +4,12 @@ const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', redirect: { name: 'items' } },
   {
     path: '/items',
-    component: () => import('@views/ItemsPage/ItemsPage.vue'),
+    component: () => import('@modules/items/ItemsPage.vue'),
     name: 'items',
   },
   {
     path: '/data-import',
-    component: () => import('@views/DataImportPage/DataImportPage.vue'),
+    component: () => import('@modules/data-importer/DataImportPage.vue'),
     name: 'dataImport',
   },
   { path: '/:catchAll(.*)', redirect: { name: 'items' } },

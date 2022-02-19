@@ -1,7 +1,7 @@
 <template>
   <div class="tool-panel-outer">
     <div class="tool-panel-inner">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

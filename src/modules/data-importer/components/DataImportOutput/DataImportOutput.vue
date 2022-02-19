@@ -47,9 +47,9 @@ import { toRaw, ref } from 'vue';
 import { strToU8, zipSync, ZipOptions, Zippable, ZippableFile } from 'fflate';
 import { NSpin, useMessage } from 'naive-ui';
 
-import ItemBlock from '@components/ItemBlock/ItemBlock.vue';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Locale } from '@interfaces/locale';
+import ItemBlock from '@modules/data-importer/components/ItemBlock/ItemBlock.vue';
 import { mergeItemsName } from '@services/game-data-parser';
 import { saveFileToDb, saveItemsToDb, saveLocalesToDb } from '@services/locale-data-source-service';
 import { saveDataToJsonFile, downloadFile } from '@utils/file-utils';

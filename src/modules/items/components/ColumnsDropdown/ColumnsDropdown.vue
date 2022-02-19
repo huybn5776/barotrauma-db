@@ -21,8 +21,8 @@ import { computed, ref } from 'vue';
 import { NSwitch } from 'naive-ui';
 
 import ListDragSort from '@components/ListDragSort/ListDragSort.vue';
-import TopBarDropdown from '@components/TopBarDropdown.vue';
 import { ColumnDefine } from '@interfaces/columnDefine';
+import TopBarDropdown from '@modules/items/components/TopBarDropdown/TopBarDropdown.vue';
 import { toggleEntry } from '@utils/array-utils';
 
 interface ColumnDefineWithSelected {

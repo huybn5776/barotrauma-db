@@ -16,8 +16,8 @@ import { ref, watchEffect } from 'vue';
 
 import { NSwitch } from 'naive-ui';
 
-import TopBarDropdown from '@components/TopBarDropdown.vue';
 import { ColumnSettings, SettingKey } from '@enums/setting-key';
+import TopBarDropdown from '@modules/items/components/TopBarDropdown/TopBarDropdown.vue';
 
 const props = defineProps<{ modelValue: ColumnSettings }>();
 const emits = defineEmits<{ (e: 'update:modelValue', value: ColumnSettings): void }>();

@@ -17,11 +17,10 @@ An Item query website for [Barotrauma](https://store.steampowered.com/app/602960
 
 To read all files under selected directory without use ` <input type="file"> to select file one by one.
 
-### [Archive images to zip](https://github.com/huybn5776/barotrauma-db/tree/main/src/components/DataImportOutput/DataImportOutput.vue)
-
+### [Archive images to zip](https://github.com/huybn5776/barotrauma-db/tree/main/src/modules/data-importer/components/DataImportOutput.vue)
 Use high performance library [fflate](https://github.com/101arrowz/fflate) to bundle the data importer outputs as zip for download.
 
-### [Lazy render with IntersectionObserver](https://github.com/huybn5776/barotrauma-db/tree/main/src/compositions/use-lazy-render.ts)
+### [Lazy render with IntersectionObserver](https://github.com/huybn5776/barotrauma-db/tree/main/src/modules/items/compositions/use-lazy-render.ts)
 
 Render a lot of row at once may cause browser lag for seconds, even thought fetch those static data is very fast that lazy load may not be required, we still need a way to render lazily to prevent this laggy.
 
