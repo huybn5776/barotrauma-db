@@ -1,0 +1,18 @@
+.highlight-item {
+  animation: blink 1s;
+}
+
+@keyframes blink {
+  from {
+    background-color: rgba(yellow, .3);
+  }
+
+  to {
+    background-color: #191919;
+  }
+}
+
+.temporary-row {
+  background-image: repeating-linear-gradient(135deg, rgba(white, .04), rgba(white, .04) 30px, transparent 30px, transparent 60px);
+  background-size: 200% 100%;
+}

@@ -26,27 +26,17 @@
       />
 
       <template v-for="(viewData, index) of itemsToShow" :key="viewData.item.identifier">
-        <div
-          v-if="selectedColumns.includes('image')"
-          class="item-cell item-image"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('image') }"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
-        >
+        <ItemListCell column="image" class="item-cell item-image" :rowNumber="index" :viewData="viewData">
           <ItemImage :item="viewData.item" :size="64" />
-        </div>
+        </ItemListCell>
 
-        <div
+        <ItemListCell
+          column="name"
           class="item-cell item-name"
           v-item-intersection="{ enter: () => onItemRowEnter(viewData) }"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('name') }"
           :id="viewData.item.identifier"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
+          :rowNumber="index"
+          :viewData="viewData"
         >
           <template v-if="!columnSettings.showCollectibleImage || !viewData.collectibleItemImages?.length">
             <ItemNameView :item="viewData.item" />
@@ -58,59 +48,27 @@
             :showCollectibleImage="columnSettings.showCollectibleImage"
             @toggleView="columnSettings.showCollectibleImage = !columnSettings.showCollectibleImage"
           />
-        </div>
+        </ItemListCell>
 
-        <div
-          class="item-cell item-recipe"
-          v-if="selectedColumns.includes('recipe')"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('recipe') }"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
-        >
+        <ItemListCell column="recipe" class="item-cell item-recipe" :rowNumber="index" :viewData="viewData">
           <FabricationRecipeView
             :recipes="viewData.fabricationRecipes"
             @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
           />
-        </div>
+        </ItemListCell>
 
-        <div
-          class="item-cell item-recipe"
-          v-if="selectedColumns.includes('deconstruct')"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('deconstruct') }"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
-        >
+        <ItemListCell column="deconstruct" class="item-cell item-recipe" :rowNumber="index" :viewData="viewData">
           <DeconstructRecipeView
             :recipe="viewData.deconstructRecipe"
             @itemClick="(event, item) => onNavigateToItem(event, item, viewData)"
           />
-        </div>
+        </ItemListCell>
 
-        <div
-          v-if="selectedColumns.includes('price')"
-          class="item-cell"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('price') }"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
-        >
+        <ItemListCell column="price" class="item-cell" :rowNumber="index" :viewData="viewData">
           <ItemPriceView :viewData="viewData" :detail="columnSettings.showPriceDetail" />
-        </div>
+        </ItemListCell>
 
-        <div
-          v-if="selectedColumns.includes('action')"
-          class="item-cell item-actions"
-          :style="{ order: (index + 1) * 10 + columnsOrder.indexOf('action') }"
-          :class="{
-            'highlight-item': highlightItem === viewData.item.identifier,
-            'temporary-row': viewData.isTemporaryRow,
-          }"
-        >
+        <ItemListCell column="action" class="item-cell item-actions" :rowNumber="index" :viewData="viewData">
           <button
             v-if="viewData.hasGain"
             class="b-button item-action-button deconstruct-button"
@@ -125,7 +83,7 @@
           >
             Usage
           </button>
-        </div>
+        </ItemListCell>
       </template>
 
       <p
@@ -148,6 +106,7 @@ import { onMounted, ref, computed } from 'vue';
 
 import { indexBy } from 'ramda';
 
+import { withProps } from '@/hocs/with-props';
 import ItemImage from '@components/ItemImage/ItemImage.vue';
 import { useMitt } from '@compositions/use-mitt';
 import { intersectionDirectiveFactory } from '@directives/IntersectionDirective';
@@ -162,6 +121,7 @@ import ColumnSettingModal from '@modules/items/components/ColumnSettingModal/Col
 import DeconstructRecipeView from '@modules/items/components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@modules/items/components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemActionInfoRow from '@modules/items/components/ItemActionInfoRow/ItemActionInfoRow.vue';
+import ItemListCellBase from '@modules/items/components/ItemListCell/ItemListCell.vue';
 import ItemListHeader from '@modules/items/components/ItemListHeader/ItemListHeader.vue';
 import ItemNameView from '@modules/items/components/ItemNameView/ItemNameView.vue';
 import ItemPriceView from '@modules/items/components/ItemPriceView/ItemPriceView.vue';
@@ -302,6 +262,12 @@ async function onNavigateToItem(event: MouseEvent, item: ItemPrefab, sourceViewD
 function onSortingChange(): void {
   clearTemporaryItems();
 }
+
+const ItemListCell = withProps(ItemListCellBase, () => ({
+  selectedColumns: selectedColumns.value,
+  columnsOrder: columnsOrder.value,
+  highlightItem: highlightItem.value,
+}));
 </script>
 
 <style lang="scss" scoped>
