@@ -592,7 +592,10 @@
     "ruincolumnbottom": "Bas de colonne de ruine",
     "ruinlight": "Lampe de ruine",
     "alienmachine": "Machine alien",
-    "opdeco_medcurtain": "Rideau médical"
+    "opdeco_medcurtain": "Rideau médical",
+    "metalwalls": "Mur en métal",
+    "metalbox": "Caisse en métal",
+    "ff_wall_airlock1": "Sas"
   },
   "entityDescriptions": {
     "door": "Porte coulissante sans boutons intégrés. Câblage manuel nécessaire.",
@@ -695,7 +698,7 @@
     "junctionbox": "Sert de plaque tournante pour distribuer l'énergie et pour relayer des signaux entre dispositifs.",
     "battery": "Généralement utilisée pour stocker de l'énergie de secours dans le cas d'une panne de réacteur.",
     "shuttlebattery": "Généralement utilisée pour stocker de l'énergie de secours dans le cas d'une panne de réacteur.",
-    "supercapacitor": "Peut fournir de l'énergie bien plus rapidement que les batteries",
+    "supercapacitor": "Peut produire d'énormes quantités d'électricité, mais a une capacité bien inférieure à celle des batteries. Le rechargement des condensateurs requiert également beaucoup plus d'énergie que pour ces dernières.",
     "chargingdock": "Un support de recharge pour cellule de batterie monté sur un mur.",
     "fpgacircuit": "Field-programmable gate array (ou réseau de portes programmables), un circuit multi-usage qui peut être reconfiguré pour être utilisé dans de nombreux appareils électriques.",
     "andcomponent": "Envoie un signal où les deux entrées reçoivent chacune un signal dans une période de temps prédéfinie.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "Fusil d'assaut 6,8 mm. Bien qu'il ait été banni par la Coalition, le schéma de ce fusil circule encore sur Europe. En effet, c'est une arme de choix pour la défense des sous-marins ou, comme aiment à dire les Séparatistes, la révolution sociale.",
     "assaultriflemagazine": "Chargeur conçu pour les cartouches de 6,8 mm.",
     "shotgunslugexplosive": "Balle de fusil à pompe contenant des matériaux explosifs. Puissante, mais quelque peu imprécise du fait de l'utilisation du fusil à pompe.",
-    "boardingaxe": "Hache conçue pour être maniée à deux mains. Sa lame affûtée et sa puissance de tranchage lui permettent parfois de frapper l'ennemi plus fort, ainsi que de trancher les têtes plus facilement.",
+    "boardingaxe": "Grande hache conçue pour être maniée à deux mains.",
     "skillbooksailorsguide": "Petit manuel qui présente brièvement toutes les tâches associées à la vie à bord d'un sous-marin.",
     "skillbooksubmarinewarfare": "Petit manuel contenant des informations utiles sur la guerre en sous-marin, avec des images détaillées présentant les manœuvres tactiques et l'utilisation correcte des armes à feu.",
     "skillbookhandyseaman": "Petit manuel contenant des informations détaillées sur les problèmes techniques les plus courants à bord des sous-marins d'Europe, ainsi que des instructions simples pour les régler.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "Appareil qui utilise un sonar pour cartographier les ruines.",
     "ruinvent": "Évent qui risque d'émettre des spores ou des gaz nocifs.",
     "guardiancutter": "Arme de gardien fractal.",
-    "ruincolumn": "Ornement de ruine."
+    "ruincolumn": "Ornement de ruine.",
+    "combatstimulantsyringe": "Stimulant hautement sophistiqué qui soigne rapidement l'utilisateur en cas de blessure physique et de perte de sang."
   },
   "displayNames": {
     "oxygentankempty": "Bouteille d'oxygène (vide)",

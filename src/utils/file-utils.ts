@@ -57,7 +57,7 @@ async function scanDirectory(
 
 export function saveDataToJsonFile(data: unknown, config: { fileName?: string; space?: number }): void {
   const json = config.space ? JSON.stringify(data, null, config.space) : JSON.stringify(data);
-  const blob = new Blob([json], { type: 'application/json' });
+  const blob = new Blob([`${json}\n`], { type: 'application/json' });
   const url = window.URL.createObjectURL(blob);
   downloadFile(url, `${config.fileName}.json`);
 }

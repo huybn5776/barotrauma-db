@@ -19,7 +19,7 @@
         16,
         16
       ],
-      "depth": 0.8
+      "depth": 0.5
     },
     "infectedIcon": {
       "texture": "Content/Items/InventoryIconAtlas.png",
@@ -56,7 +56,7 @@
         16,
         16
       ],
-      "depth": 0.8
+      "depth": 0.5
     },
     "infectedIcon": {
       "texture": "Content/Items/InventoryIconAtlas.png",
@@ -422,6 +422,45 @@
       ],
       "depth": 0.6
     },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "psychosisartifact_event",
+    "nameIdentifier": "psychosisartifact",
+    "variantOf": "psychosisartifact",
+    "price": {
+      "basePrice": 1000,
+      "soldEverywhere": false,
+      "canBeSpecial": false,
+      "locations": [
+        {
+          "locationType": "outpost",
+          "multiplier": 0.85,
+          "sold": false
+        },
+        {
+          "locationType": "city",
+          "multiplier": 0.85,
+          "sold": false
+        },
+        {
+          "locationType": "research",
+          "multiplier": 1.3,
+          "sold": false
+        },
+        {
+          "locationType": "military",
+          "multiplier": 1.25,
+          "sold": false
+        },
+        {
+          "locationType": "mine",
+          "multiplier": 1,
+          "sold": false
+        }
+      ]
+    },
+    "maxStackSize": 1,
     "sourceXml": "Content/Items/Alien/alienitems.xml"
   },
   {
@@ -1764,77 +1803,6 @@
     "sourceXml": "Content/Items/Alien/alienitems.xml"
   },
   {
-    "identifier": "psychosisartifact_event",
-    "nameIdentifier": "psychosisartifact",
-    "category": "Alien",
-    "tags": [
-      "alien",
-      "alienartifact"
-    ],
-    "price": {
-      "basePrice": 1000,
-      "soldEverywhere": false,
-      "locations": [
-        {
-          "locationType": "outpost",
-          "multiplier": 0.85,
-          "sold": false
-        },
-        {
-          "locationType": "city",
-          "multiplier": 0.85,
-          "sold": false
-        },
-        {
-          "locationType": "research",
-          "multiplier": 1.3,
-          "sold": false
-        },
-        {
-          "locationType": "military",
-          "multiplier": 1.25,
-          "sold": false
-        },
-        {
-          "locationType": "mine",
-          "multiplier": 1,
-          "sold": false
-        }
-      ]
-    },
-    "deconstructTime": 30,
-    "deconstructItems": [
-      {
-        "identifier": "steel"
-      },
-      {
-        "identifier": "dementonite"
-      },
-      {
-        "identifier": "dementonite"
-      },
-      {
-        "identifier": "dementonite"
-      }
-    ],
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Items/Alien/AlienRuins_Items.png",
-      "sourceRect": [
-        541,
-        0,
-        88,
-        108
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.6
-    },
-    "sourceXml": "Content/Items/Alien/alienitems.xml"
-  },
-  {
     "identifier": "ruinvent",
     "nameIdentifier": "ruinvent",
     "category": "Alien",
@@ -2001,6 +1969,230 @@
     "sourceXml": "Content/Items/Alien/alienitems.xml"
   },
   {
+    "identifier": "guardiansteamcannon",
+    "category": "hidden",
+    "tags": [
+      "smallitem",
+      "weapon",
+      "gun"
+    ],
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
+      "sourceRect": [
+        214,
+        514,
+        130,
+        64
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "guardianhookcannon",
+    "category": "hidden",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
+      "sourceRect": [
+        409,
+        520,
+        92,
+        42
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "guardianspear",
+    "category": "hidden",
+    "tags": [
+      "mediumitem",
+      "harpoonammo"
+    ],
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
+      "sourceRect": [
+        395,
+        609,
+        117,
+        40
+      ],
+      "origin": [
+        0.3,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "acidemitter",
+    "name": "acidemitter",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Items/Weapons/weapons_new.png",
+      "sourceRect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "ballastfloratoxins",
+    "name": "ballastfloratoxins",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Items/Weapons/weapons_new.png",
+      "sourceRect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "ruintoxins",
+    "name": "ruintoxins",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Items/Weapons/weapons_new.png",
+      "sourceRect": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "spinelingspike",
+    "category": "Misc",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Characters/Spineling/Spineling.png",
+      "sourceRect": [
+        0,
+        215,
+        180,
+        18
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "giantspinelingspike",
+    "nameIdentifier": "spinelingspike",
+    "category": "Misc",
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Characters/Spineling_giant/Spineling_giant.png",
+      "sourceRect": [
+        0,
+        860,
+        720,
+        72
+      ],
+      "depth": 0.55
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "smallcrawleregg",
+    "nameIdentifier": "crawleregg",
+    "category": "Alien",
+    "tags": [
+      "smallitem",
+      "ignorebyai",
+      "monsterfood"
+    ],
+    "deconstructTime": 10,
+    "deconstructItems": [
+      {
+        "identifier": "sulphuricacid"
+      }
+    ],
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
+      "sourceRect": [
+        323,
+        203,
+        45,
+        53
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.18
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
+    "identifier": "crawlereggprojectile",
+    "nameIdentifier": "crawleregg",
+    "category": "Alien",
+    "tags": [
+      "ignorebyai"
+    ],
+    "deconstructTime": 10,
+    "deconstructItems": [
+      {
+        "identifier": "sulphuricacid"
+      }
+    ],
+    "maxStackSize": 1,
+    "sprite": {
+      "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
+      "sourceRect": [
+        323,
+        203,
+        45,
+        53
+      ],
+      "origin": [
+        0.5,
+        0.5
+      ],
+      "depth": 0.18
+    },
+    "sourceXml": "Content/Items/Alien/alienitems.xml"
+  },
+  {
     "identifier": "button",
     "category": "Electrical",
     "tags": [
@@ -2066,9 +2258,9 @@
     "sprite": {
       "texture": "Content/Items/Button/button.png",
       "sourceRect": [
-        26,
+        28,
         70,
-        38,
+        34,
         51
       ],
       "origin": [
@@ -3277,9 +3469,9 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        16,
-        132,
-        76,
+        12,
+        130,
+        89,
         50
       ],
       "origin": [
@@ -3332,10 +3524,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        118,
-        130,
-        68,
-        47
+        114,
+        129,
+        83,
+        48
       ],
       "origin": [
         0.5,
@@ -3387,10 +3579,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        211,
-        124,
-        82,
-        50
+        212,
+        119,
+        90,
+        53
       ],
       "origin": [
         0.5,
@@ -4154,10 +4346,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        321,
-        332,
-        86,
-        45
+        320,
+        327,
+        88,
+        51
       ],
       "origin": [
         0.5,
@@ -4582,6 +4774,10 @@
         103,
         180
       ],
+      "origin": [
+        0.5,
+        0.35
+      ],
       "depth": 0.6
     },
     "infectedIcon": {
@@ -4663,10 +4859,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        15,
-        220,
-        73,
-        66
+        7,
+        215,
+        85,
+        68
       ],
       "origin": [
         0.5,
@@ -4740,10 +4936,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        115,
-        215,
-        77,
-        88
+        112,
+        213,
+        82,
+        94
       ],
       "origin": [
         0.5,
@@ -4817,10 +5013,10 @@
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
-        208,
-        214,
-        92,
-        81
+        207,
+        201,
+        104,
+        101
       ],
       "origin": [
         0.5,
@@ -7112,10 +7308,10 @@
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
-        323,
-        203,
-        45,
-        53
+        164,
+        3,
+        42,
+        49
       ],
       "origin": [
         0.5,
@@ -7226,10 +7422,10 @@
     "deconstructTime": 10,
     "deconstructItems": [
       {
-        "identifier": "alienblood"
+        "identifier": "adrenalinegland"
       },
       {
-        "identifier": "adrenalinegland"
+        "identifier": "sulphuricacid"
       }
     ],
     "maxStackSize": 1,
@@ -7246,75 +7442,6 @@
         0.5
       ],
       "depth": 0.18
-    },
-    "sourceXml": "Content/Items/CreatureLoot/creatureloot.xml"
-  },
-  {
-    "identifier": "guardiansteamcannon",
-    "category": "hidden",
-    "tags": [
-      "smallitem",
-      "weapon",
-      "gun"
-    ],
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
-      "sourceRect": [
-        214,
-        514,
-        130,
-        64
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.55
-    },
-    "sourceXml": "Content/Items/CreatureLoot/creatureloot.xml"
-  },
-  {
-    "identifier": "guardianhookcannon",
-    "category": "hidden",
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
-      "sourceRect": [
-        409,
-        520,
-        92,
-        42
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.55
-    },
-    "sourceXml": "Content/Items/CreatureLoot/creatureloot.xml"
-  },
-  {
-    "identifier": "guardianspear",
-    "category": "hidden",
-    "tags": [
-      "mediumitem",
-      "harpoonammo"
-    ],
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
-      "sourceRect": [
-        395,
-        609,
-        117,
-        40
-      ],
-      "origin": [
-        0.3,
-        0.5
-      ],
-      "depth": 0.55
     },
     "sourceXml": "Content/Items/CreatureLoot/creatureloot.xml"
   },
@@ -9529,8 +9656,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        122,
-        68,
+        225,
+        33,
         36,
         36
       ],
@@ -9619,10 +9746,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        1,
-        1,
-        30,
-        28
+        0,
+        0,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -9709,10 +9836,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        193,
-        36,
-        31,
-        26
+        32,
+        0,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -9799,10 +9926,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        161,
-        35,
-        30,
-        27
+        64,
+        0,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -9889,10 +10016,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        0,
         96,
-        31,
-        25
+        0,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -9979,10 +10106,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        129,
-        2,
+        128,
+        0,
         32,
-        25
+        32
       ],
       "origin": [
         0.5,
@@ -10069,10 +10196,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        192,
-        2,
-        31,
-        25
+        160,
+        0,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10159,10 +10286,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
+        0,
         32,
-        96,
-        31,
-        25
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10249,10 +10376,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        224,
-        2,
-        31,
-        25
+        32,
+        32,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10339,10 +10466,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        225,
-        131,
-        31,
-        26
+        64,
+        32,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10429,10 +10556,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
+        96,
         32,
-        2,
         32,
-        26
+        32
       ],
       "origin": [
         0.5,
@@ -10519,10 +10646,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        160,
-        3,
-        31,
-        25
+        128,
+        32,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10609,10 +10736,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        65,
-        2,
-        31,
-        26
+        160,
+        32,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10699,10 +10826,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        161,
-        67,
-        30,
-        28
+        0,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10789,10 +10916,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        129,
-        162,
-        30,
-        28
+        32,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10879,10 +11006,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        162,
-        162,
-        30,
-        28
+        64,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -10969,10 +11096,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        193,
-        162,
-        30,
-        28
+        96,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11059,10 +11186,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        129,
-        194,
-        30,
-        28
+        128,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11149,10 +11276,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        161,
-        194,
-        30,
-        28
+        160,
+        64,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11239,10 +11366,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        194,
-        194,
-        30,
-        28
+        0,
+        96,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11329,10 +11456,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        193,
-        98,
-        30,
-        28
+        32,
+        96,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11419,10 +11546,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        161,
-        98,
-        30,
-        28
+        64,
+        96,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11509,10 +11636,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        225,
-        98,
-        30,
-        28
+        96,
+        96,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11599,10 +11726,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        161,
-        130,
-        30,
-        28
+        128,
+        96,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11689,10 +11816,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        224,
-        162,
+        160,
+        96,
         32,
-        26
+        32
       ],
       "origin": [
         0.5,
@@ -11779,10 +11906,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        224,
-        194,
+        0,
+        128,
         32,
-        26
+        32
       ],
       "origin": [
         0.5,
@@ -11869,10 +11996,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        129,
-        130,
-        30,
-        28
+        32,
+        128,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -11960,10 +12087,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        96,
-        35,
-        31,
-        26
+        64,
+        128,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -12050,10 +12177,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
+        96,
+        128,
         32,
-        67,
-        31,
-        27
+        32
       ],
       "origin": [
         0.5,
@@ -12141,9 +12268,9 @@
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
         128,
-        36,
-        31,
-        25
+        128,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -12230,8 +12357,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        97,
-        3,
+        195,
+        4,
         28,
         24
       ],
@@ -12321,8 +12448,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        226,
-        34,
+        195,
+        33,
         27,
         31
       ],
@@ -12771,10 +12898,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        0,
-        35,
-        31,
-        26
+        160,
+        128,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -12861,10 +12988,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
+        0,
+        160,
         32,
-        35,
-        31,
-        26
+        32
       ],
       "origin": [
         0.5,
@@ -12951,10 +13078,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        35,
-        130,
-        28,
-        26
+        32,
+        160,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -13041,10 +13168,10 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        0,
-        67,
-        28,
-        26
+        64,
+        160,
+        32,
+        32
       ],
       "origin": [
         0.5,
@@ -13131,8 +13258,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        76,
-        64,
+        222,
+        72,
         40,
         62
       ],
@@ -13221,8 +13348,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        75,
-        133,
+        221,
+        138,
         42,
         57
       ],
@@ -13296,8 +13423,8 @@
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
-        1,
-        123,
+        199,
+        69,
         16,
         32
       ],
@@ -14818,7 +14945,7 @@
         0.5
       ],
       "sheetIndex": [
-        3,
+        1,
         2
       ],
       "sheetElementSize": [
@@ -16772,6 +16899,22 @@
         0.5
       ]
     },
+    "containedSprites": [
+      {
+        "texture": "Content/Items/Alien/AlienMaterials.png",
+        "sourceRect": [
+          33,
+          182,
+          193,
+          76
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.55
+      }
+    ],
     "sourceXml": "Content/Items/Materials/materials.xml"
   },
   {
@@ -16859,6 +17002,22 @@
         0.5
       ]
     },
+    "containedSprites": [
+      {
+        "texture": "Content/Items/Alien/AlienMaterials.png",
+        "sourceRect": [
+          27,
+          84,
+          200,
+          88
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.55
+      }
+    ],
     "sourceXml": "Content/Items/Materials/materials.xml"
   },
   {
@@ -16946,6 +17105,22 @@
         0.5
       ]
     },
+    "containedSprites": [
+      {
+        "texture": "Content/Items/Alien/AlienMaterials.png",
+        "sourceRect": [
+          283,
+          0,
+          197,
+          87
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.55
+      }
+    ],
     "sourceXml": "Content/Items/Materials/materials.xml"
   },
   {
@@ -17029,6 +17204,22 @@
         64
       ]
     },
+    "containedSprites": [
+      {
+        "texture": "Content/Items/Alien/AlienMaterials.png",
+        "sourceRect": [
+          15,
+          0,
+          222,
+          85
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.55
+      }
+    ],
     "sourceXml": "Content/Items/Materials/materials.xml"
   },
   {
@@ -17094,6 +17285,22 @@
         0.5
       ]
     },
+    "containedSprites": [
+      {
+        "texture": "Content/Items/Alien/AlienMaterials.png",
+        "sourceRect": [
+          274,
+          270,
+          205,
+          86
+        ],
+        "origin": [
+          0.5,
+          0.5
+        ],
+        "depth": 0.55
+      }
+    ],
     "sourceXml": "Content/Items/Materials/materials.xml"
   },
   {
@@ -32143,7 +32350,7 @@
           }
         ],
         "requiredTime": 5,
-        "outCondition": 100,
+        "outCondition": 1,
         "requiredSkills": [
           {
             "identifier": "mechanical",
@@ -33129,9 +33336,9 @@
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
         263,
-        191,
+        193,
         150,
-        89
+        87
       ],
       "origin": [
         0.5,
@@ -33144,7 +33351,7 @@
       "sourceRect": [
         384,
         256,
-        64,
+        62,
         64
       ]
     },
@@ -33644,7 +33851,7 @@
         {
           "locationType": "city",
           "multiplier": 1.2,
-          "minAvailable": 1
+          "sold": false
         },
         {
           "locationType": "research",
@@ -33654,7 +33861,8 @@
         {
           "locationType": "military",
           "multiplier": 0.9,
-          "minAvailable": 2
+          "minAvailable": 0,
+          "maxAvailable": 2
         },
         {
           "locationType": "mine",
@@ -33959,13 +34167,13 @@
       "ammobox"
     ],
     "price": {
-      "basePrice": 250,
+      "basePrice": 325,
       "soldEverywhere": false,
       "locations": [
         {
           "locationType": "outpost",
           "multiplier": 1.3,
-          "sold": false
+          "minAvailable": 1
         },
         {
           "locationType": "city",
@@ -34075,7 +34283,7 @@
       "ammobox"
     ],
     "price": {
-      "basePrice": 400,
+      "basePrice": 520,
       "soldEverywhere": false,
       "locations": [
         {
@@ -35332,13 +35540,13 @@
       "locations": [
         {
           "locationType": "outpost",
-          "multiplier": 1.3,
-          "sold": false
+          "multiplier": 1.6,
+          "minAvailable": 1
         },
         {
           "locationType": "city",
-          "multiplier": 1.2,
-          "sold": false
+          "multiplier": 1.4,
+          "minAvailable": 1
         },
         {
           "locationType": "research",
@@ -36175,7 +36383,7 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 6,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36265,7 +36473,7 @@
         "identifier": "physicorium"
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 6,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36361,7 +36569,7 @@
         "outCondition": 0.5
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 6,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36538,7 +36746,7 @@
         "amount": 4
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 12,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36743,6 +36951,30 @@
             "level": 40
           }
         ]
+      },
+      {
+        "displayName": "recycleitem",
+        "requiredItems": [
+          {
+            "identifier": "magnesium"
+          },
+          {
+            "identifier": "lead"
+          },
+          {
+            "identifier": "smgmagazine",
+            "useCondition": false,
+            "minCondition": 0
+          }
+        ],
+        "requiredTime": 15,
+        "requiresRecipe": true,
+        "requiredSkills": [
+          {
+            "identifier": "weapons",
+            "level": 40
+          }
+        ]
       }
     ],
     "deconstructTime": 10,
@@ -36752,8 +36984,7 @@
         "copyCondition": true
       },
       {
-        "identifier": "steel",
-        "copyCondition": true
+        "identifier": "steel"
       }
     ],
     "maxStackSize": 1,
@@ -37877,7 +38108,7 @@
         "amount": 4
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 12,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38209,66 +38440,6 @@
     "sourceXml": "Content/Items/Weapons/weapons.xml"
   },
   {
-    "identifier": "acidemitter",
-    "name": "acidemitter",
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Items/Weapons/weapons_new.png",
-      "sourceRect": [
-        0,
-        0,
-        2,
-        2
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.55
-    },
-    "sourceXml": "Content/Items/Weapons/weapons.xml"
-  },
-  {
-    "identifier": "ballastfloratoxins",
-    "name": "ballastfloratoxins",
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Items/Weapons/weapons_new.png",
-      "sourceRect": [
-        0,
-        0,
-        2,
-        2
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.55
-    },
-    "sourceXml": "Content/Items/Weapons/weapons.xml"
-  },
-  {
-    "identifier": "ruintoxins",
-    "name": "ruintoxins",
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Items/Weapons/weapons_new.png",
-      "sourceRect": [
-        0,
-        0,
-        2,
-        2
-      ],
-      "origin": [
-        0.5,
-        0.5
-      ],
-      "depth": 0.55
-    },
-    "sourceXml": "Content/Items/Weapons/weapons.xml"
-  },
-  {
     "identifier": "shotgununique",
     "category": "Equipment",
     "tags": [
@@ -38385,7 +38556,7 @@
         "identifier": "iron"
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 6,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38559,22 +38730,6 @@
         0.5,
         0.5
       ]
-    },
-    "sourceXml": "Content/Items/Weapons/weapons.xml"
-  },
-  {
-    "identifier": "spinelingspike",
-    "category": "Misc",
-    "maxStackSize": 1,
-    "sprite": {
-      "texture": "Content/Characters/Spineling/Spineling.png",
-      "sourceRect": [
-        0,
-        215,
-        180,
-        18
-      ],
-      "depth": 0.55
     },
     "sourceXml": "Content/Items/Weapons/weapons.xml"
   },
@@ -39459,7 +39614,7 @@
         16,
         16
       ],
-      "depth": 0.8
+      "depth": 0.5
     },
     "infectedIcon": {
       "texture": "Content/Items/InventoryIconAtlas.png",
@@ -43466,7 +43621,7 @@
       }
     ],
     "deconstructTime": 5,
-    "maxStackSize": 8,
+    "maxStackSize": 12,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -44686,6 +44841,36 @@
             "level": 30
           }
         ]
+      },
+      {
+        "displayName": "recycleitem",
+        "requiredItems": [
+          {
+            "identifier": "magnesium"
+          },
+          {
+            "identifier": "depletedfuel",
+            "useCondition": true,
+            "minCondition": 0.5
+          },
+          {
+            "identifier": "smgmagazinedepletedfuel",
+            "useCondition": false,
+            "minCondition": 0
+          }
+        ],
+        "requiredTime": 18,
+        "requiresRecipe": true,
+        "requiredSkills": [
+          {
+            "identifier": "weapons",
+            "level": 40
+          },
+          {
+            "identifier": "electrical",
+            "level": 30
+          }
+        ]
       }
     ],
     "deconstructTime": 15,
@@ -45654,8 +45839,8 @@
         "requiresRecipe": true,
         "requiredSkills": [
           {
-            "identifier": "mechanical",
-            "level": 50
+            "identifier": "electrical",
+            "level": 70
           }
         ]
       }
@@ -46339,7 +46524,7 @@
         "amount": 4
       }
     ],
-    "maxStackSize": 8,
+    "maxStackSize": 12,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [

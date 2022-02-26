@@ -1,5 +1,5 @@
 {
-  "language": "korean",
+  "language": "Korean",
   "name": "한국어",
   "entityNames": {
     "door": "커스텀 문",
@@ -592,7 +592,10 @@
     "ruincolumnbottom": "유적 기둥 아랫부분",
     "ruinlight": "유적 조명",
     "alienmachine": "외계 기계",
-    "opdeco_medcurtain": "의료용 커튼"
+    "opdeco_medcurtain": "의료용 커튼",
+    "metalwalls": "철제 벽",
+    "metalbox": "철제 상자",
+    "ff_wall_airlock1": "에어락"
   },
   "entityDescriptions": {
     "door": "버튼이 없는 미닫이문. 직접 배선해야 합니다.",
@@ -695,7 +698,7 @@
     "junctionbox": "장치 간 배전 및 신호 중계를 위한 허브 역할을 합니다.",
     "battery": "원자로 고장 시 예비 전력을 저장하는 데 주로 사용됩니다.",
     "shuttlebattery": "원자로 고장 시 예비 전력을 저장하는 데 주로 사용됩니다.",
-    "supercapacitor": "배터리보다 훨씬 전하를 전송시킵니다.",
+    "supercapacitor": "엄청난 전력을 생산할 수 있지만 수용량이 배터리보다 훨씬 낮습니다. 축전기를 충전하는 것도 배터리보다 훨씬 더 많은 전력을 소모합니다.",
     "chargingdock": "벽에 고정된 배터리 셀 충전 독.",
     "fpgacircuit": "장 프로그램 가능 게이트 배열. 매우 다양한 전기 장치에서 사용 가능하도록 재구성할 수 있는 다목적 회로.",
     "andcomponent": "양쪽 입력부가 서로 정해진 시간 내에 신호를 수신하면 신호를 전송합니다.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "6.8mm 탄약을 쓰는 돌격소총. 연합은 금지시켰지만, 이 총에 대한 설계도는 여전히 유로파 주변에서 전해지고 있습니다. 이는 잠수함 방어에 뛰어날 뿐 아니라 분리주의자들의 사회주의 혁명에도 탁월하게 쓰이기 때문입니다.",
     "assaultriflemagazine": "6.8mm 카트리지용으로 설계된 탄창입니다.",
     "shotgunslugexplosive": "폭발물이 들어 있는 산탄총 탄환입니다. 산탄총에서 발사되기 때문에 강력하지만 여전히 정확하지 않습니다.",
-    "boardingaxe": "양손으로 휘두르는 손도끼. 날카로운 날과 관통력은 때때로 적을 더 깊이 공격할 뿐만 아니라 머리를 더 쉽게 잘라낼 수 있게 해준다.",
+    "boardingaxe": "거대한 손도끼. 양 손으로 들어야 합니다.",
     "skillbooksailorsguide": "제한된 범위나마 수중 항해와 관련된 모든 작업을 다루는 작은 안내서입니다.",
     "skillbooksubmarinewarfare": "잠수함 전투와 관련된 유용한 정보를 담은 작은 핸드북. 정교한 전술 기동과 적절한 화기 훈련이 상세하게 설명돼 있습니다.",
     "skillbookhandyseaman": "유로파 잠수함 기술적 문제에 대한 자세한 정보를 담고 있는 작은 핸드북으로 간단한 설명이 수록되어 있습니다.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "음파탐지로 유적의 지도를 만드는 장치입니다.",
     "ruinvent": "유해한 포자 또는 가스를 방출할 수 있는 환기구입니다.",
     "guardiancutter": "프랙탈 가디언 무기",
-    "ruincolumn": "유적 장식"
+    "ruincolumn": "유적 장식",
+    "combatstimulantsyringe": "굉장히 향상된 자극제로 사용자를 출혈이나 부상으로부터 빠르게 회복시켜줍니다."
   },
   "displayNames": {
     "oxygentankempty": "산소통 (비어 있음)",

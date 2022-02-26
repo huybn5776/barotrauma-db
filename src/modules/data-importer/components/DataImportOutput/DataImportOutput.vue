@@ -80,7 +80,7 @@ function downloadTexts(): void {
   props.convertResult.texts.forEach((locale) => {
     const json = JSON.stringify(locale, null, 2);
     const fileName = `${getLocaleKey(locale)}.json`;
-    filesToArchive[fileName] = strToU8(json);
+    filesToArchive[fileName] = strToU8(`${json}\n`);
   });
 
   const locales = props.convertResult.texts.map((locale) => ({ key: getLocaleKey(locale), name: locale.name }));

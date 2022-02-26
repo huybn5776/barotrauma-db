@@ -891,7 +891,10 @@
     "ruincolumnbottom": "Ruin Column Bottom",
     "ruinlight": "Ruin Light",
     "alienmachine": "Alien Machine",
-    "opdeco_medcurtain": "Medical Curtain"
+    "opdeco_medcurtain": "Medical Curtain",
+    "MetalWalls": "Metal Wall",
+    "MetalBox": "Metal Box",
+    "FF_Wall_Airlock1": "Airlock"
   },
   "entityDescriptions": {
     "hull": "Hulls determine which parts are considered to be 'inside the sub'. Generally every room should be enclosed by a hull.",
@@ -1209,7 +1212,6 @@
     "junctionbox": "Serves as a hub for power distribution and relaying signals between devices.",
     "battery": "Generally used for storing backup power in case of a reactor failure.",
     "shuttlebattery": "Generally used for storing backup power in case of a reactor failure.",
-    "supercapacitor": "Can deliver charge much faster than batteries.",
     "chargingdock": "A wall-mounted battery cell charging dock.",
     "fpgacircuit": "Field-programmable gate array—a multipurpose circuit that can be reconfigured for use in a large variety of electrical devices.",
     "andcomponent": "Sends a signal when both inputs receive a signal within a set period of each other.",
@@ -1514,7 +1516,6 @@
     "assaultrifle": "An assault rifle chambering 6.8mm cartridges. Though banned by the Coalition, the schematics for these rifles are still passed around Europa as they present a premier option for submarine defense, or as the Separatists would prefer, societal revolution.",
     "assaultriflemagazine": "A magazine designed for holding 6.8mm cartridges.",
     "shotgunslugexplosive": "A shotgun slug containing explosive material. Powerful, but still somewhat inaccurate on account of being fired out of a shotgun.",
-    "boardingaxe": "A hand axe, meant to be wielded with both hands. The sharp edge and sheer hacking power allow it to occasionally strike deeper into a foe, as well as lop off heads more easily.",
     "skillbooksailorsguide": "A small handbook that covers all the tasks associated with underwater sailing, though in limited scope.",
     "skillbooksubmarinewarfare": "A small handbook with useful information pertaining to all things submarine warfare, with detailed pictures of elaborate tactical manuevers and proper firearms discipline.",
     "skillbookhandyseaman": "A small handbook containing detailed information on the most-often-encountered technical problems on board the submarines of Europa, with simple-to-understand instructions for dealing with them.",
@@ -1541,7 +1542,10 @@
     "guardianpod": "Protective pod for Fractal Guardians.",
     "ruinscanner": "A device that uses sonar waves to map ruins.",
     "ruinvent": "A vent that might emit harmful spores or gas.",
-    "ruincolumn": "Ruin decoration."
+    "ruincolumn": "Ruin decoration.",
+    "boardingaxe": "A hand axe, meant to be wielded with both hands.",
+    "supercapacitor": "Can output huge surges of power, but has a much lower capacity than batteries. Recharging the capacitors also takes much more power than batteries.",
+    "combatstimulantsyringe": "A highly advanced stimulant that makes the user rapidly recover from physical injuries and bloodloss."
   },
   "displayNames": {
     "oxygentankempty": "Oxygen Tank (empty)",

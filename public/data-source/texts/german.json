@@ -592,7 +592,10 @@
     "ruincolumnbottom": "Ruinensäule unten",
     "ruinlight": "Ruinenlicht",
     "alienmachine": "Außerirdische Maschine",
-    "opdeco_medcurtain": "Medizinvorhang"
+    "opdeco_medcurtain": "Medizinvorhang",
+    "metalwalls": "Metallwand",
+    "metalbox": "Metallkiste",
+    "ff_wall_airlock1": "Luftschleuse"
   },
   "entityDescriptions": {
     "door": "Eine Schiebetür ohne eingebaute Knöpfe – muss manuell verkabelt werden.",
@@ -695,7 +698,7 @@
     "junctionbox": "Dient als Zentrale für die Energieverteilung und Signalübertragung zwischen Geräten.",
     "battery": "Wird verwendet, um Hilfsstrom für den Fall eines Reaktorversagens zu speichern.",
     "shuttlebattery": "Wird verwendet, um Hilfsstrom für den Fall eines Reaktorversagens zu speichern.",
-    "supercapacitor": "Lädt viel schneller nach als Batterien.",
+    "supercapacitor": "Weist eine gewaltige Leistung auf, aber auch eine viel niedrigere Kapazität als Batterien. Kondensatoren verbrauchen zudem beim Aufladen deutlich mehr Energie als Batterien.",
     "chargingdock": "Eine an der Wand befestigte Batteriezellen-Ladestation.",
     "fpgacircuit": "Eine feldprogrammierbare Gatter-Anordnung – ein Mehrzweckschaltkreis, der für viele elektrische Geräte verwendet werden kann.",
     "andcomponent": "Sendet ein Signal, wenn beide Eingänge ein Signal innerhalb eines bestimmten Zeitraums erhalten.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "Ein Sturmgewehr, das mit 6,8-mm-Patronen geladen wird. Die Waffe wurde von der Koalition zwar verboten, doch die Baupläne kursieren weiterhin, da das Gewehr eine hervorragende Option für die U-Boot-Verteidigung darstellt ... oder für das Vorantreiben der gesellschaftlichen Revolution, wenn es nach den Separatisten geht.",
     "assaultriflemagazine": "Ein Magazin für 6,8-mm-Patronen.",
     "shotgunslugexplosive": "Eine Schrotflintenpatrone mit explosiver Ladung. Besitzt zwar eine hohe Durchschlagskraft, ist aber weiterhin etwas unpräzise, da sie aus einer Schrotflinte abgefeuert wird.",
-    "boardingaxe": "Ein Handbeil, das mit beiden Händen geführt wird. Dank der scharfen Schneide und schieren Hackkraft kann es tiefer in einen Gegner eindringen und ihm leichter den Kopf abtrennen.",
+    "boardingaxe": "Eine große Axt für die Verwendung mit zwei Händen.",
     "skillbooksailorsguide": "Ein kleines Handbuch, das alle Aufgaben eines Unterwassermatrosen beschreibt, wenn auch nicht sonderlich detailliert.",
     "skillbooksubmarinewarfare": "Ein kleines Handbuch mit nützlichen Informationen rund um den U-Boot-Krieg, einschließlich detaillierten Bildern von komplizierten taktischen Manövern und Hinweisen zum korrekten Waffengebrauch.",
     "skillbookhandyseaman": "Ein kleines Handbuch mit detaillierten Informationen zu den häufigsten technischen Problemen, die auf den U-Booten Europas auftreten können, inklusive kinderleichten Anweisungen, wie man sie behebt.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "Ein Gerät, das mit Hilfe von Sonarwellen Ruinen scannt.",
     "ruinvent": "Ein Luftauslass, der schädliche Sporen oder Gase absondern kann.",
     "guardiancutter": "Fraktaler-Wächter-Waffen",
-    "ruincolumn": "Ruinendekoration."
+    "ruincolumn": "Ruinendekoration.",
+    "combatstimulantsyringe": "Ein fortschrittliches Stimulans, das extrem schnell gegen Wunden und Blutverlust wirkt."
   },
   "displayNames": {
     "oxygentankempty": "Sauerstoffflasche (leer)",

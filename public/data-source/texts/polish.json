@@ -592,7 +592,10 @@
     "ruincolumnbottom": "Dół kolumny ruiny",
     "ruinlight": "Oświetlenie ruiny",
     "alienmachine": "Maszyna obcych",
-    "opdeco_medcurtain": "Parawan medyczny"
+    "opdeco_medcurtain": "Parawan medyczny",
+    "metalwalls": "Metalowa ściana",
+    "metalbox": "Metalowe pudełko",
+    "ff_wall_airlock1": "Śluza powietrzna"
   },
   "entityDescriptions": {
     "door": "Drzwi przesuwne bez przycisków do otwierania – należy je podpiąć ręcznie.",
@@ -695,7 +698,7 @@
     "junctionbox": "Służy jako centrum rozdziału prądu i przekazywania sygnałów pomiędzy urządzeniami.",
     "battery": "Używana do przechowywania zapasowej energii na wypadek awarii reaktora.",
     "shuttlebattery": "Używana do przechowywania zapasowej energii na wypadek awarii reaktora.",
-    "supercapacitor": "Przekazuje ładunek znacznie szybciej niż baterie.",
+    "supercapacitor": "Może generować ogromną ilość mocy, ale ma znacznie mniejszą pojemność niż baterie. Ładowanie kondensatorów również wymaga znacznie więcej energii niż w przypadku baterii.",
     "chargingdock": "Umieszczona na ścianie stacja ładująca baterie.",
     "fpgacircuit": "Bezpośrednio programowalna macierz bramek – wielofunkcyjny układ, który można zrekonfigurować do użytku z wieloma różnymi urządzeniami elektrycznymi.",
     "andcomponent": "Wysyła sygnał, jeżeli oba wejścia otrzymają sygnały w określonym oknie czasowym.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "Karabin szturmowy na naboje kalibru 6,8 mm. Choć zostały zakazane przez Koalicję, schematy tych karabinów wciąż krążą po Europie, gdyż stanowią one doskonałą opcję obrony okrętów podwodnych – lub, jak woleliby określać to separatyści, rewolucji społecznej.",
     "assaultriflemagazine": "Magazynek na naboje kalibru 6,8 mm.",
     "shotgunslugexplosive": "Pocisk do strzelby zawierający materiały wybuchowe. Potężny, ale wciąż nieco niedokładny, ponieważ jest wystrzeliwany ze strzelby.",
-    "boardingaxe": "Topór ręczny, przeznaczony do trzymania oburącz. Ostra krawędź i siła czystego cięcia umożliwiają głębsze wbijanie się w przeciwnika, a także łatwiejsze odcinanie głów.",
+    "boardingaxe": "Duży topór ręczny, przeznaczony do trzymania w obu rękach.",
     "skillbooksailorsguide": "Mały podręcznik obejmujący wszystkie zagadnienia związane z żeglarstwem podwodnym, choć w ograniczonym zakresie.",
     "skillbooksubmarinewarfare": "Niewielki podręcznik zawierający przydatne informacje na temat działań wojennych na okrętach podwodnych, ze szczegółowymi schematami skomplikowanych manewrów taktycznych i prawidłowej dyscypliny broni palnej.",
     "skillbookhandyseaman": "Mały podręcznik zawierający szczegółowe informacje na temat najczęstszych problemów technicznych napotykanych na pokładach okrętów podwodnych Europy, wraz z prostymi instrukcjami radzenia sobie z nimi.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "Urządzenie, które wykorzystuje sonar do mapowania ruin.",
     "ruinvent": "Otwór wentylacyjny, może emitować szkodliwe gazy lub zarodniki.",
     "guardiancutter": "Arsenał strażnika fraktalnego",
-    "ruincolumn": "Dekoracja ruin."
+    "ruincolumn": "Dekoracja ruin.",
+    "combatstimulantsyringe": "Wysoce zaawansowany stymulant, który szybko leczy pacjenta z urazów fizycznych i utraty krwi."
   },
   "displayNames": {
     "oxygentankempty": "Butla z tlenem (pusta)",

@@ -592,7 +592,10 @@
     "ruincolumnbottom": "Base da Coluna da Ruína",
     "ruinlight": "Luz da Ruína",
     "alienmachine": "Máquina Alienígena",
-    "opdeco_medcurtain": "Cortina Médica"
+    "opdeco_medcurtain": "Cortina Médica",
+    "metalwalls": "Parede de Metal",
+    "metalbox": "Caixa de Metal",
+    "ff_wall_airlock1": "Câmara de Vácuo"
   },
   "entityDescriptions": {
     "door": "Uma porta de correr. Não há botões integrados. Deve ser operada manualmente.",
@@ -695,7 +698,7 @@
     "junctionbox": "Serve como um centro de distribuição de energia e retransmissão de sinais entre dispositivos.",
     "battery": "Normalmente usada para armazenar energia reserva no caso de uma falha no reator.",
     "shuttlebattery": "Normalmente usada para armazenar energia reserva no caso de uma falha no reator.",
-    "supercapacitor": "Carrega muito mais rápido do que baterias.",
+    "supercapacitor": "Consegue produzir grandes picos de energia, mas tem uma capacidade muito inferior à das baterias. Recarregar os capacitores também requer muito mais energia do que as baterias.",
     "chargingdock": "Um suporte para recarga de pilhas acoplado à parede.",
     "fpgacircuit": "A matriz de portas programáveis é um circuito multiuso que pode ser reconfigurado para uma grande variedade de dispositivos elétricos.",
     "andcomponent": "Indica quando ambas as entradas recebem um sinal dentro de um período determinado de cada uma.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "Um fuzil de assalto que comporta cartuchos de 6,8 mm. Apesar de banido pela Coalizão, as instruções de fabricação desses fuzis continuam circulando pela Europa por serem uma excelente opção para defesa de submarino; ou, como os Separatistas preferem, para a revolução social.",
     "assaultriflemagazine": "Um carregador feito para comportar cartuchos de 6,8 mm.",
     "shotgunslugexplosive": "Um cartucho de espingarda que contém material explosivo. Poderoso, mas um tanto impreciso por ser disparado de uma espingarda.",
-    "boardingaxe": "Um machado feito para ser usado com as duas mãos. A lâmina afiada e seu golpe poderoso permitem ocasionalmente cortar inimigos mais fundo, além de decepar cabeças com mais facilidade.",
+    "boardingaxe": "Um machado grande feito para ser usado com as duas mãos.",
     "skillbooksailorsguide": "Um livreto que fala sobre todas as tarefas associadas à navegação submarina, mas de forma mais breve.",
     "skillbooksubmarinewarfare": "Um livreto com informações úteis pertinentes à guerra submarina, com imagens detalhadas de manobras táticas complexas e o uso correto das armas de fogo.",
     "skillbookhandyseaman": "Um livreto com informações detalhadas sobre os problemas técnicos mais comuns encontrados a bordo dos submarinos na Europa, com instruções fáceis de entender para solucioná-los.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "Um dispositivo que usa ondas sonoras para mapear ruínas.",
     "ruinvent": "Um duto que pode emitir esporos ou gases nocivos.",
     "guardiancutter": "Armamento de Guardião Fractal",
-    "ruincolumn": "Decoração da ruína."
+    "ruincolumn": "Decoração da ruína.",
+    "combatstimulantsyringe": "Um estimulante muito avançado que cura rapidamente os ferimentos e a hemorragia do usuário."
   },
   "displayNames": {
     "oxygentankempty": "Tanque de Oxigênio (vazio)",

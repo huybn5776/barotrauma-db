@@ -592,7 +592,10 @@
     "ruincolumnbottom": "Columna en ruinas (parte baja)",
     "ruinlight": "Luz de las ruinas",
     "alienmachine": "Máquina alienígena",
-    "opdeco_medcurtain": "Separador médico"
+    "opdeco_medcurtain": "Separador médico",
+    "metalwalls": "Pared metálica",
+    "metalbox": "Caja metálica",
+    "ff_wall_airlock1": "Compartimento estanco"
   },
   "entityDescriptions": {
     "door": "Una puerta corredera sin botones integrados; hay que conectarla manualmente.",
@@ -695,7 +698,7 @@
     "junctionbox": "Funciona como eje de distribución de energía y transmisor de señales entre dispositivos.",
     "battery": "Suele usarse para almacenar energía de reserva en caso de un fallo del reactor.",
     "shuttlebattery": "Suele usarse para almacenar energía de reserva en caso de un fallo del reactor.",
-    "supercapacitor": "Puede cargar mucho más rápido que una batería.",
+    "supercapacitor": "Tiene una gran salida de energía, pero mucha menos capacidad que las baterías. Recargar los condensadores también consume mucha más energía que las baterías.",
     "chargingdock": "Puerto de carga para pilas fijado a la pared.",
     "fpgacircuit": "Matriz de puertas programable por campo: un circuito multiusos que puede reconfigurarse para usarse en una gran variedad de dispositivos electrónicos.",
     "andcomponent": "Envía una señal cuando las dos entradas reciben una señal de la otra en un plazo determinado.",
@@ -1048,7 +1051,7 @@
     "assaultrifle": "Un fusil de asalto con cartuchos de 6.8 mm. Aunque están prohibidos por la Coalición, los planos de estos fusiles siguen circulando por Europa, ya que son una opción excelente para la defensa submarina o, como dirían los separatistas, la revolución social.",
     "assaultriflemagazine": "Un cargador diseñado para albergar cartuchos de 6.8 mm.",
     "shotgunslugexplosive": "Una bala de escopeta explosiva. Es potente, pero algo imprecisa, ya que sale de una escopeta.",
-    "boardingaxe": "Un hacha de mano pensada para que se sostenga con ambas manos. Su tajante filo e increíble potencia para hacer pedazos permiten asestar golpes mucho más profundos, además de cortar cabezas con más facilidad.",
+    "boardingaxe": "Un hacha grande pensada para blandirse a dos manos.",
     "skillbooksailorsguide": "Una pequeña guía que cubre todas las tareas asociadas a la navegación bajo el agua, aunque con un alcance limitado.",
     "skillbooksubmarinewarfare": "Una pequeña guía con información útil sobre las guerras submarinas, con imágenes detalladas, maniobras tácticas elaboradas y dominio real de armas de fuego.",
     "skillbookhandyseaman": "Una pequeña guía que contiene información detallada sobre los problemas técnicos más comunes de los submarinos de Europa, con instrucciones simples de comprender para resolverlos.",
@@ -1077,7 +1080,8 @@
     "ruinscanner": "Un dispositivo que usa ondas sonar para encontrar ruinas.",
     "ruinvent": "Un respiradero que emite esporas o gases nocivos.",
     "guardiancutter": "Armamento de guardián fractal.",
-    "ruincolumn": "Decoración de las ruinas."
+    "ruincolumn": "Decoración de las ruinas.",
+    "combatstimulantsyringe": "Un estimulante muy avanzado que cura rápidamente al usuario de heridas y pérdidas de sangre."
   },
   "displayNames": {
     "oxygentankempty": "Botella de oxígeno (vacía)",
