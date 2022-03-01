@@ -40,6 +40,7 @@
         >
           <template v-if="!columnSettings.showCollectibleImage || !viewData.collectibleItemImages?.length">
             <ItemNameView :item="viewData.item" />
+            <ItemDescriptionView v-if="columnSettings.showItemDescription" :item="viewData.item" />
             <ItemTagsView :item="viewData" v-model:selectedTags="selectedTags" />
           </template>
           <CollectibleItemImage
@@ -121,6 +122,7 @@ import ColumnSettingModal from '@modules/items/components/ColumnSettingModal/Col
 import DeconstructRecipeView from '@modules/items/components/DeconstructRecipeView/DeconstructRecipeView.vue';
 import FabricationRecipeView from '@modules/items/components/FabricationRecipeView/FabricationRecipeView.vue';
 import ItemActionInfoRow from '@modules/items/components/ItemActionInfoRow/ItemActionInfoRow.vue';
+import ItemDescriptionView from '@modules/items/components/ItemDescriptionView/ItemDescriptionView.vue';
 import ItemListCellBase from '@modules/items/components/ItemListCell/ItemListCell.vue';
 import ItemListHeader from '@modules/items/components/ItemListHeader/ItemListHeader.vue';
 import ItemNameView from '@modules/items/components/ItemNameView/ItemNameView.vue';
