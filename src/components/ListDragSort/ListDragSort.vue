@@ -33,6 +33,7 @@
 <script lang="ts" setup>
 import { ref, computed, watch } from 'vue';
 
+import { clamp } from 'ramda';
 import { merge, fromEvent, tap, map, distinctUntilChanged, takeUntil, take } from 'rxjs';
 
 import { useInverseRef } from '@compositions/use-inverse-ref';
@@ -47,7 +48,6 @@ const emits = defineEmits<{
 
 const untilDestroyed = useUntilDestroyed();
 const moveOffsets = ref<number[]>([]);
-const yOffsetsPx = ref<number[]>([]);
 const dropTransitioning = ref(false);
 const stopAllTransition = ref(false);
 const isDragging = ref<boolean>(false);
@@ -92,13 +92,14 @@ function subscribeForDragMove(startEvent: MouseEvent | TouchEvent, itemIndex: nu
   yOffset$.pipe(takeUntil(end$), untilDestroyed()).subscribe((yOffset) => {
     setYPosition(yOffset);
     moveOffsets.value = calcMoveOffsets(yOffset, itemHeight, itemIndex);
-    yOffsetsPx.value = moveOffsets.value.map((v, index) => (index === itemIndex ? 0 : v * itemHeight));
   });
 
   end$.pipe(take(1), untilDestroyed()).subscribe(() => {
     isDragging.value = false;
     setEnableTransitionState(true);
-    setYPosition(moveOffsets.value[itemIndex] * itemHeight);
+    const movement = moveOffsets.value[itemIndex];
+    const limitedMovement = clamp(-itemIndex, props.items.length - 1 - itemIndex, movement);
+    setYPosition(limitedMovement * itemHeight);
 
     const offsets = [...moveOffsets.value];
     const notMoved = offsets.every((offset) => offset === 0);
@@ -140,7 +141,11 @@ function calcMoveOffsets(yOffset: number, itemHeight: number, itemIndex: number)
 
 function emitItemUpdate(offsets: number[]): void {
   const newItems: typeof props.items = [];
-  props.items.forEach((item, index) => (newItems[index + offsets[index]] = item));
+  props.items.forEach((item, index) => {
+    const indexAfterApplyOffset = index + offsets[index];
+    const limitedIndex = clamp(0, props.items.length - 1, indexAfterApplyOffset);
+    newItems[limitedIndex] = item;
+  });
   emits('update:items', newItems);
 }
 
@@ -156,7 +161,6 @@ function transitionListAfterDragMove(
       setYPosition(0);
       draggingItemIndex.value = undefined;
       moveOffsets.value = [];
-      yOffsetsPx.value = [];
 
       dropTransitioning.value = false;
       stopAllTransition.value = true;
