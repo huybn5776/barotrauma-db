@@ -64,6 +64,8 @@ function subscribeForDragMove(startEvent: MouseEvent | TouchEvent, itemIndex: nu
   const draggableContainerElement = itemElement.parentElement as HTMLElement;
 
   const itemHeight = draggableContainerElement.offsetHeight;
+  const minBoundOfItemIndex = -itemIndex * itemHeight - itemHeight * 0.1;
+  const maxBoundOfItemIndex = (props.items.length - 1 - itemIndex) * itemHeight + itemHeight * 0.1;
   const startY = Math.round(getPositionFromEvent(startEvent).y);
   const yOffset$ = merge(
     fromEvent<MouseEvent>(document.body, 'mousemove'),
@@ -90,8 +92,14 @@ function subscribeForDragMove(startEvent: MouseEvent | TouchEvent, itemIndex: nu
     setEnableTransitionState(false);
   });
   yOffset$.pipe(takeUntil(end$), untilDestroyed()).subscribe((yOffset) => {
-    setYPosition(yOffset);
     moveOffsets.value = calcMoveOffsets(yOffset, itemHeight, itemIndex);
+    if (yOffset < minBoundOfItemIndex) {
+      setYPosition(minBoundOfItemIndex + (yOffset - minBoundOfItemIndex) / 5);
+    } else if (yOffset > maxBoundOfItemIndex) {
+      setYPosition(maxBoundOfItemIndex + (yOffset - maxBoundOfItemIndex) / 5);
+    } else {
+      setYPosition(yOffset);
+    }
   });
 
   end$.pipe(take(1), untilDestroyed()).subscribe(() => {
