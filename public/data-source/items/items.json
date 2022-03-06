@@ -10,7 +10,6 @@
       "basePrice": 10,
       "soldEverywhere": false
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/idcard.png",
       "sourceRect": [
@@ -47,7 +46,6 @@
       "basePrice": 10,
       "soldEverywhere": false
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/idcard.png",
       "sourceRect": [
@@ -126,7 +124,6 @@
         "identifier": "oxygeniteshard"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -196,7 +193,6 @@
         "identifier": "incendium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -266,7 +262,6 @@
         "identifier": "fulgurium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -337,7 +332,6 @@
         "identifier": "physicorium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -407,7 +401,6 @@
         "identifier": "dementonite"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -460,7 +453,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Alien/alienitems.xml"
   },
   {
@@ -882,7 +874,6 @@
         "identifier": "fulgurium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -955,7 +946,6 @@
         "identifier": "fulgurium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -979,7 +969,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1003,7 +992,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1028,7 +1016,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1053,7 +1040,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1077,7 +1063,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1101,7 +1086,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1126,7 +1110,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1151,7 +1134,6 @@
       "alien",
       "aliendoor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1174,7 +1156,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1197,7 +1178,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1221,7 +1201,6 @@
       "alien",
       "alienmotionsensor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1276,7 +1255,6 @@
       "artifactholder",
       "artifactcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1368,7 +1346,6 @@
       "alien",
       "aliengenerator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/Legacy/AlienRuin_Legacy.png",
       "sourceRect": [
@@ -1461,7 +1438,6 @@
       "smallitem",
       "pistolammoitem"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -1498,7 +1474,6 @@
       "alien",
       "alienpump"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/Legacy/AlienRuin_Legacy.png",
       "sourceRect": [
@@ -1519,7 +1494,6 @@
       "alien",
       "alienbutton"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1544,7 +1518,6 @@
       "alien",
       "alienturret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/Legacy/AlienRuin_Legacy.png",
       "sourceRect": [
@@ -1564,7 +1537,6 @@
       "alien",
       "alienturretammo"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien//Legacy/AlienRuin_Legacy.png",
       "sourceRect": [
@@ -1588,7 +1560,6 @@
       "alien",
       "aliencoil"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1612,7 +1583,6 @@
       "alien",
       "alienvent"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/Legacy/AlienRuin_Legacy.png",
       "sourceRect": [
@@ -1631,7 +1601,6 @@
     "tags": [
       "aliencontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1655,7 +1624,6 @@
     "tags": [
       "aliencontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1678,7 +1646,6 @@
     "tags": [
       "aliencontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1702,7 +1669,6 @@
       "smallitem",
       "alienlight"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1725,7 +1691,6 @@
     "tags": [
       "aliencontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1745,7 +1710,6 @@
   {
     "identifier": "gravitysphere",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1785,7 +1749,6 @@
       "smallitem",
       "logic"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1806,7 +1769,6 @@
     "identifier": "ruinvent",
     "nameIdentifier": "ruinvent",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Map/AlienWallSet1.png",
       "sourceRect": [
@@ -1827,7 +1789,6 @@
     "identifier": "ruinpipeconnection",
     "nameIdentifier": "RuinDecal1",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Map/AlienWallSet1.png",
       "sourceRect": [
@@ -1848,7 +1809,6 @@
     "identifier": "ruindecalpulse1",
     "nameIdentifier": "RuinDecal1",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Map/AlienRuins_LevelAssets1.png",
       "sourceRect": [
@@ -1872,7 +1832,6 @@
       "alien",
       "guardianshelter"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/guardianpod.png",
       "sourceRect": [
@@ -1909,7 +1868,6 @@
     "identifier": "alienlight1",
     "nameIdentifier": "ruinlight",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1930,7 +1888,6 @@
     "identifier": "alienlight2",
     "nameIdentifier": "ruinlight",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1951,7 +1908,6 @@
     "identifier": "alienlight3",
     "nameIdentifier": "ruinlight",
     "category": "Alien",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -1976,7 +1932,6 @@
       "weapon",
       "gun"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
       "sourceRect": [
@@ -1996,7 +1951,6 @@
   {
     "identifier": "guardianhookcannon",
     "category": "hidden",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
       "sourceRect": [
@@ -2020,7 +1974,6 @@
       "mediumitem",
       "harpoonammo"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Fractalguardian/Fractalguardian.png",
       "sourceRect": [
@@ -2040,7 +1993,6 @@
   {
     "identifier": "acidemitter",
     "name": "acidemitter",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -2060,7 +2012,6 @@
   {
     "identifier": "ballastfloratoxins",
     "name": "ballastfloratoxins",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -2080,7 +2031,6 @@
   {
     "identifier": "ruintoxins",
     "name": "ruintoxins",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -2100,7 +2050,6 @@
   {
     "identifier": "spinelingspike",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Spineling/Spineling.png",
       "sourceRect": [
@@ -2117,7 +2066,6 @@
     "identifier": "giantspinelingspike",
     "nameIdentifier": "spinelingspike",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Spineling_giant/Spineling_giant.png",
       "sourceRect": [
@@ -2145,7 +2093,6 @@
         "identifier": "sulphuricacid"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -2175,7 +2122,6 @@
         "identifier": "sulphuricacid"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -2419,7 +2365,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Button/button.png",
       "sourceRect": [
@@ -2460,7 +2405,6 @@
       "navterminal",
       "primarynavterminal"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Command/CommandDevices.png",
       "sourceRect": [
@@ -2485,7 +2429,6 @@
       "navterminal",
       "secondarynavterminal"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Command/CommandDevices.png",
       "sourceRect": [
@@ -2509,7 +2452,6 @@
       "command",
       "sonarmonitor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Command/CommandDevices.png",
       "sourceRect": [
@@ -2533,7 +2475,6 @@
       "command",
       "statusmonitor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Command/CommandDevices.png",
       "sourceRect": [
@@ -2557,7 +2498,6 @@
       "command",
       "sonartransducer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Command/CommandDevices.png",
       "sourceRect": [
@@ -2580,7 +2520,6 @@
       "container",
       "suppliescontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2603,7 +2542,6 @@
       "locker",
       "container"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2627,7 +2565,6 @@
       "container",
       "divinggearcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2650,7 +2587,6 @@
       "locker",
       "container"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2674,7 +2610,6 @@
       "container",
       "securecontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2697,7 +2632,6 @@
       "container",
       "railgunammocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2721,7 +2655,6 @@
       "coilgunammocontainer",
       "ammocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2744,7 +2677,6 @@
       "container",
       "medcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2763,7 +2695,6 @@
       "container",
       "toxcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2788,7 +2719,6 @@
       "divingsuitcontainer",
       "divingsuitcontainerhorizontal"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/DivingSuitLocker.png",
       "sourceRect": [
@@ -2884,7 +2814,6 @@
       "oxygentankcontainer",
       "oxygentankrefiller"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/DivingSuitLocker.png",
       "sourceRect": [
@@ -2908,7 +2837,6 @@
       "divingsuitcontainer",
       "divingsuitcontainerwindow"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2933,7 +2861,6 @@
       "oxygentankcontainer",
       "oxygentankrefiller"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2962,7 +2889,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -2991,7 +2917,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3020,7 +2945,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3049,7 +2973,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3078,7 +3001,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3100,7 +3022,6 @@
     "tags": [
       "extinguisherholder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3122,7 +3043,6 @@
     "tags": [
       "weaponholder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3161,7 +3081,6 @@
     "tags": [
       "hidden"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3184,7 +3103,6 @@
     "tags": [
       "hidden"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3207,7 +3125,6 @@
       "container",
       "cargocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3284,7 +3201,6 @@
         "identifier": "titanium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -3342,7 +3258,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3364,7 +3279,6 @@
     "tags": [
       "cargocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/UnitLoadDevice.png",
       "sourceRect": [
@@ -3410,7 +3324,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -3465,7 +3378,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -3520,7 +3432,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -3575,7 +3486,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -3630,7 +3540,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -3698,7 +3607,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -3766,7 +3674,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -3866,7 +3773,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -3934,7 +3840,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4002,7 +3907,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4070,7 +3974,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4138,7 +4041,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4206,7 +4108,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4274,7 +4175,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4342,7 +4242,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -4397,7 +4296,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4465,7 +4363,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4533,7 +4430,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4601,7 +4497,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4669,7 +4564,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -4765,7 +4659,6 @@
         "identifier": "ballisticfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/Mechanic/safetyharness.png",
       "sourceRect": [
@@ -4855,7 +4748,6 @@
         "identifier": "ballisticfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -4932,7 +4824,6 @@
         "identifier": "ballisticfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -5009,7 +4900,6 @@
         "identifier": "ballisticfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -5086,7 +4976,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/Mechanic/safetyharness.png",
       "sourceRect": [
@@ -5150,7 +5039,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5216,7 +5104,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5282,7 +5169,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5348,7 +5234,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5414,7 +5299,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5480,7 +5364,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5546,7 +5429,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5612,7 +5494,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5678,7 +5559,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5744,7 +5624,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5810,7 +5689,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5876,7 +5754,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -5942,7 +5819,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6008,7 +5884,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6075,7 +5950,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6142,7 +6016,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6209,7 +6082,6 @@
       ]
     },
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6274,7 +6146,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6348,7 +6219,6 @@
         "identifier": "bikehorn"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -6417,7 +6287,6 @@
         "identifier": "bikehorn"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6493,7 +6362,6 @@
         "identifier": "bikehorn"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -6571,7 +6439,6 @@
         "identifier": "bikehorn"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -6666,7 +6533,6 @@
         "identifier": "fpgacircuit"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -6704,7 +6570,6 @@
       "despawncontainer"
     ],
     "deconstructTime": 5,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/MiscJobGear.png",
       "sourceRect": [
@@ -7045,7 +6910,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7109,7 +6973,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7172,7 +7035,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7236,7 +7098,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7304,7 +7165,6 @@
         "identifier": "alienblood"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7334,7 +7194,6 @@
         "identifier": "adrenalinegland"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7370,7 +7229,6 @@
         "identifier": "mudraptorshell"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7399,7 +7257,6 @@
         "identifier": "alienblood"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7428,7 +7285,6 @@
         "identifier": "sulphuricacid"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/CreatureLoot/CreatureLoot.png",
       "sourceRect": [
@@ -7514,7 +7370,6 @@
         "identifier": "rubber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/headgears.png",
       "sourceRect": [
@@ -7614,7 +7469,6 @@
         "identifier": "rubber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Diving/DivingSuit_Item.png",
       "sourceRect": [
@@ -7754,7 +7608,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Diving/Scooter.png",
       "sourceRect": [
@@ -7863,7 +7716,6 @@
         "identifier": "rubber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Diving/Abyss_DivingSuit_Items.png",
       "sourceRect": [
@@ -8019,7 +7871,6 @@
         "identifier": "rubber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Diving/Combat_DivingSuit_Items.png",
       "sourceRect": [
@@ -8098,7 +7949,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/door.png",
       "sourceRect": [
@@ -8136,7 +7986,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/door.png",
       "sourceRect": [
@@ -8174,7 +8023,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/hatch.png",
       "sourceRect": [
@@ -8196,7 +8044,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/door.png",
       "sourceRect": [
@@ -8234,7 +8081,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/door.png",
       "sourceRect": [
@@ -8272,7 +8118,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/hatch.png",
       "sourceRect": [
@@ -8310,7 +8155,6 @@
     "tags": [
       "dock"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/dockingport.png",
       "sourceRect": [
@@ -8332,7 +8176,6 @@
     "tags": [
       "dock"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/dockingport.png",
       "sourceRect": [
@@ -8354,7 +8197,6 @@
     "tags": [
       "ductblock"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Door/duct.png",
       "sourceRect": [
@@ -8378,7 +8220,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8399,7 +8240,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8424,7 +8264,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8449,7 +8288,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8474,7 +8312,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8499,7 +8336,6 @@
       "largeitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8524,7 +8360,6 @@
       "largeitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8549,7 +8384,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8574,7 +8408,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8599,7 +8432,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8624,7 +8456,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8649,7 +8480,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8673,7 +8503,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8692,7 +8521,6 @@
     "tags": [
       "junctionbox"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8716,7 +8544,6 @@
     "tags": [
       "junctionbox"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8740,7 +8567,6 @@
       "battery",
       "batterycellrecharger"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8760,7 +8586,6 @@
       "battery",
       "batterycellrecharger"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8779,7 +8604,6 @@
     "tags": [
       "supercapacitor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -8984,7 +8808,6 @@
       "chargingdock",
       "batterycellrecharger"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -13381,7 +13204,6 @@
       "smallitem",
       "camera"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -13419,7 +13241,6 @@
       "smallitem",
       "camera"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -13443,7 +13264,6 @@
       "smallitem",
       "logic"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -13471,7 +13291,6 @@
       "basePrice": 100,
       "soldEverywhere": false
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Electricity/signalcomp.png",
       "sourceRect": [
@@ -13507,7 +13326,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Engine/Engines.png",
       "sourceRect": [
@@ -13546,7 +13364,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Engine/Engines.png",
       "sourceRect": [
@@ -13585,7 +13402,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Engine/Engines.png",
       "sourceRect": [
@@ -13625,7 +13441,6 @@
       "fabricator",
       "donttakeitems"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Fabricators/FabricatorsAndDeconstructors.png",
       "sourceRect": [
@@ -13695,7 +13510,6 @@
       "medicalfabricator",
       "donttakeitems"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Fabricators/FabricatorsAndDeconstructors.png",
       "sourceRect": [
@@ -13719,7 +13533,6 @@
       "deconstructor",
       "donttakeitems"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Fabricators/FabricatorsAndDeconstructors.png",
       "sourceRect": [
@@ -13834,7 +13647,6 @@
     "tags": [
       "geneticresearchstation"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Map/Outposts/Art/MedicalItemResearch.png",
       "sourceRect": [
@@ -13899,7 +13711,6 @@
       }
     ],
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "sourceRect": [
@@ -13967,150 +13778,127 @@
     "identifier": "geneticmaterialmudraptor_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmoloch_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmoloch"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmantis_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmantis"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialthresher_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialthresher"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerhead_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerhead"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerheadmatriarch_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerheadmatriarch"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialspineling_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialspineling"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhusk_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhusk"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmollusc_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmollusc"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialskitter_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialskitter"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhunter_unresearched",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhunter"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialcrawler_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor",
@@ -14118,14 +13906,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmudraptor_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor",
@@ -14133,14 +13919,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmoloch_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmoloch",
@@ -14148,14 +13932,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmantis_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmantis",
@@ -14163,14 +13945,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialthresher_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialthresher",
@@ -14178,14 +13958,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerhead_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerhead",
@@ -14193,14 +13971,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerheadmatriarch_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerheadmatriarch",
@@ -14208,14 +13984,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialspineling_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialspineling",
@@ -14223,14 +13997,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhusk_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhusk",
@@ -14238,14 +14010,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmollusc_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmollusc",
@@ -14253,14 +14023,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialskitter_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialskitter",
@@ -14268,14 +14036,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhunter_unresearched2",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhunter",
@@ -14283,14 +14049,12 @@
         "outConditionMax": 0.4
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialcrawler_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor",
@@ -14298,14 +14062,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmudraptor_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor",
@@ -14313,14 +14075,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmoloch_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmoloch",
@@ -14328,14 +14088,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmantis_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmantis",
@@ -14343,14 +14101,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialthresher_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialthresher",
@@ -14358,14 +14114,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerhead_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerhead",
@@ -14373,14 +14127,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhammerheadmatriarch_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerheadmatriarch",
@@ -14388,14 +14140,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialspineling_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialspineling",
@@ -14403,14 +14153,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhusk_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhusk",
@@ -14418,14 +14166,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialmollusc_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmollusc",
@@ -14433,14 +14179,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialskitter_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialskitter",
@@ -14448,14 +14192,12 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
     "identifier": "geneticmaterialhunter_unresearched3",
     "nameIdentifier": "unidentifiedgeneticmaterial",
     "variantOf": "geneticmaterialcrawler_unresearched",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhunter",
@@ -14463,7 +14205,6 @@
         "outConditionMax": 0.6
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Genetic/genetic.xml"
   },
   {
@@ -14519,13 +14260,11 @@
     "identifier": "geneticmaterialmudraptor",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmudraptor"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14563,13 +14302,11 @@
     "identifier": "geneticmaterialmoloch",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmoloch"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14607,13 +14344,11 @@
     "identifier": "geneticmaterialthresher",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialthresher"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14651,13 +14386,11 @@
     "identifier": "geneticmaterialmantis",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmantis"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14695,13 +14428,11 @@
     "identifier": "geneticmaterialhammerhead",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerhead"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14739,13 +14470,11 @@
     "identifier": "geneticmaterialhammerheadmatriarch",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhammerheadmatriarch"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14783,13 +14512,11 @@
     "identifier": "geneticmaterialspineling",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialspineling"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14827,13 +14554,11 @@
     "identifier": "geneticmaterialhusk",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhusk"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14871,13 +14596,11 @@
     "identifier": "geneticmaterialmollusc",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialmollusc"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14915,13 +14638,11 @@
     "identifier": "geneticmaterialskitter",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialskitter"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -14959,13 +14680,11 @@
     "identifier": "geneticmaterialhunter",
     "nameIdentifier": "geneticmaterial",
     "variantOf": "geneticmaterialcrawler",
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "geneticmaterialhunter"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "origin": [
@@ -15001,7 +14720,6 @@
   },
   {
     "identifier": "label",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Labels/labels.png",
       "sourceRect": [
@@ -15016,7 +14734,6 @@
   },
   {
     "identifier": "textdisplay",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Labels/labels.png",
       "sourceRect": [
@@ -15034,7 +14751,6 @@
     "tags": [
       "ladder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Ladder/ladder.png",
       "sourceRect": [
@@ -26071,7 +25787,6 @@
   {
     "identifier": "piezocrystal",
     "category": "Material",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Materials/Crystal.png",
       "sourceRect": [
@@ -29804,7 +29519,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Misc/Misc.png",
       "sourceRect": [
@@ -29871,7 +29585,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Misc/Misc.png",
       "sourceRect": [
@@ -29938,7 +29651,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Misc/Misc.png",
       "sourceRect": [
@@ -29999,7 +29711,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Misc/Misc.png",
       "sourceRect": [
@@ -30165,7 +29876,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Misc/Misc.png",
       "sourceRect": [
@@ -30195,7 +29905,6 @@
   {
     "identifier": "bunk",
     "category": "Decorative",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Map/MiscStructures.png",
       "sourceRect": [
@@ -30219,7 +29928,6 @@
       "oxygengenerator",
       "oxygentankrefiller"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/OxygenGenerator/oxygengenerator.png",
       "sourceRect": [
@@ -30329,7 +30037,6 @@
       "oxygengenerator",
       "oxygentankrefiller"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/OxygenGenerator/oxygengenerator.png",
       "sourceRect": [
@@ -30348,7 +30055,6 @@
     "tags": [
       "vent"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/OxygenGenerator/oxygengenerator.png",
       "sourceRect": [
@@ -30380,7 +30086,6 @@
       "vent",
       "hidden"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/OxygenGenerator/oxygengenerator.png",
       "sourceRect": [
@@ -30411,7 +30116,6 @@
     "tags": [
       "pump"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Pump/Pumps.png",
       "sourceRect": [
@@ -30460,7 +30164,6 @@
     "tags": [
       "pump"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Pump/Pumps.png",
       "sourceRect": [
@@ -30483,7 +30186,6 @@
     "tags": [
       "searchlight"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/SearchLight/SearchLightBase.png",
       "sourceRect": [
@@ -30502,7 +30204,6 @@
     "tags": [
       "reactor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Reactor/reactor.png",
       "sourceRect": [
@@ -30573,7 +30274,6 @@
         "identifier": "organicfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -30659,7 +30359,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -30755,7 +30454,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -30851,7 +30549,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31167,7 +30864,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31268,7 +30964,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31359,7 +31054,6 @@
         "identifier": "iron"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31451,7 +31145,6 @@
         "identifier": "iron"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31543,7 +31236,6 @@
         "identifier": "iron"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31639,7 +31331,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31736,7 +31427,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -31832,7 +31522,6 @@
         "identifier": "lightcomponent"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -32085,7 +31774,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -32176,7 +31864,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Tools/tools.png",
       "sourceRect": [
@@ -33331,7 +33018,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -33459,7 +33145,6 @@
       "smallitem",
       "scanner"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Alien/AlienRuins_Items.png",
       "sourceRect": [
@@ -33482,7 +33167,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Turrets.png",
       "sourceRect": [
@@ -33503,7 +33187,6 @@
       "coilgunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -33539,7 +33222,6 @@
   {
     "identifier": "coilgunbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -33555,7 +33237,6 @@
   {
     "identifier": "physicoriumbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -33571,7 +33252,6 @@
   {
     "identifier": "coilgunboltexplosive",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -33587,7 +33267,6 @@
   {
     "identifier": "coilgunboltpiercing",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -33698,7 +33377,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -33814,7 +33492,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -33932,7 +33609,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -34048,7 +33724,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -34071,7 +33746,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -34092,7 +33766,6 @@
       "chaingunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -34128,7 +33801,6 @@
   {
     "identifier": "chaingunbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34145,7 +33817,6 @@
     "identifier": "chaingunboltphysicorium",
     "nameIdentifier": "chaingunbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34257,7 +33928,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -34373,7 +34043,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -34396,7 +34065,6 @@
     "tags": [
       "depthchargelauncher"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34419,7 +34087,6 @@
     "tags": [
       "depthchargeammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34500,7 +34167,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34601,7 +34267,6 @@
         "identifier": "ic4block"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34700,7 +34365,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34805,7 +34469,6 @@
         "identifier": "ic4block"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -34841,7 +34504,6 @@
     "tags": [
       "dischargecoil"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Turrets.png",
       "sourceRect": [
@@ -35334,7 +34996,6 @@
         }
       ]
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -35439,7 +35100,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -35460,7 +35120,6 @@
       "pulselaserammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -35496,7 +35155,6 @@
   {
     "identifier": "pulselaserbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -35513,7 +35171,6 @@
     "identifier": "pulselaserbolttrilaser",
     "nameIdentifier": "pulselaserbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -35625,7 +35282,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -35741,7 +35397,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -35764,7 +35419,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Turrets.png",
       "sourceRect": [
@@ -35783,7 +35437,6 @@
     "tags": [
       "periscope"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -35809,7 +35462,6 @@
       "railgunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -35901,7 +35553,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -36003,7 +35654,6 @@
         "identifier": "ic4block"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -36093,7 +35743,6 @@
         "identifier": "physicorium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -36126,7 +35775,6 @@
   {
     "identifier": "railguncanistershellpellet",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -36228,7 +35876,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers2.png",
       "sourceRect": [
@@ -36264,7 +35911,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -36283,7 +35929,6 @@
     "tags": [
       "periscope"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -36306,7 +35951,6 @@
     "tags": [
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/Loaders.png",
       "sourceRect": [
@@ -36666,7 +36310,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36826,7 +36469,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36862,7 +36504,6 @@
     "tags": [
       "smallitem"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -36987,7 +36628,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -37062,7 +36702,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -37570,7 +37209,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -37660,7 +37298,6 @@
         "identifier": "iron"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -37739,7 +37376,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38016,7 +37652,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38207,7 +37842,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38389,7 +38023,6 @@
         "identifier": "bikehorn"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38422,7 +38055,6 @@
   {
     "identifier": "nuclearaftereffectemitter",
     "name": "nuclearaftereffectemitter",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38483,7 +38115,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38629,7 +38260,6 @@
         "identifier": "morbusine"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38703,7 +38333,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -38741,7 +38370,6 @@
       "command",
       "navterminal"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38762,7 +38390,6 @@
       "command",
       "sonarmonitor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38783,7 +38410,6 @@
       "command",
       "statusmonitor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38804,7 +38430,6 @@
       "locker",
       "container"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/locker.png",
       "sourceRect": [
@@ -38825,7 +38450,6 @@
       "container",
       "medcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/cabinets.png",
       "sourceRect": [
@@ -38846,7 +38470,6 @@
       "container",
       "toxcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/cabinets.png",
       "sourceRect": [
@@ -38866,7 +38489,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/engine.png",
       "sourceRect": [
@@ -38886,7 +38508,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/engine.png",
       "sourceRect": [
@@ -38906,7 +38527,6 @@
     "tags": [
       "fabricator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38926,7 +38546,6 @@
     "tags": [
       "medicalfabricator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38946,7 +38565,6 @@
     "tags": [
       "deconstructor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/machines.png",
       "sourceRect": [
@@ -38966,7 +38584,6 @@
     "tags": [
       "oxygengenerator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/oxygengenerator.png",
       "sourceRect": [
@@ -38986,7 +38603,6 @@
     "tags": [
       "junctionbox"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/junctionbox.png",
       "sourceRect": [
@@ -39006,7 +38622,6 @@
     "tags": [
       "pump"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/pump.png",
       "sourceRect": [
@@ -39026,7 +38641,6 @@
     "tags": [
       "pump"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/smallpump.png",
       "sourceRect": [
@@ -39046,7 +38660,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/legacyrailgunbase.png",
       "sourceRect": [
@@ -39066,7 +38679,6 @@
     "tags": [
       "periscope"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -39090,7 +38702,6 @@
     "tags": [
       "periscope"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/TurretsAndDepthCharges.png",
       "sourceRect": [
@@ -39115,7 +38726,6 @@
       "railgunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/LegacyLoaders.png",
       "sourceRect": [
@@ -39140,7 +38750,6 @@
       "railgunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/LegacyLoaders.png",
       "sourceRect": [
@@ -39165,7 +38774,6 @@
       "railgunammosource",
       "turretammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/LegacyLoaders.png",
       "sourceRect": [
@@ -39190,7 +38798,6 @@
       "railgunequipment",
       "railgunammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/LegacyLoaders.png",
       "sourceRect": [
@@ -39215,7 +38822,6 @@
       "railgunequipment",
       "railgunammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/LegacyLoaders.png",
       "sourceRect": [
@@ -39240,7 +38846,6 @@
       "searchlight",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Legacy/SearchLightBase_legacy.png",
       "sourceRect": [
@@ -39302,7 +38907,6 @@
         "identifier": "adrenalinegland"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Pets/pets.png",
       "sourceRect": [
@@ -39368,7 +38972,6 @@
         "identifier": "adrenalinegland"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Pets/pets.png",
       "sourceRect": [
@@ -39434,7 +39037,6 @@
         "identifier": "adrenalinegland"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Pets/pets.png",
       "sourceRect": [
@@ -39500,7 +39102,6 @@
         "identifier": "adrenalinegland"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Pets/pets.png",
       "sourceRect": [
@@ -39605,7 +39206,6 @@
       "basePrice": 10,
       "soldEverywhere": true
     },
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/idcard.png",
       "sourceRect": [
@@ -39805,7 +39405,6 @@
         "identifier": "chitin"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Characters/Pets/pets.png",
       "sourceRect": [
@@ -39842,7 +39441,6 @@
     "tags": [
       "reactor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -39866,7 +39464,6 @@
     "tags": [
       "turret"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -39886,7 +39483,6 @@
     "tags": [
       "periscope"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -39911,7 +39507,6 @@
       "railgunequipment",
       "railgunammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -39936,7 +39531,6 @@
       "railgunequipment",
       "railgunammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -39961,7 +39555,6 @@
       "railgunequipment",
       "railgunammosource"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -39986,7 +39579,6 @@
       "turret",
       "ignoresubmarines"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -40006,7 +39598,6 @@
     "tags": [
       "coilgunequipment"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/TurretsWrecked.png",
       "sourceRect": [
@@ -40030,7 +39621,6 @@
     "tags": [
       "oxygengenerator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40054,7 +39644,6 @@
     "tags": [
       "oxygengenerator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40078,7 +39667,6 @@
     "tags": [
       "vent"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40102,7 +39690,6 @@
     "tags": [
       "ladder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40126,7 +39713,6 @@
     "tags": [
       "fabricator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40150,7 +39736,6 @@
     "tags": [
       "medicalfabricator"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40174,7 +39759,6 @@
     "tags": [
       "deconstructor"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40198,7 +39782,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/MiscStructuresWrecked.png",
       "sourceRect": [
@@ -40222,7 +39805,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/MiscStructuresWrecked.png",
       "sourceRect": [
@@ -40246,7 +39828,6 @@
     "tags": [
       "engine"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/MiscStructuresWrecked.png",
       "sourceRect": [
@@ -40270,7 +39851,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40310,7 +39890,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40350,7 +39929,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40374,7 +39952,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40414,7 +39991,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40454,7 +40030,6 @@
     "tags": [
       "door"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40494,7 +40069,6 @@
     "tags": [
       "dock"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40518,7 +40092,6 @@
     "tags": [
       "dock"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40543,7 +40116,6 @@
       "container",
       "suppliescontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40568,7 +40140,6 @@
       "locker",
       "container"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40594,7 +40165,6 @@
       "container",
       "divinggearcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40619,7 +40189,6 @@
       "locker",
       "container"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40644,7 +40213,6 @@
       "container",
       "securecontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40669,7 +40237,6 @@
       "container",
       "railgunammocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40694,7 +40261,6 @@
       "container",
       "coilgunammocontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40719,7 +40285,6 @@
       "container",
       "medcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40744,7 +40309,6 @@
       "container",
       "toxcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40770,7 +40334,6 @@
       "divingsuitcontainer",
       "divingsuitcontainerwindow"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40795,7 +40358,6 @@
       "container",
       "oxygentankcontainer"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -40819,7 +40381,6 @@
     "tags": [
       "extinguisherholder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40843,7 +40404,6 @@
     "tags": [
       "weaponholder"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40880,7 +40440,6 @@
     "identifier": "navterminalwrecked",
     "nameIdentifier": "navterminal",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40901,7 +40460,6 @@
     "identifier": "shuttlenavterminalwrecked",
     "nameIdentifier": "shuttlenavterminal",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40922,7 +40480,6 @@
     "identifier": "statusmonitorwrecked",
     "nameIdentifier": "statusmonitor",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40943,7 +40500,6 @@
     "identifier": "sonartransducerwrecked",
     "nameIdentifier": "sonartransducer",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40967,7 +40523,6 @@
     "tags": [
       "junctionbox"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -40988,7 +40543,6 @@
     "identifier": "batterywrecked",
     "nameIdentifier": "battery",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -41009,7 +40563,6 @@
     "identifier": "shuttlebatterywrecked",
     "nameIdentifier": "shuttlebattery",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -41030,7 +40583,6 @@
     "identifier": "supercapacitorwrecked",
     "nameIdentifier": "supercapacitor",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -41051,7 +40603,6 @@
     "identifier": "chargingdockwrecked",
     "nameIdentifier": "chargingdock",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems.png",
       "sourceRect": [
@@ -41076,7 +40627,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41101,7 +40651,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41126,7 +40675,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41151,7 +40699,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41176,7 +40723,6 @@
       "largeitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41201,7 +40747,6 @@
       "largeitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41226,7 +40771,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41251,7 +40795,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41276,7 +40819,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41301,7 +40843,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41326,7 +40867,6 @@
       "smallitem",
       "light"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/WreckedItems2.png",
       "sourceRect": [
@@ -41347,7 +40887,6 @@
     "identifier": "bunkwrecked",
     "nameIdentifier": "bunk",
     "category": "Wrecked",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Shipwrecks/BackgroundStructuresWrecked.png",
       "sourceRect": [
@@ -41693,7 +41232,6 @@
         "copyCondition": true
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Gardening/GrowablePlants_Temp.png",
       "sourceRect": [
@@ -41779,7 +41317,6 @@
         "copyCondition": true
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Gardening/GrowablePlants_Temp.png",
       "sourceRect": [
@@ -41957,7 +41494,6 @@
       }
     ],
     "deconstructTime": 15,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Gardening/GrowablePlants_Temp.png",
       "sourceRect": [
@@ -42467,7 +42003,6 @@
         "identifier": "divingmask"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -42551,7 +42086,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -42741,7 +42275,6 @@
       }
     ],
     "deconstructTime": 20,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -42844,7 +42377,6 @@
         "identifier": "organicfiber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -42921,7 +42453,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -42930,7 +42461,6 @@
         "identifier": "dementonite"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Mechanic/mechanic_talent_items.xml"
   },
   {
@@ -42980,7 +42510,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -42989,7 +42518,6 @@
         "identifier": "dementonite"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Mechanic/mechanic_talent_items.xml"
   },
   {
@@ -43039,7 +42567,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -43048,7 +42575,6 @@
         "identifier": "dementonite"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Mechanic/mechanic_talent_items.xml"
   },
   {
@@ -43098,7 +42624,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -43107,7 +42632,6 @@
         "identifier": "dementonite"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Mechanic/mechanic_talent_items.xml"
   },
   {
@@ -43298,7 +42822,6 @@
         "identifier": "steel"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -43390,7 +42913,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -43494,7 +43016,6 @@
         "copyCondition": true
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -43531,7 +43052,6 @@
     "tags": [
       "smallitem"
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -43718,7 +43238,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -43815,7 +43334,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -43985,7 +43503,6 @@
         "identifier": "rubber"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/Security/Slipsuit_Items.png",
       "sourceRect": [
@@ -44423,7 +43940,6 @@
         "identifier": "aluminium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Containers/containers.png",
       "sourceRect": [
@@ -44443,7 +43959,6 @@
   {
     "identifier": "depletedfuelbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -44505,7 +44020,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -44517,7 +44031,6 @@
         "identifier": "depletedfuel"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Engineer/engineer_talent_items.xml"
   },
   {
@@ -44569,7 +44082,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -44581,7 +44093,6 @@
         "identifier": "depletedfuel"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Engineer/engineer_talent_items.xml"
   },
   {
@@ -44633,7 +44144,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -44645,7 +44155,6 @@
         "identifier": "depletedfuel"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Engineer/engineer_talent_items.xml"
   },
   {
@@ -44697,7 +44206,6 @@
         "requiresRecipe": true
       }
     ],
-    "deconstructTime": 0,
     "deconstructItems": [
       {
         "identifier": "iron"
@@ -44709,7 +44217,6 @@
         "identifier": "depletedfuel"
       }
     ],
-    "maxStackSize": 1,
     "sourceXml": "Content/Items/Jobgear/Engineer/engineer_talent_items.xml"
   },
   {
@@ -44774,7 +44281,6 @@
         "amount": 5
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png"
     },
@@ -44884,7 +44390,6 @@
         "copyCondition": true
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png"
     },
@@ -44893,7 +44398,6 @@
   {
     "identifier": "smgrounddepletedfuel",
     "variantOf": "smground",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png"
     },
@@ -44972,7 +44476,6 @@
         "identifier": "fulgurium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45067,7 +44570,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45253,7 +44755,6 @@
         "identifier": "fulgurium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45274,7 +44775,6 @@
     "identifier": "nucleargunbolt",
     "name": "nucleargunbolt",
     "category": "Misc",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Weapons/weapons_new.png",
       "sourceRect": [
@@ -45360,7 +44860,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45484,7 +44983,6 @@
   {
     "identifier": "dirtybombafteremitter",
     "name": "dirtybombafteremitter",
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45568,7 +45066,6 @@
         "identifier": "plastic"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -45684,7 +45181,6 @@
         "identifier": "physicorium"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/Engineer/PUCS_Items.png",
       "sourceRect": [
@@ -45958,7 +45454,6 @@
         "identifier": "fpgacircuit"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -46436,7 +45931,6 @@
       }
     ],
     "deconstructTime": 10,
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Genetic/Genetic.png",
       "sourceRect": [
@@ -46629,7 +46123,6 @@
         "identifier": "titaniumaluminiumalloy"
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [
@@ -46829,7 +46322,6 @@
         "requiresRecipe": true
       }
     ],
-    "maxStackSize": 1,
     "sprite": {
       "texture": "Content/Items/Jobgear/TalentGear.png",
       "sourceRect": [

@@ -1,4 +1,4 @@
-import { omit, toLower, mergeDeepRight, indexBy } from 'ramda';
+import { omit, mergeDeepRight, indexBy } from 'ramda';
 
 import { DeconstructItem } from '@interfaces/deconstruct-item';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
@@ -9,13 +9,19 @@ import { PriceInfo } from '@interfaces/price-info';
 import { RequiredItem } from '@interfaces/required-item';
 import { Skill } from '@interfaces/skill';
 import { SpriteImage } from '@interfaces/sprite';
-import { getAttrValue, getNumberArray, getBooleanValue, getNumberValue } from '@utils/element-utils';
+import {
+  getAttrValue,
+  getNumberValue,
+  createElementValueAccessor,
+  getChildrenOf,
+  getMultiChildrenFor,
+} from '@utils/element-utils';
 import { deleteNilProperties } from '@utils/object-utils';
 
 export function parseItemXml(documentFiles: { path: string; document: Document }[]): ItemPrefab[] {
   return documentFiles.flatMap(({ path, document }) => {
     const modName = path.startsWith('Mods/') ? path.split('/')[1] : undefined;
-    const itemDocuments = Array.from(document.children).flatMap((element) => {
+    const itemElements: Element[] = Array.from(document.children).flatMap((element) => {
       const tagName = element.tagName.toLowerCase();
       if (tagName === 'items') {
         return Array.from(element.children);
@@ -25,37 +31,38 @@ export function parseItemXml(documentFiles: { path: string; document: Document }
       }
       return [];
     });
-    return Array.from(itemDocuments).map((item) => {
-      const deconstruct = parseDeconstruct(getChildrenOf(item, 'Deconstruct')[0]);
-      const priceElement = getChildrenOf(item, 'Price')[0];
+    const items: ItemPrefab[] = Array.from(itemElements).map((itemElement) => {
+      const accessor = createElementValueAccessor(itemElement);
+      const deconstruct = accessor.firstChildrenFor('Deconstruct', parseDeconstruct);
       const documentDirectory = getFileDirectory(path);
 
-      return deleteNilProperties({
-        identifier: getAttrValue(item, 'identifier'),
-        nameIdentifier: getAttrValue(item, 'nameIdentifier'),
-        descriptionIdentifier: getAttrValue(item, 'descriptionIdentifier'),
-        name: getAttrValue(item, 'name'),
-        description: getAttrValue(item, 'description'),
+      return {
+        identifier: accessor.string('identifier') as string,
+        nameIdentifier: accessor.string('nameIdentifier'),
+        descriptionIdentifier: accessor.string('descriptionIdentifier'),
+        name: accessor.string('name'),
+        description: accessor.string('description'),
         modName,
-        category: getAttrValue(item, 'category'),
-        variantOf: getAttrValue(item, 'variantOf'),
-        tags: (getAttrValue(item, 'tags') || getAttrValue(item, 'Tags'))?.split(',').map((s) => s.trim()),
-        price: priceElement ? parsePrice(priceElement) : undefined,
-        fabricationRecipes: parseRecipes(getChildrenOf(item, 'Fabricate')),
+        category: accessor.string('category') as string,
+        variantOf: accessor.string('variantOf'),
+        tags: accessor.stringArray('tags'),
+        price: accessor.firstChildrenFor('Price', parsePrice),
+        fabricationRecipes: accessor.multiChildrenFor('Fabricate', parseRecipe),
         deconstructTime: deconstruct?.time,
         deconstructItems: deconstruct?.items,
-        maxStackSize: +(getAttrValue(item, 'maxStackSize') || 1),
-        sprite: parseSprite(getChildrenOf(item, 'Sprite')[0], documentDirectory),
-        infectedIcon: parseSprite(getChildrenOf(item, 'InventoryIcon')[0], documentDirectory),
-        containedSprites: getChildrenOf(item, 'ContainedSprite').map((element) =>
+        maxStackSize: accessor.number('maxStackSize'),
+        sprite: accessor.firstChildrenFor('Sprite', (element) => parseSprite(element, documentDirectory)),
+        infectedIcon: accessor.firstChildrenFor('InventoryIcon', (element) => parseSprite(element, documentDirectory)),
+        containedSprites: accessor.multiChildrenFor('ContainedSprite', (element) =>
           parseSprite(element, documentDirectory),
         ),
-        decorativeSprite: getChildrenOf(item, 'DecorativeSprite').map((element) =>
+        decorativeSprite: accessor.multiChildrenFor('DecorativeSprite', (element) =>
           parseSprite(element, documentDirectory),
         ),
         sourceXml: path,
-      }) as ItemPrefab;
+      };
     });
+    return items;
   });
 }
 
@@ -116,120 +123,106 @@ export function mergeLocale(locale1: Locale, locale2: Locale): Locale {
   };
 }
 
-function getChildrenOf(node: ParentNode, tagName: string | string[]): Element[] {
-  const tagNames = (Array.isArray(tagName) ? tagName : [tagName]).map(toLower);
-  return Array.from(node.children).filter((e) => {
-    const lowerTagName = e.tagName.toLowerCase();
-    return tagNames.some((name) => name === lowerTagName);
-  });
-}
-
-function parsePrice(priceElement: Element): PriceInfo {
+function parsePrice(element: Element): PriceInfo {
+  const accessor = createElementValueAccessor(element);
   return deleteNilProperties({
-    basePrice: getNumberValue(priceElement, 'basePrice'),
-    soldEverywhere: getBooleanValue(priceElement, 'soldEverywhere'),
-    canBeSpecial: getBooleanValue(priceElement, 'canBeSpecial'),
-    minLevelDifficulty: getNumberValue(priceElement, 'minLevelDifficulty'),
-    locations: getChildrenOf(priceElement, 'Price').map(parseLocationPrice),
+    basePrice: accessor.number('basePrice'),
+    soldEverywhere: accessor.boolean('soldEverywhere'),
+    canBeSpecial: accessor.boolean('canBeSpecial'),
+    minLevelDifficulty: accessor.number('minLevelDifficulty'),
+    locations: accessor.multiChildrenFor('Price', parseLocationPrice),
   }) as PriceInfo;
 }
 
-function parseLocationPrice(subPriceElement: Element): LocationPriceInfo {
+function parseLocationPrice(element: Element): LocationPriceInfo {
+  const accessor = createElementValueAccessor(element);
   return {
-    locationType: getAttrValue(subPriceElement, 'locationType'),
-    multiplier: getNumberValue(subPriceElement, 'multiplier'),
-    minAvailable: getNumberValue(subPriceElement, 'minAvailable'),
-    maxAvailable: getNumberValue(subPriceElement, 'maxAvailable'),
-    sold: getBooleanValue(subPriceElement, 'sold'),
+    locationType: accessor.string('locationType'),
+    multiplier: accessor.number('multiplier'),
+    minAvailable: accessor.number('minAvailable'),
+    maxAvailable: accessor.number('maxAvailable'),
+    sold: accessor.boolean('sold'),
   } as LocationPriceInfo;
 }
 
-function parseRecipes(recipeElements: Element[]): FabricationRecipe[] {
-  return recipeElements.map((element) => {
-    return deleteNilProperties({
-      displayName: getAttrValue(element, 'displayName'),
-      requiredItems: parseRequiredItems(element),
-      requiredTime: getNumberValue(element, 'requiredTime'),
-      requiresRecipe: getBooleanValue(element, 'requiresRecipe'),
-      outCondition: getNumberValue(element, 'outCondition'),
-      requiredSkills: parseRequiredSkills(getChildrenOf(element, 'RequiredSkill')),
-      amount: getNumberValue(element, 'amount'),
-    }) as FabricationRecipe;
-  });
+function parseRecipe(element: Element): FabricationRecipe {
+  const accessor = createElementValueAccessor(element);
+  return {
+    displayName: accessor.string('displayName'),
+    requiredItems: parseRequiredItems(element),
+    requiredTime: accessor.number('requiredTime') as number,
+    requiresRecipe: accessor.boolean('requiresRecipe'),
+    outCondition: accessor.number('outCondition'),
+    requiredSkills: accessor.multiChildrenFor('RequiredSkill', parseRequiredSkill),
+    amount: accessor.number('amount'),
+  };
 }
 
-function parseRequiredSkills(skillElements: Element[]): Skill[] {
-  return Array.from(skillElements).map((element) => {
-    return deleteNilProperties({
-      identifier: getAttrValue(element, 'identifier'),
-      level: getNumberValue(element, 'level'),
-    }) as Skill;
-  });
+function parseRequiredSkill(element: Element): Skill {
+  return { identifier: getAttrValue(element, 'identifier'), level: getNumberValue(element, 'level') } as Skill;
 }
 
 function parseRequiredItems(recipeElement: Element): RequiredItem[] {
   return Array.from(recipeElement.children)
     .filter((element) => ['Item', 'RequiredItem'].includes(element.tagName))
     .map((element) => {
-      return deleteNilProperties({
-        identifier: getAttrValue(element, 'identifier'),
-        tag: getAttrValue(element, 'tag'),
-        amount: getNumberValue(element, 'amount'),
-        useCondition: getBooleanValue(element, 'useCondition'),
-        minCondition: getNumberValue(element, 'minCondition'),
-        maxCondition: getNumberValue(element, 'maxCondition'),
-      }) as RequiredItem;
+      const accessor = createElementValueAccessor(element);
+      return {
+        identifier: accessor.string('identifier'),
+        tag: accessor.string('tag'),
+        amount: accessor.number('amount'),
+        useCondition: accessor.boolean('useCondition'),
+        minCondition: accessor.number('minCondition'),
+        maxCondition: accessor.number('maxCondition'),
+      };
     });
 }
 
-function parseDeconstruct(deconstructElement: Element | null): {
-  time: number;
-  items: DeconstructItem[];
+function parseDeconstruct(deconstructElement: Element): {
+  time: number | undefined;
+  items: DeconstructItem[] | undefined;
 } | null {
-  if (!deconstructElement) {
-    return null;
-  }
-  const time = getNumberValue(deconstructElement, 'time') || 0;
-  const items = Array.from(getChildrenOf(deconstructElement, 'Item')).map((element) => {
-    return deleteNilProperties({
-      identifier: getAttrValue(element, 'identifier'),
-      minCondition: getNumberValue(element, 'minCondition'),
-      maxCondition: getNumberValue(element, 'maxCondition'),
-      outCondition: getNumberValue(element, 'outCondition'),
-      outConditionMin: getNumberValue(element, 'outConditionMin'),
-      outConditionMax: getNumberValue(element, 'outConditionMax'),
-      copyCondition: getBooleanValue(element, 'copyCondition'),
-      requiredDeconstructor: getAttrValue(element, 'requiredDeconstructor'),
-      requiredOtherItem: getAttrValue(element, 'requiredOtherItem'),
-      commonness: getNumberValue(element, 'commonness'),
-    }) as DeconstructItem;
-  });
-  return { time, items };
+  return {
+    time: getNumberValue(deconstructElement, 'time'),
+    items: getMultiChildrenFor(deconstructElement, 'Item', (element) => {
+      const accessor = createElementValueAccessor(element);
+      return {
+        identifier: accessor.string('identifier') as string,
+        minCondition: accessor.number('minCondition'),
+        maxCondition: accessor.number('maxCondition'),
+        outCondition: accessor.number('outCondition'),
+        outConditionMin: accessor.number('outConditionMin'),
+        outConditionMax: accessor.number('outConditionMax'),
+        copyCondition: accessor.boolean('copyCondition'),
+        requiredDeconstructor: accessor.string('requiredDeconstructor'),
+        requiredOtherItem: accessor.string('requiredOtherItem'),
+        commonness: accessor.number('commonness'),
+      };
+    }),
+  };
 }
 
-function parseSprite(spriteElement: Element, documentDirectory: string): SpriteImage | undefined {
-  if (!spriteElement) {
-    return undefined;
-  }
-
-  let texture = getAttrValue(spriteElement, 'texture')?.replace('/JobGear/', '/Jobgear/');
+function parseSprite(element: Element, documentDirectory: string): SpriteImage {
+  const accessor = createElementValueAccessor(element);
+  let texture = accessor.string('texture')?.replace('/JobGear/', '/Jobgear/');
   if (texture && !texture.includes('/')) {
     texture = `${documentDirectory}/${texture}`;
   }
 
-  return deleteNilProperties({
+  return {
     texture,
-    sourceRect: getNumberArray(spriteElement, 'sourceRect'),
-    origin: getNumberArray(spriteElement, 'origin'),
-    depth: getNumberValue(spriteElement, 'depth'),
-    sheetIndex: getNumberArray(spriteElement, 'sheetIndex'),
-    sheetElementSize: getNumberArray(spriteElement, 'sheetElementSize'),
-    randomGroupId: getNumberValue(spriteElement, 'randomGroupId'),
-    randomRotation: getNumberArray(spriteElement, 'randomRotation'),
-    randomScale: getNumberArray(spriteElement, 'randomScale'),
-    randomOffset: getNumberArray(spriteElement, 'randomOffset'),
-  }) as SpriteImage;
+    sourceRect: accessor.numberArray('sourceRect'),
+    origin: accessor.numberArray('origin'),
+    depth: accessor.number('depth'),
+    sheetIndex: accessor.numberArray('sheetIndex'),
+    sheetElementSize: accessor.numberArray('sheetElementSize'),
+    randomGroupId: accessor.number('randomGroupId'),
+    randomRotation: accessor.numberArray('randomRotation'),
+    randomScale: accessor.numberArray('randomScale'),
+    randomOffset: accessor.numberArray('randomOffset'),
+  } as SpriteImage;
 }
+
 function getFileDirectory(path: string): string {
   const lastDirectory = path.lastIndexOf('/');
   return lastDirectory > -1 ? path.substring(0, lastDirectory) : '';
