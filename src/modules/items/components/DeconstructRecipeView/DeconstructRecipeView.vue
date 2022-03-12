@@ -11,6 +11,7 @@
       <span>{{ item.name }}</span>
       <span v-if="count !== 1">{{ ` × ${count}` }}</span>
       <span v-if="recipe?.[0]?.commonness">{{ ` ${recipe?.[0]?.commonness * 100}%` }}</span>
+      <i v-if="recipe?.[0]?.copyCondition" class="copy-condition-icon" title="copy condition from deconstructed item" />
     </a>
     <div v-if="recipe?.items.length && recipe.time" class="recipe-required-time">
       <i class="time-sand-icon" />

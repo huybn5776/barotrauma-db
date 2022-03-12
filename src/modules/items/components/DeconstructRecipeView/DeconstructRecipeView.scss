@@ -8,3 +8,17 @@
     background-color: rgba(white, .04);
   }
 }
+
+.copy-condition-icon {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  padding: 2px;
+  background: url('/src/assets/svg/progress-bar-arrow-down.svg') no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  border: 1px solid #d9d7bc;
+  border-radius: 4px;
+}
