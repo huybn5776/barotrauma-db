@@ -8,6 +8,11 @@ const routes: RouteRecordRaw[] = [
     name: 'items',
   },
   {
+    path: '/weapons',
+    component: () => import('@modules/weapons/WeaponPage.vue'),
+    name: 'weapons',
+  },
+  {
     path: '/data-import',
     component: () => import('@modules/data-importer/DataImportPage.vue'),
     name: 'dataImport',

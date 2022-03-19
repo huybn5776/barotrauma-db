@@ -5,5 +5,6 @@ export interface WeaponAmmo {
   item: ItemPrefab;
   effects: AttackEffect[];
   shots: number;
+  structureDamage?: number;
   totalEffectAmount: number;
 }

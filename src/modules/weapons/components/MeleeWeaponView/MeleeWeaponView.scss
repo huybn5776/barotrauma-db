@@ -1,0 +1,11 @@
+.melee-weapon-view {
+  display: flex;
+  align-items: center;
+}
+
+.melee-weapon-basic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 160px;
+}

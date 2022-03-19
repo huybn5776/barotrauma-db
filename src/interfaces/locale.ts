@@ -4,4 +4,6 @@ export interface Locale {
   entityNames: Record<string, string>;
   entityDescriptions: Record<string, string>;
   displayNames: Record<string, string>;
+  afflictionNames: Record<string, string>;
+  afflictionDescriptions: Record<string, string>;
 }

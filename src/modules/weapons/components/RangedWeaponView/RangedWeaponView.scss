@@ -1,0 +1,77 @@
+.ranged-weapon-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ranged-weapon-basic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ranged-weapon-ammo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ranged-weapon-ammo {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  & + &::before {
+    position: absolute;
+    top: -8px;
+    right: 8px;
+    left: 8px;
+    display: block;
+    height: 1px;
+    background-color: rgba(white, .15);
+    content: '';
+  }
+}
+
+.ranged-weapon-ammo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 120px;
+}
+
+.ammo-effects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 160px;
+}
+
+.ammo-effect {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.ammo-effect-sum {
+  opacity: .8;
+}
+
+.ammo-effect-sum-icon {
+  width: 32px;
+  height: 24px;
+  background-image: url('/src/assets/svg/sigma.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ammo-effect-amount {
+  font-weight: 400;
+}
+
+.ammo-effect-dps {
+  font-size: 14px;
+  opacity: .7;
+}

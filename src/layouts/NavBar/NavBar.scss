@@ -1,11 +1,12 @@
 .nav-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto minmax(4ch, auto) auto;
+  gap: 2px;
   align-items: center;
 }
 
 .nav-bar-link {
   display: inline-block;
-  min-width: 60px;
   padding: 8px;
   white-space: nowrap;
   text-align: center;
@@ -27,4 +28,9 @@
     background-color: rgba(white, .1);
     opacity: 1;
   }
+}
+
+.data-importer {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }

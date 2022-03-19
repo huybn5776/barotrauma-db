@@ -1,0 +1,34 @@
+.effects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 120px;
+}
+
+.effect {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.effect-sum {
+  opacity: .8;
+}
+
+.effect-sum-icon {
+  width: 32px;
+  height: 24px;
+  background-image: url('/src/assets/svg/sigma.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.effect-amount {
+  font-weight: 400;
+}
+
+.effect-dps {
+  font-size: 14px;
+  opacity: .7;
+}
