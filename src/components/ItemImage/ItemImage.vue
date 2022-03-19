@@ -18,10 +18,10 @@
 <script lang="ts" setup>
 import { StyleValue, ref, onMounted } from 'vue';
 
-import { provideGetLocaleFileKey } from '@/symbols';
 import { ItemPrefab } from '@interfaces/Item-prefab';
 import { Rect } from '@interfaces/rect';
 import { SpriteImage } from '@interfaces/sprite';
+import { provideGetLocaleFileKey } from '@symbols';
 import { injectStrict } from '@utils/inject-utils';
 
 interface ItemImageInfo {

@@ -47,6 +47,10 @@ module.exports = {
             position: 'before',
           },
           {
+            pattern: '@+(symbols)',
+            group: 'internal',
+          },
+          {
             pattern: '@+(api|components|compositions|directives|enums|interfaces|layouts|modules|services|utils|views)/**',
             group: 'internal',
           },

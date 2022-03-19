@@ -1,7 +1,7 @@
 import { provide } from 'vue';
 
-import { provideGetLocaleFileKey } from '@/symbols';
 import { getFileURLFromDb } from '@services/locale-data-source-service';
+import { provideGetLocaleFileKey } from '@symbols';
 
 export const provideLocaleFile = 'localeFileProvider';
 
