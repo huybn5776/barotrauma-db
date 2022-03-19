@@ -1,7 +1,14 @@
 import { DeconstructItem } from '@interfaces/deconstruct-item';
 import { FabricationRecipe } from '@interfaces/fabrication-recipe';
+import { Holdable } from '@interfaces/holdable';
+import { ItemComponent } from '@interfaces/item-component';
+import { ItemContainer } from '@interfaces/item-container';
+import { MeleeWeapon } from '@interfaces/melee-weapon';
 import { PriceInfo } from '@interfaces/price-info';
+import { Projectile } from '@interfaces/projectile';
+import { RangedWeapon } from '@interfaces/ranged-weapon';
 import { SpriteImage } from '@interfaces/sprite';
+import { Throwable } from '@interfaces/throwable';
 
 export interface ItemPrefab {
   identifier: string;
@@ -18,9 +25,16 @@ export interface ItemPrefab {
   fabricationRecipes?: FabricationRecipe[];
   deconstructTime?: number;
   deconstructItems?: DeconstructItem[];
-  maxStackSize: number;
+  maxStackSize?: number;
   sprite?: SpriteImage;
   infectedIcon?: SpriteImage;
   containedSprites?: SpriteImage[];
   decorativeSprite?: SpriteImage[];
+  itemContainer?: ItemContainer;
+  component?: ItemComponent;
+  meleeWeapon?: MeleeWeapon;
+  rangedWeapon?: RangedWeapon;
+  projectile?: Projectile;
+  holdable?: Holdable;
+  throwable?: Throwable;
 }
