@@ -101,7 +101,13 @@ export function parseTextXml(textDocuments: Document[]): Locale[] {
     const language = getAttrValue(infoTextsElement, 'language');
     const name = getAttrValue(infoTextsElement, 'translatedName');
 
-    const searchForTag = ['entityname.', 'entitydescription.', 'displayname.'];
+    const searchForTag = [
+      'entityname.',
+      'entitydescription.',
+      'displayname.',
+      'afflictionname.',
+      'afflictiondescription.',
+    ];
     const labels: Record<string, string>[] = searchForTag.map(() => ({}));
     Array.from(infoTextsElement.children).forEach((element) => {
       const matchedTagIndex = searchForTag.findIndex((tag) => element.tagName.startsWith(tag));
@@ -109,13 +115,15 @@ export function parseTextXml(textDocuments: Document[]): Locale[] {
         labels[matchedTagIndex][element.tagName.substring(searchForTag[matchedTagIndex].length)] = element.textContent;
       }
     });
-    const [entityNames, entityDescriptions, displayNames] = labels;
+    const [entityNames, entityDescriptions, displayNames, afflictionNames, afflictionDescriptions] = labels;
     return {
       language,
       name,
       entityNames,
       entityDescriptions,
       displayNames,
+      afflictionNames,
+      afflictionDescriptions,
     } as Locale;
   });
 }
