@@ -3,7 +3,7 @@ import { getAttrValue } from '@utils/element-utils';
 
 export async function loadContentPackage(files: Record<string, File>): Promise<ContentPackageEntry | undefined> {
   const contentPackageXmlFiles = Object.entries(files).filter(
-    ([path]) => path.match(/Vanilla\s\d.+.xml/) || path.match(/(^|\/)filelist\.xml/),
+    ([path]) => path.match(/Vanilla\s*\d*.xml/) || path.match(/(^|\/)filelist\.xml/),
   );
   if (!contentPackageXmlFiles.length) {
     return undefined;
